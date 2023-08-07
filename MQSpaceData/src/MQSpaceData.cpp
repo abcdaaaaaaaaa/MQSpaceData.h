@@ -57,19 +57,19 @@ float MQSpaceData::readValue()
 //**************************************ppm Value**************************************\\
 
 float MQSpaceData::MQData100(){return map(analogRead(_pin),0,(_bitadc-1),0,100);}
-float MQSpaceData::MQ2DataAir(){return map(analogRead(_pin),0,(_bitadc-1),300,10000);}
-float MQSpaceData::MQ3DataAir(){return map(analogRead(_pin),0,(_bitadc-1),25,500);}
-float MQSpaceData::MQ4DataAir(){return map(analogRead(_pin),0,(_bitadc-1),300,10000);}
-float MQSpaceData::MQ5DataAir(){return map(analogRead(_pin),0,(_bitadc-1),200,10000);}
-float MQSpaceData::MQ6DataAir(){return map(analogRead(_pin),0,(_bitadc-1),300,10000);}
-float MQSpaceData::MQ7DataAir(){return map(analogRead(_pin),0,(_bitadc-1),10,10000);}
-float MQSpaceData::MQ8DataAir(){return map(analogRead(_pin),0,(_bitadc-1),10,10000);}
-float MQSpaceData::MQ9DataAir(){return map(analogRead(_pin),0,(_bitadc-1),10,10000);}
-float MQSpaceData::MQ131DataAir(){return map(analogRead(_pin),0,(_bitadc-1),10,1000);}
-float MQSpaceData::MQ135DataAir(){return map(analogRead(_pin),0,(_bitadc-1),10,1000);}
-float MQSpaceData::MQ136DataAir(){return map(analogRead(_pin),0,(_bitadc-1),10,1000);}
-float MQSpaceData::MQ303ADataAir(){return map(analogRead(_pin),0,(_bitadc-1),10,10000);}
-float MQSpaceData::MQ309ADataAir(){return map(analogRead(_pin),0,(_bitadc-1),100,10000);}
+float MQSpaceData::MQ2DataAir(){return map(analogRead(_pin),1,(_bitadc-1),300,10000);}
+float MQSpaceData::MQ3DataAir(){return map(analogRead(_pin),1,(_bitadc-1),25,500);}
+float MQSpaceData::MQ4DataAir(){return map(analogRead(_pin),1,(_bitadc-1),300,10000);}
+float MQSpaceData::MQ5DataAir(){return map(analogRead(_pin),1,(_bitadc-1),200,10000);}
+float MQSpaceData::MQ6DataAir(){return map(analogRead(_pin),1,(_bitadc-1),300,10000);}
+float MQSpaceData::MQ7DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,10000);}
+float MQSpaceData::MQ8DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,10000);}
+float MQSpaceData::MQ9DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,10000);}
+float MQSpaceData::MQ131DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,1000);}
+float MQSpaceData::MQ135DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,1000);}
+float MQSpaceData::MQ136DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,1000);}
+float MQSpaceData::MQ303ADataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,10000);}
+float MQSpaceData::MQ309ADataAir(){return map(analogRead(_pin),1,(_bitadc-1),100,10000);}
 
 //**************************************MQ-2**************************************\\
 
