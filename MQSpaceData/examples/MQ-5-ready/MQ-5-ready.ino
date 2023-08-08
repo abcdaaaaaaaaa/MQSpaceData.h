@@ -27,15 +27,15 @@ MQ5.MQ5calibrate();
 
 void loop(){
   Serial.print("H2:");
-  Serial.println(MQ5.MQ5DataH2); 
+  Serial.println(MQ5.MQ5DataH2()); 
   Serial.print("LPG:");
-  Serial.println(MQ5.MQ5DataLPG);
+  Serial.println(MQ5.MQ5DataLPG());
   Serial.print("CH4:");
-  Serial.println(MQ5.MQ5DataCH4);
+  Serial.println(MQ5.MQ5DataCH4());
   Serial.print("CO:");
-  Serial.println(MQ5.MQ5DataCO);
+  Serial.println(MQ5.MQ5DataCO());
   Serial.print("Alcohol:");
-  Serial.println(MQ5.MQ5DataAlcohol);	
+  Serial.println(MQ5.MQ5DataAlcohol());	
 }
 
 /*
