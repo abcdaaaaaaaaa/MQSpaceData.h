@@ -30,7 +30,7 @@ ADC_BITB RESU value is 12 for esp32 models and 13 for esp32-s2 and 10 for esp826
 
 result calculateMQresult(y, y0, x, x0);
 calibrateR0 R0value(RSR0MQAir, Voltage, ADC_BIT_RESU, Rload, space);
-MQSpaceData MQ-other(ADC_BIT_RESU, Rload, space);
+MQSpaceData MQother(ADC_BIT_RESU, Rload, space);
 float valueA, valueB, lastPercentage, lastVoltage, lastResult;
 
 void setup() {
@@ -45,4 +45,4 @@ void loop() {
   Serial.println(data);  
 }
 
-// WARNING: if you don't know how to define values, upload MQother-result.ino codes and it will give you how to define which values ​​on serial port screen
+// WARNING: if you don't know how to define values, upload MQother-result.ino or MQother-resulteasy.ino (different calibraet method) codes and it will give you how to define which values ​​on serial port screen
