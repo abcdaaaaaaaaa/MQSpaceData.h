@@ -55,13 +55,13 @@ void loop(){
   float Alcohol = MQ309.readValue();
 
   Serial.print("H2:");
-  Serial.println(MQ309.MQ309ADataH2());
+  Serial.println(H2);
   Serial.print("CH4:");
-  Serial.println(MQ309.MQ309ADataCH4());
+  Serial.println(CH4);
   Serial.print("CO:");
-  Serial.println(MQ309.MQ309ADataCO()); 
+  Serial.println(CO); 
   Serial.print("Alcohol:");
-  Serial.println(MQ309.MQ309ADataAlcohol()); 
+  Serial.println(Alcohol); 
 
   Serial.print("Total ppm:");
   Serial.println(MQ309.MQ309ADataAir());
