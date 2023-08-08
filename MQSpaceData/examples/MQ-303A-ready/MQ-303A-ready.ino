@@ -21,7 +21,7 @@ MQSpaceData MQ303(ADC_BIT_RESU, Rload, space303);
 void setup(){
 Serial.begin(9600);
 MQ303.begin();
-MQ303.M303Acalibrate();
+MQ303.M303QAcalibrate();
 //MQ303.calibrateR0(27);
 }
 
