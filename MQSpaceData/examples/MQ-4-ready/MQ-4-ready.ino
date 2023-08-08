@@ -41,19 +41,19 @@ void loop(){
   Serial.println(MQ4.MQData100());
 }  
 /*
-  MQ4.valueA(3811.9); MQ4.valueB(-3.113); 
+  MQ4.valuea(3811.9); MQ4.valueb(-3.113); 
   float LPG = MQ4.readValue(); 
   
-  MQ4.valueA(1012.7); MQ4.valueB(-2.786); 
+  MQ4.valuea(1012.7); MQ4.valueb(-2.786); 
   float CH4 = MQ4.readValue(); 
   
-  MQ4.valueA(200000000000000); MQ4.valueB(-19.05);
+  MQ4.valuea(200000000000000); MQ4.valueb(-19.05);
   float CO = MQ4.readValue(); 
   
-  MQ4.valueA(60000000000); MQ4.valueB(-14.01);
+  MQ4.valuea(60000000000); MQ4.valueb(-14.01);
   float Alcohol = MQ4.readValue();
   
-  MQ4.valueA(30000000); MQ4.valueB(-8.308); 
+  MQ4.valuea(30000000); MQ4.valueb(-8.308); 
   float Smoke = MQ4.readValue(); 
   
   Serial.print("LPG:");
