@@ -62,7 +62,7 @@ void loop() {
   Serial.println(lastPercentage);
   Serial.print("Define Your R0 value!:");
   Serial.println(lastResult);
-
+// R0value.calibrateR0(lastResult);
 //After making sure that you have calculated the lastResult in SUITABLE conditions 
 //(varies according to the air quality and chemistry of the environment), 
 //you can directly calibrate it using the MQSpaceData class without using this loop again.
