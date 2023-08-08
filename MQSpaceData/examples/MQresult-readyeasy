@@ -31,7 +31,6 @@ by abcdaaaaaaaaa
 // define your adc bit resulation, 
 //if you use arduino please define 10 , if you use esp32 please define 12,  if you use esp32-s2 please define 13
 #define ADC_BIT_RESU      (10)  
-#define Voltage           (5) 
 #define space             (A1)
 
 calibrateR0VeryEasy easy(RSR0,Rload);
@@ -40,7 +39,7 @@ float mypercentile = 27 // define your percentile
 result calculateMQresult(y, y0, x, x0);
 calibrateR0VeryEasy R0value(RSR0MQAir, Rload);
 MQSpaceData MQother(ADC_BIT_RESU, Rload, space);
-float valueA, valueB, lastPercentage, lastVoltage, lastResult;
+float valueA, valueB, lastResult;
 
 void setup(){
 Serial.begin(9600);
@@ -50,10 +49,6 @@ float mlastResult = easy.calculateR0VeryEasy(mypercentile);
   MQother.calibrateR0(lastResult);
   valueA = calculateMQresult.resultA();
   valueB = calculateMQresult.resultB();
-  Serial.print("Voltage:");
-  Serial.println(lastVoltage);
-  Serial.print("%0-100 SensorValue:");
-  Serial.println(lastPercentage);
   Serial.print("Define Your R0 value!:");
   Serial.println(lastResult);
   Serial.print("valueA = ");
@@ -63,5 +58,7 @@ float mlastResult = easy.calculateR0VeryEasy(mypercentile);
 }
 
 void loop(){
-	
+ MQother.valuea(valueA); MQother.valueb(valueB);
+ float data = MQother.readValue(); 
+// Serial.println(data);  	
 }
