@@ -49,7 +49,7 @@ void loop(){
   Serial.println(MQ309.MQ309ADataAlcohol()); 
 
 //Serial.print("Total ppm:");
-//Serial.println(MQ309.MQ309DataAir());
+//Serial.println(MQ309.MQ309ADataAir());
 //Serial.print("Percentile%:");
 //Serial.println(MQ309.MQData100()); 
 }
@@ -65,7 +65,7 @@ void loop(){
   Serial.println(MQ309.MQ309ADataAlcohol()); 
  
   Serial.print("Total ppm:");
-  Serial.println(MQ309.MQ309DataAir());
+  Serial.println(MQ309.MQ309ADataAir());
   Serial.print("Percentile%:");
   Serial.println(MQ309.MQData100()); 
 */
