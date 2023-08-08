@@ -19,81 +19,81 @@ ADC_BITB RESU value is 12 for esp32 models and 13 for esp32-s2 and 10 for esp826
 
 #define ADC_BIT_RESU      (10) // define your adc bit resulation
 #define space             (A1) //define your analog pin 
+static const int notimportant = random(1,11);
 
-MQSpaceData MQ-X(ADC_BIT_RESU, (random[1,11]), space);
-
+MQSpaceData MQX(ADC_BIT_RESU, notimportant, space);
 
 void setup() {
   Serial.begin(9600); //Baud rate 
-  MQ-X.begin();
-  	Serial.print("Analog MQ value:");
+  MQX.begin();
 }
 
 void loop() {
+  Serial.print("Analog MQ value:");
   switch(MQSensor){
    case 1:  // MQ-135
    {
-	Serial.println(MQ-X.MQ135DataAir());
+	Serial.println(MQX.MQ135DataAir());
 	break;
    }
    case 2:  // MQ-2
    {
-	Serial.println(MQ-X.MQ2DataAir());
+	Serial.println(MQX.MQ2DataAir());
 	break;
    }
    case 3:  // MQ-3
    {
-	Serial.println(MQ-X.MQ3DataAir());
+	Serial.println(MQX.MQ3DataAir());
 	break;
    }
    case 4:  // MQ-4
    {
-	Serial.println(MQ-X.MQ4DataAir());
+	Serial.println(MQX.MQ4DataAir());
 	break;
    }
    case 5:  // MQ-5
    {
-	Serial.println(MQ-X.MQ5DataAir());
+	Serial.println(MQX.MQ5DataAir());
 	break;
    }
    case 6:  // MQ-6
    {
-	Serial.println(MQ-X.MQ6DataAir());
+	Serial.println(MQX.MQ6DataAir());
 	break;
    }
    case 7:  // MQ-7
    {
-	Serial.println(MQ-X.MQ7DataAir());
+	Serial.println(MQX.MQ7DataAir());
 	break;
    }
    case 8:  // MQ-8
    {
-	Serial.println(MQ-X.MQ8DataAir());
+	Serial.println(MQX.MQ8DataAir());
 	break;
    }
    case 9:  // MQ-9
    {
-	Serial.println(MQ-X.MQ9DataAir());
+	Serial.println(MQX.MQ9DataAir());
 	break;
    }
    case 131:  // MQ-131
    {
-	Serial.println(MQ-X.MQ131DataAir());
+	Serial.println(MQX.MQ131DataAir());
 	break;
    }
    case 136:  // MQ-136
    {
-	Serial.println(MQ-X.MQ136DataAir());
+	Serial.println(MQX.MQ136DataAir());
 	break;
    }
    case 303:  // MQ-303A
    {
-	Serial.println(MQ-X.MQ303ADataAir());
+	Serial.println(MQX.MQ303ADataAir());
 	break;
    }
    case 309:  // MQ-309A
    {
-	Serial.println(MQ-X.MQ309ADataAir());
+	Serial.println(MQX.MQ309ADataAir());
 	break;
    }
   }	
