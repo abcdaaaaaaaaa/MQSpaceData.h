@@ -1,3 +1,4 @@
+
 #include "MQSpaceData.h"
 #include "Arduino.h"
 
@@ -208,7 +209,7 @@ calibrateR0VeryEasy::calibrateR0VeryEasy(float RSR0, float Rleasy)
 
 float calibrateR0VeryEasy::calculateR0VeryEasy(float percentile)
 {
-    _RS = (_Rload / (percentile /100)) - (_Rload);
+    _RS = (percentile / 100 / _Rload) - (_Rload);
     _R0 = (_RS / _RSR0);
     return _R0;
 }
