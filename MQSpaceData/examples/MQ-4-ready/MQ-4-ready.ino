@@ -21,8 +21,8 @@ MQSpaceData MQ4(ADC_BIT_RESU, Rload, space4);
 void setup(){
 Serial.begin(9600);
 MQ4.begin();
-MQ4.calibrateR0();
-//MQ4.MQ4calibrate();
+MQ4.MQ4calibrate();
+//MQ4.calibrateR0();
 }
 void loop(){ 
   Serial.print("LPG:");
