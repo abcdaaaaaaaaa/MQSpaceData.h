@@ -45,4 +45,5 @@ void loop() {
   Serial.println(data);  
 }
 
-// WARNING: if you don't know how to define values, upload MQother-result.ino or MQother-resulteasy.ino (different calibraet method) codes and it will give you how to define which values ​​on serial port screen
+// WARNING: if you don't know how to define values, upload MQother-result.ino or MQother-resulteasy.ino (different calibraet method) codes 
+//and it will give you how to define which values ​​on serial port screen
