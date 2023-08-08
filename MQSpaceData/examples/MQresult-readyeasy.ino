@@ -33,8 +33,8 @@ by abcdaaaaaaaaa
 #define ADC_BIT_RESU      (10)  
 #define space             (A1)
 
-calibrateR0VeryEasy easy(RSR0,Rload);
-float mypercentile = 27 // define your percentile
+calibrateR0VeryEasy easy(RSR0MQAir,Rload);
+float mypercentile = 27; // define your percentile
 
 result calculateMQresult(y, y0, x, x0);
 calibrateR0VeryEasy R0value(RSR0MQAir, Rload);
@@ -60,10 +60,9 @@ float mlastResult = easy.calculateR0VeryEasy(mypercentile);
 void loop(){
  MQother.valuea(valueA); MQother.valueb(valueB);
  float data = MQother.readValue(); 
-// Serial.println(data);  	
+// Serial.println(data);    
 }
 
 //It is not recommended to be calculated by the system in this way every time. After calculating the values,
 //we recommend that you define the values ​​you noted in the MQother-ready file
-// here the loop is shown as an example no sensor is needed for this operation if you don't have the sensor with you you can remove the MQother class from the code
-
+//here the loop is shown as an example no sensor is needed for this operation if you don't have the sensor with you you can remove the MQother class from the code
