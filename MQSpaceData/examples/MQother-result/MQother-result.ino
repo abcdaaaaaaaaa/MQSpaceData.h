@@ -11,7 +11,7 @@ ADC_BITB RESU value is 12 for esp32 models and 13 for esp32-s2 and 10 for esp826
 //!!!Definitely and definitely visit the information.ino file to see which sample you need!!!\\
 
 
-#include "MQSpaceData.h"
+#include <MQSpaceData.h>
 
 //please redefine according to card and sensor we will use values!!!!
 
