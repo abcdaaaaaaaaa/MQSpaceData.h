@@ -10,7 +10,6 @@ ADC_BITB RESU value is 12 for esp32 models and 13 for esp32-s2 and 10 for esp826
 
 //!!!Definitely and definitely visit the information.ino file to see which sample you need!!!\\
 
-
 #include <MQSpaceData.h>
 
 //please redefine according to card and sensor we will use values!!!!
@@ -31,40 +30,40 @@ ADC_BITB RESU value is 12 for esp32 models and 13 for esp32-s2 and 10 for esp826
 
 result calculateMQresult(y, y0, x, x0);
 calibrateR0 R0value(RSR0MQAir, Voltage, ADC_BIT_RESU, Rload, space);
-MQSpaceData MQ-other(ADC_BIT_RESU, Rload, space);
+MQSpaceData MQother(ADC_BIT_RESU, Rload, space);
 float valueA, valueB, lastPercentage, lastVoltage, lastResult;
 
 void setup() {
   Serial.begin(9600); //Baud rate 
-  MQ-other.begin();
-    for (int x = 0; x < 500; x++) // calibrateR0 500 time = 500 * 500 = 250000 time
-    {
-   // we want to save last value so we define exstra one float char
-	lastPercentage = ((R0value.readVoltage()/Voltage)*100);
-	lastVoltage = R0value.readVoltage();
-    lastResult = R0value.calculateR0();  
-    }
+  MQother.begin();
+
+  for(int i = 0 ; i < 500 ; i++) // calibrateR0 500 time = 500 * 500 = 250000 time
+  {
+  lastPercentage = ((R0value.readVoltage()/Voltage)*100);
+  lastVoltage = R0value.readVoltage();
+  lastResult = R0value.calculateR0();  
+  }
+   
 // when calibrating, what percentage of the sensor is written
 
-  MQ-other.calculateR0(lastResult);
+  MQother.calibrateR0(lastResult);
   valueA = calculateMQresult.resultA();
   valueB = calculateMQresult.resultB();
-  Serial.print("Voltage:")
+  Serial.print("Voltage:");
   Serial.println(lastVoltage);
-  Serial.print("%0-100 SensorValue:")
+  Serial.print("%0-100 SensorValue:");
   Serial.println(lastPercentage);
-  Serial.print("Define Your R0 value!:")
+  Serial.print("Define Your R0 value!:");
   Serial.println(lastResult);
   Serial.print("valueA = ");
   Serial.println(valueA); 
   Serial.print("valueB = ");
   Serial.print(valueB);
- MQ-other.calibrateR0(lastResult); 
 }
  
 void loop() {  
- MQ-other.valuea(valueA); MQ-other.(valueB); // Configure the equation to calculate data concentration value
-  float data = MQ-other.readValue(); // Sensor will read PPM concentration using the model, a and b values set previously or from the setup
+ MQother.valuea(valueA); MQother.valueb(valueB);
+  float data = MQother.readValue(); 
 // Serial.println(data);  
 }
 /*
@@ -74,8 +73,8 @@ write down the values ​​you find and define the values ​​directly next t
 and this will save you code and time
 -----------------------
 like this:
-MQ-other.calibrateR0(???);
-MQ-other.valuea(???);
-MQ-other.valueb(???);
-and try MQresult-ready.ino but don't forget to complete the values ​​you noted down again!
+MQother.calibrateR0(???);
+MQother.valuea(???);
+MQother.valueb(???);
+and try MQresult-veryeasy.ino but don't forget to complete the values ​​you noted down again!
 */
