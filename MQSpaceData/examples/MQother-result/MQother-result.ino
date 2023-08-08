@@ -78,9 +78,12 @@ MQother.calibrateR0(???);
 MQother.valuea(???);
 MQother.valueb(???);
 --------------------
-this is the normal calibration method but if you want to calibrate this way
-we recommend that you warm up your sensor for 48 hours and calibrate it 
-after you have met the correct conditions on the datasheet. 
-however, remember that you can never provide 100% environment in a laboratory environment and
-use this method only to get an idea. once you have a clear idea of ​​setting the percentage to calibrate (we set it to 27%)
+this is the normal calibration method but if you want to calibrate this way we recommend that you warm up your sensor for 48 hours and calibrate it 
+after you have met the correct conditions on the datasheet. however, remember that you can never provide 100% environment in a laboratory environment
+and use this method only to get an idea. once you have a clear idea of ​​setting the percentage to calibrate (we set it to 27%)
+do your actual calibration in MQresult-readyeasy.ino file. if you do not have the means to meet these conditions, 
+choose the most appropriate percentage determined on the internet or set 27%. just like looking for an answer to the following question: 
+If I could calibrate my sensor under laboratory conditions, what value would I want my sensor to display, which takes 0-100 analog readings? 
+and how many k resistor would i use for my sensor? After getting answers to these questions, 
+introduce the answers to these two questions in the MQresult-veryeasy.ino file.
 */
