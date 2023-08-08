@@ -12,7 +12,7 @@ by abcdaaaaaaaaa
 //calibratoR 0-ready and calibratoR 0-normal file
 //WARNING: use it only for idea, and to get correct result leave the circuit open for 48 hours after uploading (heat it up) 
 //and ensure the LAB environment (NOT RANDOM ROOM) in the datasheet correctly
-#include <MQSpaceData.h>
+#include "MQSpaceData.h"
 
 #define RSR0MQAir (4.4) // RS / R0 you should look straight line (Air value) (graphic)
 /*
@@ -48,23 +48,18 @@ void setup() {
     for (int x = 0; x < 500; x++) // calibrateR0 500 time = 500 * 500 = 250000 time
     {
    // we want to save last value so we define exstra one float char
-	lastPercentage = ((R0value.readVoltage()/Voltage)*100);
-	lastVoltage = R0value.readVoltage();
-    lastResult = R0value.calculateR0();  
+  lastPercentage = ((R0value.readVoltage()/Voltage)*100);
+  lastVoltage = R0value.readVoltage();
+  lastResult = R0value.calculateR0();  
     }
 // when calibrating, what percentage of the sensor is written
-  valueA = calculateMQresult.resultA();
-  valueB = calculateMQresult.resultB();
-  Serial.print("Voltage:")
+
+  Serial.print("Voltage:");
   Serial.println(lastVoltage);
-  Serial.print("%0-100 SensorValue:")
+  Serial.print("%0-100 SensorValue:");
   Serial.println(lastPercentage);
-  Serial.print("Define Your R0 value!:")
+  Serial.print("Define Your R0 value!:");
   Serial.println(lastResult);
-  Serial.print("valueA = ");
-  Serial.println(valueA); 
-  Serial.print("valueB = ");
-  Serial.print(valueB);
 
 //After making sure that you have calculated the lastResult in SUITABLE conditions 
 //(varies according to the air quality and chemistry of the environment), 
@@ -75,4 +70,3 @@ void setup() {
  
 void loop() {  
 }
-
