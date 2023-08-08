@@ -128,7 +128,8 @@ both prepares an environment for you to calibrate and calculates a and b values 
 (find out how!) 
 this library calculates the a and b values ​​for you only
 when you define the concentration range of the gas sensor (x,x0,y,y0) with the graph slopes
-If you are using MQresult-other.ino or the gas sensors given in the list, 
+[If you are using MQresult-ready.ino (hard , you must heat ,lab environment for  calibration,  you should use only to make idea) 
+or MQresult-readyeasy.ino (real, easy, mats technical, with no sensor(really)) ]or the gas sensors given in the list, 
 you do not have to define the values ​​using the MQ?-ready examples. If you want to be cool the code you will write,
 use MQ?-normal.ino, but there is no difference (my advice use MQ?-ready because it is very useful and little code).
 ------------------------------------------
