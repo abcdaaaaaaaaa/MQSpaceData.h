@@ -35,18 +35,18 @@ MQ-309A: 11
 */
 #define Rload             (10) // Rload
 
-calibrateR0VeryEasy easy(RSR0,Rload);
-float mypercentile = 27 // define your percentile
+calibrateR0VeryEasy easy(RSR0MQAir,Rload);
+float mypercentile = 27; // define your percentile
 
 void setup(){
 Serial.begin(9600);
 float R0value = easy.calculateR0VeryEasy(mypercentile);
-Serial.print("calibrating..")
-Seriial.println();
-Seral.print("Your R0 value is:");
+Serial.print("calibrating..");
+Serial.println();
+Serial.print("Your R0 value is:");
 Serial.println(R0value);
 }
 
 void loop(){
-	
+  
 }
