@@ -62,3 +62,8 @@ void loop(){
  float data = MQother.readValue(); 
 // Serial.println(data);  	
 }
+
+//It is not recommended to be calculated by the system in this way every time. After calculating the values,
+//we recommend that you define the values ​​you noted in the MQother-ready file
+// here the loop is shown as an example no sensor is needed for this operation if you don't have the sensor with you you can remove the MQother class from the code
+
