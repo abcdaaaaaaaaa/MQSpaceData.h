@@ -40,7 +40,7 @@ void setup() {
 }
  
 void loop() {  
-  MQother.valuea(???); MQother.(???); 
+  MQother.valuea(???); MQother.valueb(???); 
   float data = MQother.readValue(); 
   Serial.println(data);  
 }
