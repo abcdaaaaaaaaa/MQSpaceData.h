@@ -44,7 +44,7 @@ void loop(){
   Serial.println(Ethanol); 
 
 //Serial.print("Total ppm:");
-//Serial.println(MQ303.MQ303DataAir());
+//Serial.println(MQ303.MQ303ADataAir());
 //Serial.print("Percentile%:");
 //Serial.println(MQ303.MQData100()); 	
 }
@@ -53,7 +53,7 @@ void loop(){
   Serial.print("Iso_butano:");
   Serial.println(MQ303.MQ303ADataIso());
   Serial.print("Hydrogen:");
-  Serial.println(MQ303.MQ303ADataHyd();
+  Serial.println(MQ303.MQ303ADataHyd());
   Serial.print("Ethanol:");
   Serial.println(MQ303.MQ303ADataEthanol()); 
  
