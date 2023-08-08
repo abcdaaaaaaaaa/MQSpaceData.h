@@ -36,7 +36,8 @@ it would read out of 100 if you had a sensor, if you could provide the environme
 ----------------------------------------------------------------------------
 if you dont want to calculate or write valuea and valueb you can use this functions:
 Sensor Model: [MQ-2 , MQ-3 , MQ-4, MQ-5, MQ-6, MQ7, MQ-8 MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A, MQ-309A]
-WARNING: if you don't use this sensor model and you want to do set valuea and valueb you can calculate refer MQother-result 
+WARNING: if you don't use this sensor model and you want to do set valuea and valueb you can calculate refer 
+MQother-result or MQother-resulteasy.ino (different calibration) method like (calibrateR0veryeasy vs calibrateR0-normal)
  MQ2DataH2();
  MQ2DataLPG();
  MQ2DataCO();
@@ -128,8 +129,7 @@ both prepares an environment for you to calibrate and calculates a and b values 
 (find out how!) 
 this library calculates the a and b values ​​for you only
 when you define the concentration range of the gas sensor (x,x0,y,y0) with the graph slopes
-[If you are using MQresult-ready.ino (hard , you must heat ,lab environment for  calibration,  you should use only to make idea) 
-or MQresult-readyeasy.ino (real, easy, mats technical, with no sensor(really)) ]or the gas sensors given in the list, 
+[If you are using MQresult-ready.ino or the gas sensors given in the list, 
 you do not have to define the values ​​using the MQ?-ready examples. If you want to be cool the code you will write,
 use MQ?-normal.ino, but there is no difference (my advice use MQ?-ready because it is very useful and little code).
 ------------------------------------------
