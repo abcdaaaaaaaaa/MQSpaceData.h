@@ -44,14 +44,16 @@ float valueA, valueB, lastPercentage, lastVoltage, lastResult;
 
 void setup() {
   Serial.begin(9600); //Baud rate 
-  R0value.begin();
-    for (int x = 0; x < 500; x++) // calibrateR0 500 time = 500 * 500 = 250000 time
-    {
+  R0value.begin();   // setup your sensor 
+}
+ 
+void loop() {  
+   // iwe recommend throwing your circuit for 48 hours.
    // we want to save last value so we define exstra one float char
   lastPercentage = ((R0value.readVoltage()/Voltage)*100);
   lastVoltage = R0value.readVoltage();
   lastResult = R0value.calculateR0();  
-    }
+
 // when calibrating, what percentage of the sensor is written
 
   Serial.print("Voltage:");
@@ -66,7 +68,5 @@ void setup() {
 //you can directly calibrate it using the MQSpaceData class without using this loop again.
 
  // MQ-?.calibrateR0(lastResult); 
-}
- 
-void loop() {  
+
 }
