@@ -57,18 +57,18 @@ void loop(){
 //Serial.print("Total ppm:");
 //Serial.println(MQ8.MQ8DataAir());
 //Serial.print("Percentile%:");
-//Serial.println(MQ8.MQ8MQData100());
+//Serial.println(MQ8.MQData100());
 }
 
   /*
   Serial.print("H2:");
-  Serial.println(MQ8.MQ8DataH2); 
+  Serial.println(MQ8.MQ8DataH2()); 
   Serial.print("LPG:");
-  Serial.println(MQ8.MQ8DataLPG);
+  Serial.println(MQ8.MQ8DataLPG());
   Serial.print("CH4:");
-  Serial.println(MQ8.MQ8DataCH4);
+  Serial.println(MQ8.MQ8DataCH4());
   Serial.print("CO:");
-  Serial.println(MQ8.MQ8DataCO);
+  Serial.println(MQ8.MQ8DataCO());
   Serial.print("Alcohol:");
-  Serial.println(MQ8.MQ8DataAlcohol);
+  Serial.println(MQ8.MQ8DataAlcohol());
   */
