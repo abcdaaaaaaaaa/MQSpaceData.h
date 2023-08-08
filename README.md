@@ -7,5 +7,4 @@
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/16c905a9-1b72-47a1-bcd3-21d06929a54b)
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/23469cf2-4ba2-4558-9cce-b846f13bd868)
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/b1160e80-ee63-4a92-bee5-a7ac20b60fcc)
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/3aabf051-508f-4565-885c-1528789e6ab6)
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/13ea44fa-d69d-4b76-be10-03befd6b5c60)
