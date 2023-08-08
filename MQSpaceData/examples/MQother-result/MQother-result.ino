@@ -10,7 +10,8 @@ ADC_BITB RESU value is 12 for esp32 models and 13 for esp32-s2 and 10 for esp826
 
 //!!!Definitely and definitely visit the information.ino file to see which sample you need!!!\\
 
-#include <MQSpaceData.h>
+
+#include "MQSpaceData.h"
 
 //please redefine according to card and sensor we will use values!!!!
 
@@ -76,5 +77,10 @@ like this:
 MQother.calibrateR0(???);
 MQother.valuea(???);
 MQother.valueb(???);
-and try MQresult-veryeasy.ino but don't forget to complete the values ​​you noted down again!
+--------------------
+this is the normal calibration method but if you want to calibrate this way
+we recommend that you warm up your sensor for 48 hours and calibrate it 
+after you have met the correct conditions on the datasheet. 
+however, remember that you can never provide 100% environment in a laboratory environment and
+use this method only to get an idea. once you have a clear idea of ​​setting the percentage to calibrate (we set it to 27%)
 */
