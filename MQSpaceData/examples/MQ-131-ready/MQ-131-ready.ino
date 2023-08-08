@@ -27,7 +27,7 @@ MQ131.MQ131calibrate();
 
 void loop(){
   Serial.print("LPG:");
-  Serial.println(MQ131.MQ131DataNOx);
+  Serial.println(MQ131.MQ131DataNOx());
   Serial.print("CH4:");
   Serial.println(MQ131.MQ131DataCL2());
   Serial.print("CO:");
