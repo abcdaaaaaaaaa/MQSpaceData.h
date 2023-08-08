@@ -35,16 +35,14 @@ float valueA, valueB, lastPercentage, lastVoltage, lastResult;
 
 void setup() {
   Serial.begin(9600); //Baud rate 
-  MQ-other.begin();
-  MQ-other.calculateR0(???);
+  MQother.begin();
+  MQother.calibrateR0(???);
 }
  
 void loop() {  
-  MQ-other.valuea(???); MQ-other.(???); // Configure the equation to calculate data concentration value
-  float data = MQ-other.readValue(); // Sensor will read PPM concentration using the model, a and b values set previously or from the setup
+  MQother.valuea(???); MQother.(???); 
+  float data = MQother.readValue(); 
   Serial.println(data);  
 }
-/*
-if you don't know how to define values, upload MQother-result.ino codes and it will give you how to define which values ​​on serial port screen
-*/
-doğru yüzdelikte olduğuna emin ol açıklaması yazcan
+
+// WARNING: if you don't know how to define values, upload MQother-result.ino codes and it will give you how to define which values ​​on serial port screen
