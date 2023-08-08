@@ -85,5 +85,5 @@ do your actual calibration in MQresult-readyeasy.ino file. if you do not have th
 choose the most appropriate percentage determined on the internet or set 27%. just like looking for an answer to the following question: 
 If I could calibrate my sensor under laboratory conditions, what value would I want my sensor to display, which takes 0-100 analog readings? 
 and how many k resistor would i use for my sensor? After getting answers to these questions, 
-introduce the answers to these two questions in the MQresult-readyeasy.ino file.
+introduce the answers to these two questions in the MQother-resulteasy.ino file.
 */
