@@ -73,7 +73,7 @@ Serial.print(MQ135.MQ135DataCO());
 Serial.println("Alcohol:");
 Serial.print(MQ135.MQ135DataAlcohol());
 Serial.println("CO2:");
-Serial.print(CO2);
+Serial.print(MQ135.MQ135DataCO2());
 Serial.println("Toluen:");
 Serial.print(MQ135.MQ135DataToluen());
 Serial.println("NH4:");
