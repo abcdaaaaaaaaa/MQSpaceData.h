@@ -43,7 +43,7 @@ float valueA, valueB, lastResult;
 
 void setup(){
 Serial.begin(9600);
-float mlastResult = easy.calculateR0VeryEasy(mypercentile);
+float lastResult = easy.calculateR0VeryEasy(mypercentile);
 // when calibrating, what percentage of the sensor is written
 
   MQother.calibrateR0(lastResult);
