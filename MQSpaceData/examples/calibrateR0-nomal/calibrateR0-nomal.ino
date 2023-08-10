@@ -68,5 +68,11 @@ void loop() {
 //you can directly calibrate it using the MQSpaceData class without using this loop again.
 
  // MQ-?.calibrateR0(lastResult); 
-
+  
+//Sensor Model: [MQ-2 , MQ-3 , MQ-4, MQ-5, MQ-6, MQ7, MQ-8 MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A, MQ-309A]
+//WARNING: if you don't use this sensor model and you want to do set valuea and valueb you can calculate refer MQother-result 
+//then MQother-ready and your sensor value like:
+//MQother.calibrateR0(???);
+//MQother.valuea(???); MQother.valueb(???);  (MQ-other-result)
+// and redefine your values 
 }
