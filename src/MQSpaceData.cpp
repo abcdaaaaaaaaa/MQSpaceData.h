@@ -47,7 +47,7 @@ void MQSpaceData::valueb(float data2)
 
 float MQSpaceData::readValue()
 {
-  if(_Rload =< 0) _Rload == 10;
+  if(_Rload <= 0) _Rload == 10;
   if(( _Rload - _Rload) != 0) _Rload == 10;
   if(_Rload >= 47) _Rload == 47;
   _RS = ((_Rload/(analogRead(_pin)*(1/(pow(2,_bitadc)-1))))-(_Rload));
