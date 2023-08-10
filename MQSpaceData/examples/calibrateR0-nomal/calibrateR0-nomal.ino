@@ -9,7 +9,7 @@ by abcdaaaaaaaaa
 
 /////////////////////////////////////////WARNİNG PLS READ LAST TİME/////////////////////////////////////////
 //You can use this example if you are sure despite the explanations in the information.ino, 
-//calibratoR 0-ready and calibratoR 0-normal file
+//calibratoR0-ready and calibratoR0-normal file
 //WARNING: use it only for idea, and to get correct result leave the circuit open for 48 hours after uploading (heat it up) 
 //and ensure the LAB environment (NOT RANDOM ROOM) in the datasheet correctly
 #include <MQSpaceData.h>
