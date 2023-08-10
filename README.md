@@ -33,11 +33,13 @@ MQ-136: 3.6
 MQ-303A: 1
 MQ-309A: 11
 */
-#define Rload             (10) // Rload
+// define your own Rload
+#define Rload    (10) // if you are going to use a resistor other than 10k replace it 
 
 calibrateR0VeryEasy easy(RSR0MQAir,Rload);
 float mypercentile = 27; // define your percentile
-
+// like MQ-4 concentration range is 100-10000 ,  10000+100 = 11000ppm , percentile = mypercentile/100
+// we defined 27 so percentile = 27 /100 = 0,27  ppm to be calibrated: 11000 x 0.27 = 2970ppm
 void setup(){
 Serial.begin(9600);
 float R0value = easy.calculateR0VeryEasy(mypercentile);
@@ -83,6 +85,8 @@ void loop(){
   
 }
 ```
+then you can define values:
+
 
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/27061f03-3224-4ccd-91d6-92396889c9fd)
 
