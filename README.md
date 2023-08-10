@@ -39,8 +39,8 @@ MQ-309A: 11
 
 calibrateR0VeryEasy easy(RSR0MQAir,Rload);
 float mypercentile = 27; // define your percentile
-// like MQ-4 concentration range is 100-10000 ,  10000+100 = 11000ppm , percentile = mypercentile/100
-// we defined 27 so percentile = 27 /100 = 0,27  ppm to be calibrated: 11000 x 0.27 = 2970ppm
+// like MQ-4 concentration range is 200-10000 ,  10000+200 = 12000ppm , percentile = mypercentile/100
+// we defined 27 so percentile = 27 /100 = 0,27  ppm to be calibrated: 12000 x 0.27 = 3240ppm
 void setup(){
 Serial.begin(9600);
 float R0value = easy.calculateR0VeryEasy(mypercentile);
