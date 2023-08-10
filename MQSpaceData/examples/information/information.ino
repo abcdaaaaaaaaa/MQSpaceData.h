@@ -3,7 +3,7 @@
 ---------------------------------------------------------------------------------------------------------
 if you dont want to calibrate sensor try this functions:
 Sensor Model: [MQ-2 , MQ-3 , MQ-4, MQ-5, MQ-6, MQ7, MQ-8 MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A, MQ-309A]
-WARNING: if you don't use this sensor model and you want to do calibrate you must refer calibrateR0-normal:
+WARNING: if you don't use this sensor model and you want to do calibrate you must refer calibrateR0-normal or calibrateR0-veryeasy (different method):
 but if you use this sensor model and you don't want to calibrate you can use this functions:
 MQ2calibrate();
 MQ3calibrate();
@@ -128,8 +128,11 @@ however, if you do not use the sensors used in the sensor list, this library, un
 both prepares an environment for you to calibrate and calculates a and b values ​​for you.
 (find out how!) 
 this library calculates the a and b values ​​for you only
-when you define the concentration range of the gas sensor (x,x0,y,y0) with the graph slopes
-[If you are using MQresult-ready.ino or the gas sensors given in the list, 
+when you define the concentration range of the gas sensor (x,x0,y,y0) with the graph slopes (MQother-result.ino)
+then, After calculating the a and b values ​​and taking note of your required calibration values (calibrateR0-normal or calibrateR0-veryeasy) , 
+you can now define all the values ​​in the MQother-ready file!
+--------------------------------------------
+[If you are using the gas sensors given in the list, 
 you do not have to define the values ​​using the MQ?-ready examples. If you want to be cool the code you will write,
 use MQ?-normal.ino, but there is no difference (my advice use MQ?-ready because it is very useful and little code).
 ------------------------------------------
