@@ -62,7 +62,7 @@ functions of sensors supported here given, if you are using a different MQ (not 
 -------------------------------------------------------------------------------------------------------
 Sensor Model: [MQ-2 , MQ-3 , MQ-4, MQ-5, MQ-6, MQ7, MQ-8 MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A, MQ-309A]
 WARNING: if you don't use this sensor model and you want to do calibrate 
-you must refer calibrateR0-normal.ino .
+you must refer calibrateR0-normal.ino or calibrateR0-veryeasy.ino.
 WARNING: if you don't use this sensor model and you want to do set valuea and valueb you can calculate refer MQother-result 
 if you want to more information please look this example : information.ino
 */
