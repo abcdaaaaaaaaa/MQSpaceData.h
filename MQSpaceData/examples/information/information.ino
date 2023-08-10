@@ -5,6 +5,7 @@ if you dont want to calibrate sensor try this functions:
 Sensor Model: [MQ-2 , MQ-3 , MQ-4, MQ-5, MQ-6, MQ7, MQ-8 MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A, MQ-309A]
 WARNING: if you don't use this sensor model and you want to do calibrate you must refer calibrateR0-normal or calibrateR0-veryeasy (different method):
 but if you use this sensor model and you don't want to calibrate you can use this functions:
+(calibrateR0-ready , MQ?-ready)
 MQ2calibrate();
 MQ3calibrate();
 MQ4calibrate();
