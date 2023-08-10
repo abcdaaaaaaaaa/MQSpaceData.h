@@ -118,7 +118,7 @@ that's all, if you use a Geiger Counter instead of a gas sensor, you can still d
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/27061f03-3224-4ccd-91d6-92396889c9fd)
 
 ```
-#include "MQSpaceData.h"
+#include <MQSpaceData.h>
 
 // define true to the values ​​you want to calculate as false you don't want.
 // The values ​​you define as false will be 0 on the screen output.
