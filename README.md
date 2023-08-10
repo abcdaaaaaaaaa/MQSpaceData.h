@@ -11,8 +11,9 @@
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/13ea44fa-d69d-4b76-be10-03befd6b5c60)
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/b4d5e6bc-2454-4a21-a4be-ff8f10f83e1c)
 
+[MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A, MQ-309A]
 Calibrating is now easy with the MQSpaceData library:
-Without connecting the sensor to your card, just show the percentage you will calibrate and define the RS/R0 difference and we will calibrate for you without laboratory conditions.
+Without connecting the sensor to your card, just show the percentage you will calibrate and define the RS/R0 difference and we will calibrate for you without laboratory conditions. If you are using one of the listed sensors, you do not need to calibrate. Download the MQX-ready or MQXnormal files, but if you are not using the listed gas sensors, feel free to download this library anyway: first define RS/R0 in the datasheet graphic, below is the example of MQ-4 just like it:
 ```
 #include <MQSpaceData.h>
 
@@ -53,7 +54,7 @@ void loop(){
   
 }
 ```
-We can also calculate the a and b values ​​for you:
+And We can also calculate the a and b values ​​for you:
 just define the concentration range of your gas sensor and the slopes of the graph just like the MQ4:
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/446fdd27-5f85-4b6f-8834-30b77a3e440c)
 ```
@@ -85,8 +86,65 @@ void loop(){
   
 }
 ```
+
 then you can define values:
 
+```
+#include <MQSpaceData.h>
+
+#define Rload             (10) // define your Rload , if you are not sure define 10
+// define your adc bit resulation, 
+//if you use arduino please define 10 , if you use esp32 please define 12,  if you use esp32-s2 please define 13
+#define ADC_BIT_RESU      (10)  
+#define space             (A1)
+
+MQSpaceData MQother(ADC_BIT_RESU, Rload, space);
+
+void setup() {
+  Serial.begin(9600); //Baud rate 
+  MQother.begin();
+  MQother.calibrateR0(???);
+}
+ 
+void loop() {  
+  MQother.valuea(???); MQother.valueb(???); 
+  float data = MQother.readValue(); 
+  Serial.println(data);  
+}
+```
+
+that's all, if you use a Geiger Counter instead of a gas sensor, you can still download this library:
 
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/27061f03-3224-4ccd-91d6-92396889c9fd)
+
+```
+#include "MQSpaceData.h"
+
+// define true to the values ​​you want to calculate as false you don't want.
+// The values ​​you define as false will be 0 on the screen output.
+#define uSvhr1      (true)
+#define Avg1        (true)
+#define CPM_Count1  (true)
+#define LOG_PERIOD1 (30000) // enter your waiting period (30 second = 30000) 30 seconds is ideal
+#define GeigerPin1  (2)
+
+//Putting it on hold (30 seconds is recommended) will allow your sensor to measure more accurately.
+
+GeigerCounterPin Radyoactivite(uSvhr1, Avg1, CPM_Count1, LOG_PERIOD1, GeigerPin1);
+ 
+void setup(){
+Serial.begin(9600);
+Radyoactivite.begin();
+}
+
+void loop(){
+Radyoactivite.radyoactivite();
+Serial.print("Usv/hr:");
+Serial.println(Radyoactivite.usvhr); // uSvhr 
+Serial.print("Avg:");
+Serial.println(String(Radyoactivite.Avg) + "+/-" + String(Radyoactivite.sdCPM)); // Avg 
+Serial.print("CPM Count:");
+Serial.println(Radyoactivite.count);  // CPM_Count
+}
+```
 
