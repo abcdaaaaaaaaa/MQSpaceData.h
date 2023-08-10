@@ -66,11 +66,11 @@ float MQSpaceData::MQ6DataAir(){return map(analogRead(_pin),1,(_bitadc-1),300,10
 float MQSpaceData::MQ7DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,10000);}
 float MQSpaceData::MQ8DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,10000);}
 float MQSpaceData::MQ9DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,10000);}
-float MQSpaceData::MQ131DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,1000);}
+float MQSpaceData::MQ131DataAir(){return map(analogRead(_pin),1,(_bitadc-1),5,100);}
 float MQSpaceData::MQ135DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,1000);}
-float MQSpaceData::MQ136DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,1000);}
+float MQSpaceData::MQ136DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,200);}
 float MQSpaceData::MQ303ADataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,10000);}
-float MQSpaceData::MQ309ADataAir(){return map(analogRead(_pin),1,(_bitadc-1),100,10000);}
+float MQSpaceData::MQ309ADataAir(){return map(analogRead(_pin),1,(_bitadc-1),30,3000);}
 
 //**************************************MQ-2**************************************\\
 
