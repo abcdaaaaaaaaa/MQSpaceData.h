@@ -2,7 +2,7 @@
 this library is written for https://github.com/abcdaaaaaaaaa/Chernobyl project
 by abcdaaaaaaaaa
 */
-#include "MQSpaceData.h"
+#include <MQSpaceData.h>
 
 // define true to the values ​​you want to calculate as false you don't want.
 // The values ​​you define as false will be 0 on the screen output.
