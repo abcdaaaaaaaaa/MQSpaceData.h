@@ -56,7 +56,7 @@ void loop(){
 ```
 And We can also calculate the a and b values ​​for you:
 just define the concentration range of your gas sensor and the slopes of the graph just like the MQ4:
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/446fdd27-5f85-4b6f-8834-30b77a3e440c)
+![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/39f97873-8173-4831-b662-45d26f59cd1f)
 ```
 #include <MQSpaceData.h>
 
