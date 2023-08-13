@@ -21,7 +21,7 @@ MQSpaceData MQ309(ADC_BIT_RESU, Rload, space309);
 void setup(){
 Serial.begin(9600);
 MQ309.begin();
-MQ309.MQ309calibrate();
+MQ309.MQ309Acalibrate();
 //MQ309.calibrateR0(2.458);
 }
 
@@ -29,7 +29,7 @@ void loop(){
   Serial.print("H2:");
   Serial.println(MQ309.MQ309ADataH2());
   Serial.print("CH4:");
-  Serial.println(MQ309.MQ309ADataCH4();
+  Serial.println(MQ309.MQ309ADataCH4());
   Serial.print("CO:");
   Serial.println(MQ309.MQ309ADataCO()); 
   Serial.print("Alcohol:");
