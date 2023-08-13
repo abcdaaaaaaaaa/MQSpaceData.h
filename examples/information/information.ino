@@ -1,5 +1,5 @@
-/*
  !!! Try Radioactive.ino with (Geiger Counter) for any kind of Radioactive analysis (Usv/hr, sdCPM, Avg, CPM Count) !!!
+ !!! Also Allows calculating a and b values ​​without using a sensor, calculating percent caliber (different method) with python language (try python example) !!!
 ---------------------------------------------------------------------------------------------------------
 if you dont want to calibrate sensor try this functions:
 Sensor Model: [MQ-2 , MQ-3 , MQ-4, MQ-5, MQ-6, MQ7, MQ-8 MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A, MQ-309A]
@@ -129,13 +129,14 @@ however, if you do not use the sensors used in the sensor list, this library, un
 both prepares an environment for you to calibrate and calculates a and b values ​​for you.
 (find out how!) 
 this library calculates the a and b values ​​for you only
-when you define the concentration range of the gas sensor (x,x0,y,y0) with the graph slopes (MQother-result.ino)
+when you define the concentration range of the gas sensor (x,x0,y,y0) with the graph slopes (MQother-result.ino) 
 then, After calculating the a and b values ​​and taking note of your required calibration values (calibrateR0-normal or calibrateR0-veryeasy) , 
 you can now define all the values ​​in the MQother-ready file!
+-------------------------------------------
+Also Allows calculating a and b values ​​without using a sensor, calculating percent caliber (different method) with python language (try python example)
 --------------------------------------------
 [If you are using the gas sensors given in the list, 
 you do not have to define the values ​​using the MQ?-ready examples. If you want to be cool the code you will write,
-use MQ?-normal.ino, but there is no difference (my advice use MQ?-ready because it is very useful and little code).
+use MQ-X-normal.ino, but there is no difference (my advice use MQ-X-ready because it is very useful and little code).
 ------------------------------------------
 this file is like a general helper see examples for more information!
-*/
