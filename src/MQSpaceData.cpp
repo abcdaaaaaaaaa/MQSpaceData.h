@@ -23,7 +23,7 @@ void MQSpaceData::calibrateR0(float calibration)
 
 void MQSpaceData::MQ2calibrate(){_R0 = 2.74;}
 void MQSpaceData::MQ3calibrate(){_R0 = 0.45;}
-void MQSpaceData::MQ4calibrate(){_R0 = 6.13;}
+void MQSpaceData::MQ4calibrate(){_R0 = 6.14;}
 void MQSpaceData::MQ5calibrate(){_R0 = 4.16;}
 void MQSpaceData::MQ6calibrate(){_R0 = 2.71;}
 void MQSpaceData::MQ7calibrate(){_R0 = 0.98;}
