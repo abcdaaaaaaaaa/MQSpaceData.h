@@ -16,7 +16,7 @@ ADC_BITB RESU value is 12 for esp32 models and 13 for esp32-s2 and 10 for esp826
 #define ADC_BIT_RESU      (10)
 #define space8            (A1)
 
-MQSpaceData MQ8(ADC_BIT_RESU, Rload, space5);
+MQSpaceData MQ8(ADC_BIT_RESU, Rload, space8);
 
 void setup(){
 Serial.begin(9600);
@@ -38,7 +38,7 @@ void loop(){
   Serial.println(MQ8.MQ8DataAlcohol());
 
   Serial.print("Total ppm:");
-  Serial.println(MQ8.DataAir());
+  Serial.println(MQ8.MQ8DataAir());
   Serial.print("Percentile%:");
   Serial.println(MQ8.MQData100());
 }
@@ -72,7 +72,7 @@ void loop(){
   Serial.println(Alcohol);
   
   Serial.print("Total ppm:");
-  Serial.println(MQ8.DataAir());
+  Serial.println(MQ8.MQ8DataAir());
   Serial.print("Percentile%:");
   Serial.println(MQ8.MQData100());
 */
