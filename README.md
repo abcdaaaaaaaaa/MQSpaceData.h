@@ -74,8 +74,6 @@ Serial.begin(9600);
 
   valueA = calculateMQresult.resultA();
   valueB = calculateMQresult.resultB();
-  Serial.print("Define Your R0 value!:");
-  Serial.println(lastResult);
   Serial.print("valueA = ");
   Serial.println(valueA); 
   Serial.print("valueB = ");
@@ -147,4 +145,5 @@ Serial.print("CPM Count:");
 Serial.println(Radyoactivite.count);  // CPM_Count
 }
 ```
+![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/09bf5010-82dd-49ac-9deb-5251e3fc41bc)
 
