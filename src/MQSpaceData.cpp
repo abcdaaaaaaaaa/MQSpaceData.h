@@ -209,7 +209,7 @@ calibrateR0VeryEasy::calibrateR0VeryEasy(float RSR0, float Rleasy)
 
 float calibrateR0VeryEasy::calculateR0VeryEasy(float percentile)
 {
-    _RS = (percentile / 100 / _Rload) - (_Rload);
+    _RS = (100 * _Rload / percentile) - (_Rload);
     _R0 = (_RS / _RSR0);
     return _R0;
 }
