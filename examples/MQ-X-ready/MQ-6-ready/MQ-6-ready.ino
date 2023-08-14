@@ -21,8 +21,8 @@ MQSpaceData MQ6(ADC_BIT_RESU, Rload, space6);
 void setup(){
 Serial.begin(9600);
 MQ6.begin();
-MQ6.calibrateR0(2.71); // you can change it according to the value you find
-//MQ6.MQ6calibrateR0();
+MQ6.MQ6calibrate();
+//MQ6.calibrateR0(2.71); 
 }
 
 void loop(){
