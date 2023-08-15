@@ -271,7 +271,7 @@ void GeigerCounterPin::radyoactivite()
     _CPMArray[_currentCPM] = _counts * 2;
 
     if (_usvhrbool == true) (usvhr = outputSieverts(_CPMArray[_currentCPM]));
-    if (_usvhrbool == false) (usvhr = outputSieverts(_CPMArray[_currentCPM]));
+    if (_usvhrbool == false) (usvhr = 0);
 
     _counts = 0;
     _averageCPM = 0;
