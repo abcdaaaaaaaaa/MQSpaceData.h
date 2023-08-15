@@ -69,10 +69,10 @@ if you want to more information please look this example : information.ino
 }
 
 void loop(){
-  MQ.valuea(605.18); MQ.valueb(-3.937); // Configure the equation to calculate data concentration value
-  float data = MQ.readValue(); // Sensor will read PPM concentration using the model, a and b values set previously or from the setup
+  MQ.valuea(605.18); MQ.valueb(-3.937); 
+  float data = MQ.readValue(); 
   // if you dont want to set value :
-  // try MQ-135-ready or MQ-ALL-ready
+  // try MQ-X-ready
   // like float data = MQ.MQ135DataCO();
   Serial.println(data);
   delay(300);
