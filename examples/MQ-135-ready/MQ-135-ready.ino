@@ -30,18 +30,18 @@ MQ135.MQ135calibrate();
 }
 
 void loop(){
-  Serial.println("CO:");
-  Serial.print(MQ135.MQ135DataCO()); 
-  Serial.println("Alcohol:");
-  Serial.print(MQ135.MQ135DataAlcohol());
-  Serial.println("CO2:");
-  Serial.print(MQ135.MQ135DataCO2());
-  Serial.println("Toluen:");
-  Serial.print(MQ135.MQ135DataToluen());
-  Serial.println("NH4:");
-  Serial.print(MQ135.MQ135DataNH4());
-  Serial.println("Aceton:");
-  Serial.print(MQ135.MQ135DataAceton());  
+  Serial.print("CO:");
+  Serial.prinln(MQ135.MQ135DataCO()); 
+  Serial.print("Alcohol:");
+  Serial.println(MQ135.MQ135DataAlcohol());
+  Serial.print("CO2:");
+  Serial.println(MQ135.MQ135DataCO2());
+  Serial.print("Toluen:");
+  Serial.println(MQ135.MQ135DataToluen());
+  Serial.print("NH4:");
+  Serial.println(MQ135.MQ135DataNH4());
+  Serial.print("Aceton:");
+  Serial.println(MQ135.MQ135DataAceton());  
 }
 
 /*
@@ -63,18 +63,18 @@ void loop(){
   MQ135.valuea(34.668); MQ135.valueb(-3.369); 
   float Aceton = MQ135.readValue(); 
   
-  Serial.println("CO:");
-  Serial.print(CO); 
-  Serial.println("Alcohol:");
-  Serial.print(Alcohol);
-  Serial.println("CO2:");
-  Serial.print(CO2);
-  Serial.println("Toluen:");
-  Serial.print(Toluen);
-  Serial.println("NH4:");
-  Serial.print(NH4);
-  Serial.println("Aceton:");
-  Serial.print(Aceton);
+  Serial.print("CO:");
+  Serial.println(CO); 
+  Serial.print("Alcohol:");
+  Serial.println(Alcohol);
+  Serial.print("CO2:");
+  Serial.println(CO2);
+  Serial.print("Toluen:");
+  Serial.println(Toluen);
+  Serial.print("NH4:");
+  Serial.println(NH4);
+  Serial.print("Aceton:");
+  Serial.println(Aceton);
 
   Serial.print("Total ppm:");
   Serial.println(MQ135.MQ135DataAir());
