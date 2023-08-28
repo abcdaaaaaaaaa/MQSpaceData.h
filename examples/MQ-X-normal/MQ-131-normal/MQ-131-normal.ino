@@ -56,7 +56,6 @@ void loop(){
   Serial.println(CL2);
   Serial.print("O3:");
   Serial.println(O3);  
- 
   Serial.print("Total ppm:");
   Serial.println(MQ131.MQ131DataAir());
   Serial.print("Percentile%:");
