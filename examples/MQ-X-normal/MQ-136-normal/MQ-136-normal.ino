@@ -56,7 +56,6 @@ void loop(){
   Serial.println(MQ136.MQ136DataNH4());
   Serial.print("CO:");
   Serial.println(MQ136.MQ136DataCO()); 
- 
   Serial.print("Total ppm:");
   Serial.println(MQ136.MQ136DataAir());
   Serial.print("Percentile%:");
