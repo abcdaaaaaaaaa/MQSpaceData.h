@@ -32,7 +32,6 @@ void loop(){
   Serial.println(MQ303.MQ303ADataHyd());
   Serial.print("Ethanol:");
   Serial.println(MQ303.MQ303ADataEthanol()); 
- 
   Serial.print("Total ppm:");
   Serial.println(MQ303.MQ303ADataAir());
   Serial.print("Percentile%:");
