@@ -142,5 +142,6 @@ use MQ-X-normal.ino, but there is no difference (my advice use MQ-X-ready becaus
 if you don't know how many bits to define the cards : 
 You can also look at arduino (examples -> arduino --> ArduinoUNO.ino or ArduinoNano.ino or ArduinoMega.ino) 
 or  esp (examples -> esp --> esp32.ino esp32-s2.ino esp8266.ino) examples
+also you can learn adc bit resulation with python try (python -> learn-your-adc-bit-resulation.py)
 ------------------------------------------
 this file is like a general helper see examples for more information!
