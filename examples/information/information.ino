@@ -139,4 +139,8 @@ Also Allows calculating a and b values ​​without using a sensor, calculating
 you do not have to define the values ​​using the MQ?-ready examples. If you want to be cool the code you will write,
 use MQ-X-normal.ino, but there is no difference (my advice use MQ-X-ready because it is very useful and little code).
 ------------------------------------------
+if you don't know how many bits to define the cards : 
+You can also look at arduino (examples -> arduino --> ArduinoUNO.ino or ArduinoNano.ino or ArduinoMega.ino) 
+or  esp (examples -> esp --> esp32.ino esp32-s2.ino esp8266.ino) examples
+------------------------------------------
 this file is like a general helper see examples for more information!
