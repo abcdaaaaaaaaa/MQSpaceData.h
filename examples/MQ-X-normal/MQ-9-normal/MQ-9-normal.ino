@@ -55,7 +55,6 @@ void loop(){
   Serial.println(MQ9.MQ9DataCH4());
   Serial.print("CO:");
   Serial.println(MQ9.MQ9DataCO());
-
   Serial.print("Total ppm:");
   Serial.println(MQ9.MQ9DataAir());
   Serial.print("Percentile%:");
