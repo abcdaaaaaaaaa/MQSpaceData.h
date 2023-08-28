@@ -71,4 +71,8 @@ void loop(){
   Serial.println(MQ8.MQ8DataCO());
   Serial.print("Alcohol:");
   Serial.println(MQ8.MQ8DataAlcohol());
+  Serial.print("Total ppm:");
+  Serial.println(MQ8.MQ8DataAir());
+  Serial.print("Percentile%:");
+  Serial.println(MQ8.MQData100());
   */
