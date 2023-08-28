@@ -36,6 +36,10 @@ void loop(){
   Serial.println(MQ6.MQ6DataCO());
   Serial.print("Alcohol:");
   Serial.println(MQ6.MQ6DataAlcohol());
+  Serial.print("Total ppm:");
+  Serial.println(MQ6.MQ6DataAir());
+  Serial.print("Percentile%:");
+  Serial.println(MQ6.MQData100());
 }
 
 /*
