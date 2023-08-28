@@ -42,6 +42,10 @@ void loop(){
   Serial.println(MQ135.MQ135DataNH4());
   Serial.print("Aceton:");
   Serial.println(MQ135.MQ135DataAceton());  
+  Serial.print("Total ppm:");
+  Serial.println(MQ135.MQ135DataAir());
+  Serial.print("Percentile%:");
+  Serial.println(MQ135.MQData100());
 }
 
 /*
