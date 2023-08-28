@@ -32,6 +32,10 @@ and then again with the exact percentage, we recommend you get a 100% accurate r
 #define ADC_BIT_RESU      (10)  // ADC bit resulation
 #define space             (A1)  // define your Analog pin
 
+//!!This value is defined for 10k resistor, change it if you use a different value (Rload)!!!
+//WARNING: If you are using resistors with a value other than 10k, do not use this example, 
+//instead try the calirateR0-normal or calirateR0-veryeasy files and do not use our default values at all!
+
 MQSpaceData MQ(ADC_BIT_RESU, Rload, space);
 
 void setup(){
