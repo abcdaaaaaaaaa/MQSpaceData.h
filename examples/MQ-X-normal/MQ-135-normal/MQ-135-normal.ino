@@ -80,4 +80,8 @@ Serial.println("NH4:");
 Serial.print(MQ135.MQ135DataNH4());
 Serial.println("Aceton:");
 Serial.print(MQ135.MQ135DataAceton());
+Serial.print("Total ppm:");
+Serial.println(MQ135.MQ135DataAir());
+Serial.print("Percentile%:");
+Serial.println(MQ135.MQData100());
 */
