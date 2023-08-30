@@ -1,6 +1,6 @@
 # MQSpaceData MQ Sensor List
 ![mqsensorlist1000](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5864202a-d58a-4222-b760-0bacb5bf790a)
-# Calibrate Your Sensor Easily
+# Calibrate Your Sensor (R0) Very Easily
 [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A, MQ-309A]
 Calibrating is now easy with the MQSpaceData library:
 Without connecting the sensor to your card, just show the percentage you will calibrate and define the RS/R0 difference and we will calibrate for you without laboratory conditions. If you are using one of the listed sensors, you do not need to calibrate. Download the MQ-X-ready or MQ-X-normal files, but if you are not using the listed gas sensors, feel free to download this library anyway: first define RS/R0 in the datasheet graphic, below is the example of MQ-4 just like it:
@@ -44,7 +44,7 @@ void loop(){
   
 }
 ```
-# Calculate valueA and valueB With Logarithm 
+# Calculate valueA and valueB with Logarithm 
 And We can also calculate the a and b values ​​for you:
 just define the concentration range of your gas sensor and the slopes of the graph just like the MQ4:
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/39f97873-8173-4831-b662-45d26f59cd1f)
@@ -103,6 +103,7 @@ void loop() {
 ```
 
 that's all, if you use a Geiger Counter instead of a gas sensor, you can still download this library:
+# Radioactive Calculation with Geiger Counter
 
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/27061f03-3224-4ccd-91d6-92396889c9fd)
 
@@ -136,6 +137,7 @@ Serial.print("CPM Count:");
 Serial.println(Radyoactivite.count);  // CPM_Count
 }
 ```
+# Calculate valueA and valueB with Python
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/09bf5010-82dd-49ac-9deb-5251e3fc41bc)
 In addition, this library provides python examples that you can do with the easy calibration method and datasheet calculations:
 Try calculating the data (a and b values) we gave in the first example with the numpy library:
