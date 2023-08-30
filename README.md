@@ -1,19 +1,6 @@
 # MQSpaceData MQ Sensor List
 ![mqsensorlist1000](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5864202a-d58a-4222-b760-0bacb5bf790a)
-
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/237c07c9-eb5d-4b5e-8a3a-f85b47d5a32a)
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/9696bed8-0022-42e0-8e76-e7df86c82e2d)
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/da908954-4551-41f3-8213-d2ebcb33f1e3)
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/13ec7e02-8f95-499a-ab3b-d5d498678b1b)
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/543dcd47-b0bc-4950-b2ac-32b7c042d148)
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/3aefabcf-b839-4319-a751-2b1ae3831930)
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/16c905a9-1b72-47a1-bcd3-21d06929a54b)
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/23469cf2-4ba2-4558-9cce-b846f13bd868)
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/b1160e80-ee63-4a92-bee5-a7ac20b60fcc)
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/1cb9be4b-93da-4705-ba2f-40a492a21619)
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/13ea44fa-d69d-4b76-be10-03befd6b5c60)
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/b4d5e6bc-2454-4a21-a4be-ff8f10f83e1c)
-
+# Calibrate Your Sensor Easily
 [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A, MQ-309A]
 Calibrating is now easy with the MQSpaceData library:
 Without connecting the sensor to your card, just show the percentage you will calibrate and define the RS/R0 difference and we will calibrate for you without laboratory conditions. If you are using one of the listed sensors, you do not need to calibrate. Download the MQ-X-ready or MQ-X-normal files, but if you are not using the listed gas sensors, feel free to download this library anyway: first define RS/R0 in the datasheet graphic, below is the example of MQ-4 just like it:
@@ -57,6 +44,7 @@ void loop(){
   
 }
 ```
+# Calculate valueA and valueB With Logarithm 
 And We can also calculate the a and b values ​​for you:
 just define the concentration range of your gas sensor and the slopes of the graph just like the MQ4:
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/39f97873-8173-4831-b662-45d26f59cd1f)
