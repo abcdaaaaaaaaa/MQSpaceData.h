@@ -1,5 +1,5 @@
 # MQSpaceData MQ Sensor List
-<img width="1000" height="1000" alt="mqsensorlist" src="https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/570286a7-03b3-45f0-975e-aa56b3218f2d">
+![mqsensorlist1000](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5864202a-d58a-4222-b760-0bacb5bf790a)
 
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/237c07c9-eb5d-4b5e-8a3a-f85b47d5a32a)
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/9696bed8-0022-42e0-8e76-e7df86c82e2d)
