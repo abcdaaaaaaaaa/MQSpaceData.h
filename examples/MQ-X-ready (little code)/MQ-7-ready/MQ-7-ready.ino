@@ -21,6 +21,7 @@ MQSpaceData MQ7(ADC_BIT_RESU, Rload, space7);
 void setup(){
 Serial.begin(9600);
 MQ7.begin();
+//WARNING: [if you are not using 10k or 0k resistors, calibrate this value according to the calibratreR0 folder and calibrateR0(); Define your own value to the function]
 MQ7.MQ7calibrate();
 //MQ7.calibrateR0(0.98);
 }
