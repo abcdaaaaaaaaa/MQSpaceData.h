@@ -1,6 +1,41 @@
 # MQSpaceData MQ Sensor List
 ![mqsensorlist1000](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5864202a-d58a-4222-b760-0bacb5bf790a)
+# We can Calculate and Calibrate Your Sensor Very Easily like MQ-135 (MQ-X-ready)
+```
+#include <MQSpaceData.h>
 
+#define Rload             (10)
+#define ADC_BIT_RESU      (10)
+#define space135          (A1)
+
+MQSpaceData MQ135(ADC_BIT_RESU, Rload, space135);
+
+void setup(){
+Serial.begin(9600);
+MQ135.begin();
+MQ135.MQ135calibrate();
+//MQ135.calibrateR0(8.2809); 
+}
+
+void loop(){
+  Serial.print("CO:");
+  Serial.prinln(MQ135.MQ135DataCO()); 
+  Serial.print("Alcohol:");
+  Serial.println(MQ135.MQ135DataAlcohol());
+  Serial.print("CO2:");
+  Serial.println(MQ135.MQ135DataCO2());
+  Serial.print("Toluen:");
+  Serial.println(MQ135.MQ135DataToluen());
+  Serial.print("NH4:");
+  Serial.println(MQ135.MQ135DataNH4());
+  Serial.print("Aceton:");
+  Serial.println(MQ135.MQ135DataAceton());  
+  Serial.print("Total ppm:");
+  Serial.println(MQ135.MQ135DataAir());
+  Serial.print("Percentile%:");
+  Serial.println(MQ135.MQData100());
+}
+```
 # Calibrate Your Sensor (R0) Very Easily
 [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A, MQ-309A]
 Calibrating is now easy with the MQSpaceData library:
@@ -102,40 +137,6 @@ void loop() {
   Serial.println(data);  
 }
 ```
-# Or if you use Sensorlist We can Calculate and Calibrate Your Sensor Very Easily (MQ-X-ready)
-#include <MQSpaceData.h>
-
-#define Rload             (10)
-#define ADC_BIT_RESU      (10)
-#define space135          (A1)
-
-MQSpaceData MQ135(ADC_BIT_RESU, Rload, space135);
-
-void setup(){
-Serial.begin(9600);
-MQ135.begin();
-MQ135.MQ135calibrate();
-//MQ135.calibrateR0(8.2809); 
-}
-
-void loop(){
-  Serial.print("CO:");
-  Serial.prinln(MQ135.MQ135DataCO()); 
-  Serial.print("Alcohol:");
-  Serial.println(MQ135.MQ135DataAlcohol());
-  Serial.print("CO2:");
-  Serial.println(MQ135.MQ135DataCO2());
-  Serial.print("Toluen:");
-  Serial.println(MQ135.MQ135DataToluen());
-  Serial.print("NH4:");
-  Serial.println(MQ135.MQ135DataNH4());
-  Serial.print("Aceton:");
-  Serial.println(MQ135.MQ135DataAceton());  
-  Serial.print("Total ppm:");
-  Serial.println(MQ135.MQ135DataAir());
-  Serial.print("Percentile%:");
-  Serial.println(MQ135.MQData100());
-}
 that's all, if you use a Geiger Counter instead of a gas sensor, you can still download this library:
 # Radioactive Calculation with Geiger Counter
 
