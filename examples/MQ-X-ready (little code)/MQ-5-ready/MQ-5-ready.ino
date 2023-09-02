@@ -21,6 +21,7 @@ MQSpaceData MQ5(ADC_BIT_RESU, Rload, space5);
 void setup(){
 Serial.begin(9600);
 MQ5.begin();
+//WARNING: [if you are not using 10k or 0k resistors, calibrate this value according to the calibratreR0 folder and calibrateR0(); Define your own value to the function]
 MQ5.MQ5calibrate();
 //MQ5.calibrateR0(4.16);
 }
