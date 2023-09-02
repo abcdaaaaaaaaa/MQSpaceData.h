@@ -21,6 +21,7 @@ MQSpaceData MQ9(ADC_BIT_RESU, Rload, space9);
 void setup(){
 Serial.begin(9600);
 MQ9.begin();
+//WARNING: [if you are not using 10k or 0k resistors, calibrate this value according to the calibratreR0 folder and calibrateR0(); Define your own value to the function]
 MQ9.MQ9calibrate();
 //MQ9.calibrateR0(2.816);
 }
