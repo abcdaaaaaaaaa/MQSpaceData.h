@@ -21,6 +21,7 @@ MQSpaceData MQ4(ADC_BIT_RESU, Rload, space4);
 void setup(){
 Serial.begin(9600);
 MQ4.begin();
+//WARNING: [if you are not using 10k or 0k resistors, calibrate this value according to the calibratreR0 folder and calibrateR0(); Define your own value to the function]
 MQ4.MQ4calibrate();
 //MQ4.calibrateR0();
 }
