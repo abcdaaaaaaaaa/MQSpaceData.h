@@ -21,6 +21,7 @@ MQSpaceData MQ8(ADC_BIT_RESU, Rload, space8);
 void setup(){
 Serial.begin(9600);
 MQ8.begin();
+//WARNING: [if you are not using 10k or 0k resistors, calibrate this value according to the calibratreR0 folder and calibrateR0(); Define your own value to the function]
 MQ8.MQ8calibrate();
 //MQ8.calibrateR0(0.386);
 }
