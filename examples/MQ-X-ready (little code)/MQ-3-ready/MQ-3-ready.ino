@@ -21,6 +21,7 @@ MQSpaceData MQ3(ADC_BIT_RESU, Rload, space3);
 void setup(){
 Serial.begin(9600);
 MQ3.begin();
+//WARNING: [if you are not using 10k or 0k resistors, calibrate this value according to the calibratreR0 folder and calibrateR0(); Define your own value to the function]
 MQ3.MQ3calibrate();
 //MQ3.calibrateR0(0.45);
 }
