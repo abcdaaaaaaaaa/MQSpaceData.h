@@ -115,7 +115,7 @@ Serial.print("Percentile%:");
 Serial.println(MQ135.MQData100());
 }
 ```
-# The ready calibration values (function) we calculated for the MQ Sensors in the sensor list:
+# The ready calibration (find your R0 value) values (function) we calculated for the MQ Sensors in the sensor list:
 # If you are using a resistor other than 10k (or 0k), we do not recommend using this mode.
 ```
 MQ2calibrate();
