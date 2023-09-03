@@ -1,6 +1,23 @@
 # MQSpaceData MQ Sensor List
 MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A , MQ-309A]
 ![mqsensorlist1000](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5864202a-d58a-4222-b760-0bacb5bf790a)
+### MQ Sensor Datasheet:
+| MQ Sensor | URL Datasheet |
+|----------|----------|
+| MQ-2 | [datasheet](https://www.pololu.com/file/0J309/MQ2.pdf) |
+| MQ-3 | [datasheet](https://www.sparkfun.com/datasheets/Sensors/MQ-3.pdf) |
+| MQ-4 | [datasheet](https://www.sparkfun.com/datasheets/Sensors/Biometric/MQ-4.pdf) |
+| MQ-5 | [datasheet](https://www.parallax.com/sites/default/files/downloads/605-00009-MQ-5-Datasheet.pdf) |
+| MQ-6 | [datasheet](https://www.sparkfun.com/datasheets/Sensors/Biometric/MQ-6.pdf) |
+| MQ-7 | [datasheet](https://www.sparkfun.com/datasheets/Sensors/Biometric/MQ-7.pdf) |
+| MQ-8 | [datasheet](https://dlnmh9ip6v2uc.cloudfront.net/datasheets/Sensors/Biometric/MQ-8.pdf) |
+| MQ-9 | [datasheet](http://www.haoyuelectronics.com/Attachment/MQ-9/MQ9.pdf) |
+| MQ-131 | [datasheet](http://www.sensorsportal.com/DOWNLOADS/MQ131.pdf) |
+| MQ-135 | [datasheet](https://www.electronicoscaldas.com/datasheet/MQ-135_Hanwei.pdf) |
+| MQ-136 | [datasheet](https://github.com/miguel5612/MQSensorsLib_Docs/blob/master/Datasheets/MQ136%20-%20Hanwei.pdf) |
+| MQ-303A | [datasheet](http://www.kosmodrom.com.ua/pdf/MQ303A.pdf) |
+| MQ-309A | [datasheet](http://www.sensorica.ru/pdf/MQ-309A.pdf) |
+
 # MQ-X-ready folder
 # Calculate and Calibrate Your Sensor Start with MQ-135 
 ```
