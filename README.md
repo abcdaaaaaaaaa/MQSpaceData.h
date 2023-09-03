@@ -18,7 +18,7 @@ MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135,
 | MQ-303A | [datasheet](http://www.kosmodrom.com.ua/pdf/MQ303A.pdf) |
 | MQ-309A | [datasheet](http://www.sensorica.ru/pdf/MQ-309A.pdf) |
 
-# MQ-X-ready folder
+# MQ-X-ready folder (little code)
 # Calculate and Calibrate Your Sensor Start with MQ-135 
 ```
 #include <MQSpaceData.h>
@@ -54,6 +54,65 @@ void loop(){
   Serial.println(MQ135.MQ135DataAir());
   Serial.print("Percentile%:");
   Serial.println(MQ135.MQData100());
+}
+```
+# MQ-X-normal folder (cool code)
+# MQ-135 example 
+or instead of the ready-made functions we have saved in the library, you define the values in order, just like the example we showed on the MQ-4 for sensors not listed below
+NOTE: There is no difference between MQ-X-ready and MQ-X-regular files
+```
+#include <MQSpaceData.h>
+
+#define Rload             (10)
+#define ADC_BIT_RESU      (10)
+#define space135          (A1)
+
+MQSpaceData MQ135(ADC_BIT_RESU, Rload, space135);
+
+void setup(){
+Serial.begin(9600);
+MQ135.calibrateR0(8.209); // you can change it according to the value you find
+// MQ135.MQ135calibrate();
+MQ135.begin();  
+}
+
+void loop(){
+	
+  MQ135.valuea(605.18); MQ135.valueb(-3.937); 
+  float CO = MQ135.readValue(); 
+  
+  MQ135.valuea(77.255); MQ135.valueb(-3.18); 
+  float Alcohol = MQ135.readValue(); 
+
+  MQ135.valuea(110.47); MQ135.valueb(-2.862); 
+  float CO2 = MQ135.readValue(); 
+
+  MQ135.valuea(44.947); MQ135.valueb(-3.445); 
+  float Toluen = MQ135.readValue(); 
+  
+  MQ135.valuea(102.2 ); MQ135.valueb(-2.473); 
+  float NH4 = MQ135.readValue(); 
+
+  MQ135.valuea(34.668); MQ135.valueb(-3.369); 
+  float Aceton = MQ135.readValue(); 
+  
+Serial.print("CO:");
+Serial.println(CO); 
+Serial.print("Alcohol:");
+Serial.println(Alcohol);
+Serial.print("CO2:");
+Serial.println(CO2);
+Serial.print("Toluen:");
+Serial.println(Toluen);
+Serial.print("NH4:");
+Serial.println(NH4);
+Serial.print("Aceton:");
+Serial.println(Aceton);
+
+Serial.print("Total ppm:");
+Serial.println(MQ135.MQ135DataAir());
+Serial.print("Percentile%:");
+Serial.println(MQ135.MQData100());
 }
 ```
 # Calibrate Your Sensor (R0) Very Easily
