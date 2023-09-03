@@ -32,8 +32,9 @@ MQSpaceData MQ135(ADC_BIT_RESU, Rload, space135);
 void setup(){
 Serial.begin(9600);
 MQ135.begin();
-MQ135.MQ135calibrate();
-//MQ135.calibrateR0(8.2809); 
+MQ135.MQ135calibrate(); // Ready Calibration
+//  or define your custom calibration
+//MQ135.calibrateR0(8.2809);
 }
 
 void loop(){
@@ -102,7 +103,7 @@ void loop(){
 # Calculate valueA and valueB with Logarithm 
 And We can also calculate the a and b values ​​for you:
 just define the concentration range of your gas sensor and the slopes of the graph just like the MQ4:
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/39f97873-8173-4831-b662-45d26f59cd1f)
+![MQ4datasheet](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/ed616dc8-3145-4233-9741-5e848bdae377)
 ```
 #include <MQSpaceData.h>
 
