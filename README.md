@@ -56,7 +56,7 @@ void loop(){
   Serial.println(MQ135.MQData100());
 }
 ```
-# MQ-X-normal folder (show off code)
+# MQ-X-normal folder (show off)
 # MQ-135 example 
 or instead of the ready-made functions we have saved in the library, you define the values in order, just like the example we showed on the MQ-4 for sensors not listed below
 NOTE: There is no difference between MQ-X-ready and MQ-X-regular files
@@ -114,6 +114,23 @@ Serial.println(MQ135.MQ135DataAir());
 Serial.print("Percentile%:");
 Serial.println(MQ135.MQData100());
 }
+```
+# The ready calibration values (function) we calculated for the MQ Sensors in the sensor list:
+# If you are using a resistor other than 10k (or 0k), we do not recommend using this mode.
+```
+MQ2calibrate();
+MQ3calibrate();
+MQ4calibrate();
+MQ5calibrate();
+MQ6calibrate();
+MQ7calibrate();
+MQ8calibrate();
+MQ9calibrate();
+MQ131calibrate();
+MQ135calibrate();
+MQ136calibrate();
+MQ303Acalibrate();
+MQ309Acalibrate();
 ```
 # Calibrate Your Sensor (R0) Very Easily
 [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A, MQ-309A]
