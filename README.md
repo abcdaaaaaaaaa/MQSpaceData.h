@@ -132,6 +132,7 @@ MQ136calibrate();
 MQ303Acalibrate();
 MQ309Acalibrate();
 ```
+# if you are using a resistor other than 10k you can still calibrate:
 # Calibrate Your Sensor (R0) Very Easily
 [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A, MQ-309A]
 Calibrating is now easy with the MQSpaceData library:
