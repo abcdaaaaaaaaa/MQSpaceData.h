@@ -56,7 +56,7 @@ void loop(){
   Serial.println(MQ135.MQData100());
 }
 ```
-# MQ-X-normal folder (cool code)
+# MQ-X-normal folder (show off code)
 # MQ-135 example 
 or instead of the ready-made functions we have saved in the library, you define the values in order, just like the example we showed on the MQ-4 for sensors not listed below
 NOTE: There is no difference between MQ-X-ready and MQ-X-regular files
