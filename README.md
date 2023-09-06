@@ -10,7 +10,7 @@ MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135,
   * [ESP8266](#ESP8266)
   * [ESP32-S2](#ESP32-S2)
 * [MQ-X-ready](#MQ-X-ready)
-* [MQ-X-normal](MQ-X-normal)
+* [MQ-X-normal](#MQ-X-normal)
 
 ### MQ Sensor Datasheet:
 | MQ Sensor | URL Datasheet |
@@ -30,7 +30,7 @@ MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135,
 | MQ-309A | [datasheet](http://www.sensorica.ru/pdf/MQ-309A.pdf) |
 
 # MQ-X-ready folder (little code)
-# Calculate and Calibrate Your Sensor Start with MQ-135 
+# Get started with the MQ-135 with ready-made functions
 ```
 #include <MQSpaceData.h>
 
