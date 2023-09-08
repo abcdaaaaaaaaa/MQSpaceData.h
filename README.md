@@ -2,7 +2,7 @@
 MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A , MQ-309A]
 ![mqsensorlist1000](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5864202a-d58a-4222-b760-0bacb5bf790a)
 ## MQSpaceData Contents
-* [MQ Sensor Datasheet](#MQData)
+* [MQ Sensor Datasheet](#MQSensorData)
 * [Start with MQ-X](#MQ-X)
   * [Start with MQ-135](#MQ-135)
   * [MQ-X-ready folder](#MQ-X-ready)
@@ -12,15 +12,15 @@ MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135,
   * [for ESP-32](#ESP-32)
   * [for ESP8266](#ESP8266)
   * [for ESP32-S2](#ESP32-S2)
-* [Calibrate Your Sensor R0](#Arduino)
+* [Calibrate Your Sensor R0](#Calibrate)
 * [Redefine Your Value a and b](#Arduino)
-* [Calculate With Python](#Arduino)
-  * [Redefine your value a and b with numpy](#MQ-X-ready)
+* [Calculate With Python](#Python)
+  * [Redefine your value a and b with numpy](#numpy)
   * [Calibrate Your R0 Value](#R0python)
   * [Learn Your ADC BIT Resulation](#ADCBIT)
 * [Radioactivity For Geiger Counter](#Radioactivity)
 
-## MQData
+## MQSensorData
 ### MQ Sensor Datasheet:
 | MQ Sensor | URL Datasheet |
 |----------|----------|
@@ -141,7 +141,7 @@ Serial.println(MQ135.MQData100());
 }
 ```
 # The ready calibration (find your R0 value) values (function) we calculated for the MQ Sensors in the sensor list:
-# If you are using a resistor other than 10k (or 0k), we do not recommend using this mode.
+NOTE: If you are using a resistor other than 10k (or 0k), we do not recommend using this mode.
 ```
 MQ2calibrate();
 MQ3calibrate();
@@ -298,8 +298,9 @@ Serial.print("CPM Count:");
 Serial.println(Radyoactivite.count);  // CPM_Count
 }
 ```
-## R0python
+## Python
 # Calculate valueA and valueB with Python
+### numpy
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/09bf5010-82dd-49ac-9deb-5251e3fc41bc)
 In addition, this library provides python examples that you can do with the easy calibration method and datasheet calculations:
 Try calculating the data (a and b values) we gave in the first example with the numpy library:
@@ -323,6 +324,7 @@ print("ValueB:")
 print(resultB())
 ```
 and try the different calibrating method we mentioned at the beginning in python:
+### R0python
 ```
 RSR0MQAir = 4.4 #RS/R0 VALUE
 
