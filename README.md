@@ -2,12 +2,12 @@
 MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A , MQ-309A]
 ![mqsensorlist1000](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5864202a-d58a-4222-b760-0bacb5bf790a)
 ## MQSpaceData Contents
+* [MQ Sensor Datasheet](#MQData)
 * [Start with MQ-X](#MQ-X)
   * [Start with MQ-135](#MQ-135)
   * [MQ-X-ready folder](#MQ-X-ready)
   * [MQ-X-normal folder](#MQ-X-normal)
-* [MQ Sensor Datasheet](#Arduino)
-* [Sensor Electronics](#Arduino)
+* [Sensor Electronics](#Sensor)
   * [for Arduino](#Arduino)
   * [for ESP-32](#ESP-32)
   * [for ESP8266](#ESP8266)
@@ -20,6 +20,7 @@ MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135,
   * [Learn Your ADC BIT Resulation](#ADCBIT)
 * [Radioactivity For Geiger Counter](#Radioactivity)
 
+## MQData
 ### MQ Sensor Datasheet:
 | MQ Sensor | URL Datasheet |
 |----------|----------|
@@ -38,6 +39,7 @@ MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135,
 | MQ-309A | [datasheet](http://www.sensorica.ru/pdf/MQ-309A.pdf) |
 
 ## MQ-X
+### MQ-135
 # Start With MQ-135
 ### MQ-X-ready
 # MQ-X-ready folder (little code)
@@ -78,6 +80,7 @@ void loop(){
   Serial.println(MQ135.MQData100());
 }
 ```
+### MQ-X-normal
 # MQ-X-normal folder (show off)
 # MQ-135 example 
 or instead of the ready-made functions we have saved in the library, you define the values in order, just like the example we showed on the MQ-4 for sensors not listed below
@@ -260,6 +263,7 @@ void loop() {
 }
 ```
 that's all, if you use a Geiger Counter instead of a gas sensor, you can still download this library:
+### Radioactivity
 # Radioactive Calculation with Geiger Counter
 
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/27061f03-3224-4ccd-91d6-92396889c9fd)
@@ -294,6 +298,7 @@ Serial.print("CPM Count:");
 Serial.println(Radyoactivite.count);  // CPM_Count
 }
 ```
+## R0python
 # Calculate valueA and valueB with Python
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/09bf5010-82dd-49ac-9deb-5251e3fc41bc)
 In addition, this library provides python examples that you can do with the easy calibration method and datasheet calculations:
