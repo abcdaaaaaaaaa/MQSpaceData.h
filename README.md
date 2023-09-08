@@ -2,8 +2,8 @@
 MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A , MQ-309A]
 ![mqsensorlist1000](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5864202a-d58a-4222-b760-0bacb5bf790a)
 ## MQSpaceData Contents
-* [Start with MQ-X](#Arduino)
-  * [Start with MQ-135](#MQ-X-ready)
+* [Start with MQ-X](#MQ-X)
+  * [Start with MQ-135](#MQ-135)
   * [MQ-X-ready folder](#MQ-X-ready)
   * [MQ-X-normal folder](#MQ-X-normal)
 * [MQ Sensor Datasheet](#Arduino)
@@ -16,9 +16,9 @@ MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135,
 * [Redefine Your Value a and b](#Arduino)
 * [Calculate With Python](#Arduino)
   * [Redefine your value a and b with numpy](#MQ-X-ready)
-  * [Calibrate Your R0 Value](#MQ-X-ready)
-  * [Learn Your ADC BIT Resulation](#MQ-X-ready)
-* [Radioactivity For Geiger Counter](#Arduino)
+  * [Calibrate Your R0 Value](#R0python)
+  * [Learn Your ADC BIT Resulation](#ADCBIT)
+* [Radioactivity For Geiger Counter](#Radioactivity)
 
 ### MQ Sensor Datasheet:
 | MQ Sensor | URL Datasheet |
@@ -37,6 +37,9 @@ MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135,
 | MQ-303A | [datasheet](http://www.kosmodrom.com.ua/pdf/MQ303A.pdf) |
 | MQ-309A | [datasheet](http://www.sensorica.ru/pdf/MQ-309A.pdf) |
 
+## MQ-X
+# Start With MQ-135
+### MQ-X-ready
 # MQ-X-ready folder (little code)
 # Get started with the MQ-135 with ready-made functions
 ```
