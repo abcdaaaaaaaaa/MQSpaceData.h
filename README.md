@@ -14,7 +14,7 @@ MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135,
 * [Calibrate Your Sensor](#Arduino)
 * [Redefine Your Value a and b](#Arduino)
 * [Calculate With Python](#Arduino)
-* [Radioactivity with Geiger Counter](#Arduino)
+* [Radioactivity For Geiger Counter](#Arduino)
 
 
 ### MQ Sensor Datasheet:
