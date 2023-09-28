@@ -7,6 +7,7 @@ MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135,
   * [Start with MQ-135](#MQ-135)
   * [MQ-X-ready folder](#MQ-X-ready)
   * [MQ-X-normal folder](#MQ-X-normal)
+* [Data-Science](#data)
 * [Sensor Electronics](#Sensor)
   * [for Arduino](#Arduino)
   * [for ESP-32](#ESP-32)
@@ -18,7 +19,6 @@ MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135,
   * [Redefine your value a and b with numpy](#numpy)
   * [Calibrate Your R0 Value](#R0python)
   * [Learn Your ADC BIT Resulation](#ADCBIT)
-* [Data-Science](#data)
 * [Radioactivity For Geiger Counter](#Radioactivity)
 
 ## MQSensorData
