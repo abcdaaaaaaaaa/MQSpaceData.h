@@ -8,6 +8,8 @@ MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135,
   * [MQ-X-ready folder](#MQ-X-ready)
   * [MQ-X-normal folder](#MQ-X-normal)
 * [Data-Science](#data)
+  * [for MQ-Sensors]
+  * [for Geiger Conter]
 * [Sensor Electronics](#Sensor)
   * [for Arduino](#Arduino)
   * [for ESP-32](#ESP-32)
