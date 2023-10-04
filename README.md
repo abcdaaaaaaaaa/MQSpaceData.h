@@ -16,6 +16,8 @@ MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135,
   * [for ESP8266](#ESP8266)
   * [for ESP32-S2](#ESP32-S2)
 * [Calibrate Your Sensor R0](#Calibrate)
+  * [for Soldered Model]
+  * [for Normal Model] 
 * [Redefine Your Value a and b](#Arduino)
 * [Calculate With Python](#Python)
   * [Redefine your value a and b with numpy](#numpy)
