@@ -132,7 +132,7 @@ this library calculates the a and b values ​​for you only
 when you define the concentration range of the gas sensor (x,x0,y,y0) with the graph slopes (MQother-result.ino) 
 then, After calculating the a and b values ​​and taking note of your required calibration values (calibrateR0-normal or calibrateR0-veryeasy) , 
 you can now define all the values ​​in the MQother-ready file!
-WARNING: If you are using resistors with a value other than 0k or 10k, do not use this example, 
+WARNING: If you are not using soldered models, do not use this example, 
 instead try the calirateR0-normal or calirateR0-veryeasy files and do not use our default values at all! not MQother-ready file
 -------------------------------------------
 Also Allows calculating a and b values ​​without using a sensor, calculating percent caliber (different method) with python language (try python example)
