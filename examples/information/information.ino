@@ -1,4 +1,9 @@
- !!! Try Radioactive.ino with (Geiger Counter) for any kind of Radioactive analysis (Usv/hr, sdCPM, Avg, CPM Count) !!!
+
+                 ----  FOR PYTHON LANGUAGE MATPLOTLIB LIBRARY DATA-SCIENCE ---                         
+WARNING: For data science, look at the data science file and then open the MQSpaceData library 
+that you saved in the downloads from Arduino libraries and run the codes in the datascience file.
+---------------------------------------------------------------------------------------------------------
+!!! Try Radioactive.ino with (Geiger Counter) for any kind of Radioactive analysis (Usv/hr, sdCPM, Avg, CPM Count) !!!
  !!! Also Allows calculating a and b values ​​without using a sensor, calculating percent caliber (different method) with python language (try python example) !!!
 ---------------------------------------------------------------------------------------------------------
 if you dont want to calibrate sensor try this functions:
