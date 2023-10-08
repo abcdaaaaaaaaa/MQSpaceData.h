@@ -3,7 +3,7 @@ import csv
 import numpy as np
 from scipy.stats import linregress
 
-SensorModel = input("Enter the model of the MQ Gas sensor like 'MQ-303A': ")
+SensorModel = input("Enter the model of the MQ Gas sensor like MQ-303A: ")
 SensorData = SensorModel + " " + "Datasheet"
 SensorYscale = "ppm values for " + SensorModel
 SensorXscale = "Scaling time for " + SensorModel
@@ -247,7 +247,7 @@ slope, intercept, r_value, p_value, std_err = linregress(x_values, y_values)
 line = f'Y = {slope:.2f}X + {intercept:.2f}'
 
 plt.plot(x_values, y_values, 'o', label='Data', color='#6600ff')
-plt.plot(x_values, slope * np.array(x_values) + intercept, color='#6600ff', label=f'Regression: {line}')
+plt.plot(x_values, slope * np.array(x_values) + intercept, color='orange', label=f'Regression: {line}')
 
 plt.legend()
 plt.show()
