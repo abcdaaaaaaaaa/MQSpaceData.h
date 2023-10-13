@@ -1,3 +1,6 @@
+# python -m pip install matplotlib==3.8.0
+# python -m pip install csv==0.0.13
+# python -m pip install numpy==1.23.5
 import matplotlib.pyplot as plt
 import csv
 import numpy as np
