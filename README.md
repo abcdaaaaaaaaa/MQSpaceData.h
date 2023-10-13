@@ -1,6 +1,8 @@
 # MQDataScience
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with data science"
 ![MQ3exampledatasheet](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/0e928d85-b51e-42b3-a1a9-3a56f1cc8dfc)
+NOTE: [For detailed explanation, You can also check out the github wiki page]
+https://github.com/abcdaaaaaaaaa/MQSpaceData.h/wiki
 ## MQSpaceData Contents
 * [MQ Sensor Datasheet](#MQSensorData)
 * [Start with MQ-X](#MQ-X)
@@ -26,7 +28,7 @@
   * [Learn Your ADC BIT Resulation](#ADCBIT)
 * [Radioactivity For Geiger Counter](#Radioactivity)
 # MQSpaceData MQ Sensor List
-MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135, MQ-136, MQ-303A , MQ-309A]
+MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-131, MQ-135, MQ-136, MQ303A , MQ309A]
 ![mqsensorlist1000](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5864202a-d58a-4222-b760-0bacb5bf790a)
 # MQSpaceData Geiger Counter
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/27061f03-3224-4ccd-91d6-92396889c9fd)
