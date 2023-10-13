@@ -86,12 +86,12 @@ void loop() {
 	Serial.println(MQX.MQ136DataAir());
 	break;
    }
-   case 303:  // MQ-303A
+   case 303:  // MQ303A
    {
 	Serial.println(MQX.MQ303ADataAir());
 	break;
    }
-   case 309:  // MQ-309A
+   case 309:  // MQ309A
    {
 	Serial.println(MQX.MQ309ADataAir());
 	break;
