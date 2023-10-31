@@ -1,4 +1,3 @@
-
 #include "MQSpaceData.h"
 #include "Arduino.h"
 
@@ -168,12 +167,12 @@ float MQSpaceData::MQ309ADataCH4(){_va = 980.24;_vb = -1.68;return readValue();}
 float MQSpaceData::MQ309ADataCO(){_va = 1000000;_vb = -4.01;return readValue();}
 float MQSpaceData::MQ309ADataAlcohol(){_va = 473622;_vb = -3.647;return readValue();}
 
-calibrateR0::calibrateR0(float RSR0, float Rload, float voltage, float bitadc, byte pin)
+calibrateR0::calibrateR0(float RSR0, float Rload, float voltage, int bitadc, byte pin)
 {
 _RSR0=RSR0;
 _Rload = Rload;
 _voltage=voltage;
-_bitadc = bitadc;
+_bitadc=pow(2,bitadc)-1;
 _pin = pin;
 };
 
@@ -190,7 +189,7 @@ float calibrateR0::readVoltage()
         _sensorValue = _sensorValue + analogRead(_pin);
     }
     _sensorValue = _sensorValue / 500.0;
-    return _sensorValue * (_voltage / (pow(2, _bitadc) - 1));
+    return _sensorValue * (_voltage / _bitadc);
 }
 
 float calibrateR0::calculateR0()
@@ -213,20 +212,21 @@ float calibrateR0VeryEasy::calculateR0VeryEasy(float percentile)
     return _R0;
 }
 
-result::result(float y, float y0, float x, float x0)
+result::result(float y, float y0, float x, float x0, float AverageY)
 {
   _y=y;
   _y0=y0;
   _x=x;
   _x0=x0;
+  _AverageY=AverageY;
 }
 
 float result::resultA(){
-return log(_y/_y0) / log(_x/_x0);    
+return log10(_y/_y0) / log10(_x/_x0);    
 }
 
 float result::resultB(){
-return log(_y) - resultA()*log(_x);
+return log10(_AverageY) - resultA()*log10(_x/2);
 }
 
 GeigerCounterPin::GeigerCounterPin(bool uSvhr, bool Avg1, bool CPM_Count, int LOG_PERIOD1, byte pin2)
