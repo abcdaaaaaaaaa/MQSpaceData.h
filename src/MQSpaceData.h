@@ -148,7 +148,7 @@ class result
   float _x;
   float _x0;  
   public:
-  result(float y, float y0, float x, float x0);
+  result(float y, float y0, float x, float x0, float AverageY);
   float resultA();
   float resultB();  
 };
