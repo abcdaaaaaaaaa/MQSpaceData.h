@@ -1,18 +1,19 @@
-import numpy as np
+from math import log10
 
-
-y  = 0.75  #define final reference point of the graph
-y0 = 2.6   #define first reference point of the graph
-x  = 10000 #define max ppm concentrate
-x0 = 200   #define min ppm concentrate
+y  = 3.6        #define final reference point of the graph
+y0 = 4.2        #define first reference point of the graph
+x  = 10000      #define max ppm concentrate
+x0 = 200        #define min ppm concentrate
+AverageY = 0.9  #define your y value at medium ppm concentration
 
 def resultA():
-  return np.log(y/y0) / np.log(x/x0);
+  return log10(y/y0) / log10(x/x0);
 
 def resultB():
-  return np.log(y) - resultA()*np.log(x)
+  return log10(AverageY) - resultA()*log10(x/2)
 
-print("ValueA:")
+print("valuea():")
 print(resultA())
-print("ValueB:")
+print("valueb():")
 print(resultB())
+
