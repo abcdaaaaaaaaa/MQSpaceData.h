@@ -6,7 +6,7 @@ MQSpaceData::MQSpaceData(int bitadc, float Rload, byte pin)
 {
   _pin=pin;
   _Rload=Rload;
-  _bitadc=bitadc;
+  _bitadc=pow(2,bitadc)-1;
 }
 
 void MQSpaceData::begin()
@@ -49,7 +49,7 @@ float MQSpaceData::readValue()
 {
   if(_Rload <= 0) _Rload == 10;
   if(( _Rload - _Rload) != 0) _Rload == 10;
-  _RS = ((_Rload/(analogRead(_pin)*(1/(pow(2,_bitadc)-1))))-(_Rload));
+  _RS = ((_Rload/(analogRead(_pin)*(1/_bitadc))))-(_Rload));
   _ratio = ( _RS / _R0);
  return pow(_ratio,_vb)*_va;
 }
