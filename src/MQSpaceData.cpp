@@ -34,12 +34,12 @@ void MQSpaceData::MQ136calibrate(){_R0 = 7.5;}
 void MQSpaceData::MQ303Acalibrate(){_R0 = 27;}
 void MQSpaceData::MQ309Acalibrate(){_R0 = 2.458;}
 
-void MQSpaceData::valuea(float data1)
+void MQSpaceData::value_m(float data1)
 {
- _va = data1;
+ _vm = data1;
 }
 
-void MQSpaceData::valueb(float data2)
+void MQSpaceData::value_b(float data2)
 {
  _vb = data2;
 }
@@ -50,7 +50,7 @@ float MQSpaceData::readValue()
   if(( _Rload - _Rload) != 0) _Rload == 10;
   _RS = ((_Rload/(analogRead(_pin)*(1/_bitadc))))-(_Rload));
   _ratio = ( _RS / _R0);
- return pow(_ratio,_vb)*_va;
+ return pow(10, ((log10(_ratio)-b)/m));
 }
 
 //**************************************ppm Value**************************************\\
