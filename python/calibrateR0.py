@@ -1,4 +1,4 @@
-RSR0MQAir = 4.4 #RS/R0 VALUE
+RSR0MQAir = int(input("Define your MQAir RS/R0: ")) # RS/R0 VALUE
 
 """
 ---RS/R0 VALUE---
@@ -17,17 +17,14 @@ MQ-303A: 1
 MQ-309A: 11
 """
 
-Rload = 10 #Define your Rload
+Rload =  int(input("Define your resistor value (kΩ): ")) # Define your Rload
 
-percentile = 27 #Define your percentile
+percentile = int(input("Define the percentile you want to calibrate %0-100: "))
 
 def calculateR0VeryEasy(defpercentile):
-
- RS = (100 * Rload / defpercentile) - Rload
-
- R0 = RS / RSR0MQAir
-
- return R0
+    RS = (100 * Rload / defpercentile) - Rload
+    R0 = RS / RSR0MQAir
+    return R0
 
 MyR0value = calculateR0VeryEasy(percentile) 
 
