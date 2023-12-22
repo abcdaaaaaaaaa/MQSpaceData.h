@@ -11,7 +11,7 @@
 ![MQ9curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c61b58c0-7d4a-40e2-9b0b-db487bf45b8c)
 ![MQ131curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/e518f093-7b92-4799-a1c1-2f52861622a0)
 ![MQ135curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c7d33ed7-08af-4329-ab8f-353dcf0a7d2e)
-![MQ136curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/51e413d7-d063-454a-a3c6-945a2f06503c)
+![MQ136curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/2f4e3e21-9f27-4721-a8c2-1c8a7f1efa46)
 ![MQ137curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/2947fd22-6356-45f3-828a-ba7b4242224a)
 ![MQ303Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/67b94744-1419-44f9-ae02-6b253f50df5d)
 ![MQ309Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/2822ad43-0319-4579-a722-68f29b66e3e3)
