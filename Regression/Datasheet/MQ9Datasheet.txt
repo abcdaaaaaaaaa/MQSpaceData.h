@@ -1,5 +1,5 @@
-Air:9.7
-Con:200-10000
+Air: 9.7
+Con: 200-10000
 
 for ppm = a*ratio^b:
 
