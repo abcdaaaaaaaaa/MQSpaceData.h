@@ -7,54 +7,49 @@ class MQSpaceData
 {
   private:
   float _ratio;
+  float _percentile;
   int _bitadc;
   float _Rload;
   byte _pin;
-  float _R0;
-  float _RS;
+  float _RSRo;
   float _va;
   float _vb;
+  float _mlog;
+  float _blog;
   public:
   MQSpaceData(int bitadc, float Rload, byte pin);
   void begin();
-  void calibrateR0(float calibration);
-  void MQ2calibrate();
-  void MQ3calibrate();
-  void MQ4calibrate();
-  void MQ5calibrate();
-  void MQ6calibrate();
-  void MQ7calibrate();
-  void MQ8calibrate();
-  void MQ9calibrate();
-  void MQ131calibrate();
-  void MQ135calibrate();
-  void MQ136calibrate();
-  void MQ303Acalibrate();
-  void MQ309Acalibrate();
+  int MQData100();
+  float readValue();
+  float readVoltage(float sensorValue,float voltage);
+  float logValue();
   void valuea(float data1);
   void valueb(float data2);
-  float MQData100();
-  float readVoltage();
-  float findR0();
-  float readValue();
-  float MQ2DataAir();
-  float MQ3DataAir();
-  float MQ4DataAir();
-  float MQ5DataAir();
-  float MQ6DataAir();
-  float MQ7DataAir();
-  float MQ8DataAir();
-  float MQ9DataAir();
-  float MQ131DataAir();
-  float MQ135DataAir();
-  float MQ136DataAir();
+  void logm(float data1);
+  void logb(float data2);
+  void dangerousPer(float per);
+  void RSRoMQAir(float RSRo);
+  int MQ2DataAir();
+  int MQ3DataAir();
+  int MQ4DataAir();
+  int MQ5DataAir();
+  int MQ6DataAir();
+  int MQ7DataAir();
+  int MQ8DataAir();
+  int MQ9DataAir();
+  int MQ131DataAir();
+  int MQ135DataAir();
+  int MQ136DataAir();
+  int MQ137DataAir();
   float MQ303ADataAir();
-  float MQ309ADataAir();
+  int MQ309ADataAir();
   float MQ2DataH2();
   float MQ2DataLPG();
   float MQ2DataCO();
   float MQ2DataAlcohol();
   float MQ2DataPropane();
+  float MQ2DataCH4();
+  float MQ2Datasmoke();
   float MQ3DataLPG();
   float MQ3DataCH4();
   float MQ3DataCO();
@@ -66,6 +61,7 @@ class MQSpaceData
   float MQ4DataCO();
   float MQ4DataAlcohol();
   float MQ4DataSmoke();
+  float MQ4DataH2();
   float MQ5DataH2();
   float MQ5DataLPG();
   float MQ5DataCH4();
@@ -101,6 +97,9 @@ class MQSpaceData
   float MQ136DataH2S();
   float MQ136DataNH4();
   float MQ136DataCO();
+  float MQ137DataCO();
+  float MQ137DataEthanol();
+  float MQ137DataNH3();
   float MQ303ADataIso();
   float MQ303ADataHyd();
   float MQ303ADataEthanol();
@@ -108,49 +107,6 @@ class MQSpaceData
   float MQ309ADataCH4();
   float MQ309ADataCO();
   float MQ309ADataAlcohol();
-};
-
-class calibrateR0
-{
- private:
- float _RSR0;
- float _voltage;
- float _Rload;
- float _sensorValue;
- float _RS;
- float _R0;
- int _bitadc;
- byte _pin;
- public:
- void begin();
- float readVoltage();
- float calculateR0();
- calibrateR0(float RSR0, float Rload, float voltage, float bitadc, byte pin);
-};
-
-class calibrateR0VeryEasy
-{
- private:
- float _RSR0;
- float _Rload;
- float _RS;
- float _R0;
- public:
- calibrateR0VeryEasy(float RSR0, float Rleasy);
- float calculateR0VeryEasy(float percentile);
-};
-
-class result
-{
-  private:
-  float _y;
-  float _y0;
-  float _x;
-  float _x0;  
-  public:
-  result(float y, float y0, float x, float x0, float AverageY);
-  float resultA();
-  float resultB();  
 };
 
 class GeigerCounterPin
