@@ -13,221 +13,296 @@ void MQSpaceData::begin()
   pinMode(_pin,INPUT);
 }
 
-void MQSpaceData::calibrateR0(float calibration)
+void MQSpaceData::valuea(float data1)
 {
- _R0 = calibration; 
+ _va = data1;
 }
 
-//**************************************Ready Calibration**************************************\\
-
-void MQSpaceData::MQ2calibrate(){_R0 = 2.74;}
-void MQSpaceData::MQ3calibrate(){_R0 = 0.45;}
-void MQSpaceData::MQ4calibrate(){_R0 = 6.14;}
-void MQSpaceData::MQ5calibrate(){_R0 = 4.16;}
-void MQSpaceData::MQ6calibrate(){_R0 = 2.71;}
-void MQSpaceData::MQ7calibrate(){_R0 = 0.98;}
-void MQSpaceData::MQ8calibrate(){_R0 = 0.386;}
-void MQSpaceData::MQ9calibrate(){_R0 = 2.816;}
-void MQSpaceData::MQ131calibrate(){_R0 = 0.67;}
-void MQSpaceData::MQ135calibrate(){_R0 = 8.2809;}
-void MQSpaceData::MQ136calibrate(){_R0 = 7.5;}
-void MQSpaceData::MQ303Acalibrate(){_R0 = 27;}
-void MQSpaceData::MQ309Acalibrate(){_R0 = 2.458;}
-
-void MQSpaceData::value_m(float data1)
-{
- _vm = data1;
-}
-
-void MQSpaceData::value_b(float data2)
+void MQSpaceData::valueb(float data2)
 {
  _vb = data2;
 }
 
+void MQSpaceData::logm(float data1)
+{
+ _mlog = data1;
+}
+
+void MQSpaceData::logb(float data2)
+{
+ _blog = data2;
+}
+
+void MQSpaceData::RSRoMQAir(float RSRo)
+{
+ _RSRo = RSRo;
+}
+
+void MQSpaceData::dangerousPer(float per)
+{
+ _percentile = per;
+}
+
+float MQSpaceData::readVoltage(float sensorValue,float voltage)
+{
+ return sensorValue*(voltage/_bitadc);
+}
+
 float MQSpaceData::readValue()
 {
-  if(_Rload <= 0) _Rload == 10;
-  if(( _Rload - _Rload) != 0) _Rload == 10;
-  _RS = ((_Rload/(analogRead(_pin)*(1/_bitadc))))-(_Rload));
-  _ratio = ( _RS / _R0);
- return pow(10, ((log10(_ratio)-b)/m));
+ _ratio = (_Rload*_bitadc/analogRead(_pin)-_Rload)/(_Rload*100/_percentile-_Rload)*_RSRo;
+ return pow(_ratio,_vb)*_va;
 }
 
-//**************************************ppm Value**************************************\\
-
-float MQSpaceData::MQData100(){return map(analogRead(_pin),0,(_bitadc-1),0,100);}
-float MQSpaceData::MQ2DataAir(){return map(analogRead(_pin),1,(_bitadc-1),300,10000);}
-float MQSpaceData::MQ3DataAir(){return map(analogRead(_pin),1,(_bitadc-1),25,500);}
-float MQSpaceData::MQ4DataAir(){return map(analogRead(_pin),1,(_bitadc-1),300,10000);}
-float MQSpaceData::MQ5DataAir(){return map(analogRead(_pin),1,(_bitadc-1),200,10000);}
-float MQSpaceData::MQ6DataAir(){return map(analogRead(_pin),1,(_bitadc-1),300,10000);}
-float MQSpaceData::MQ7DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,10000);}
-float MQSpaceData::MQ8DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,10000);}
-float MQSpaceData::MQ9DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,10000);}
-float MQSpaceData::MQ131DataAir(){return map(analogRead(_pin),1,(_bitadc-1),5,100);}
-float MQSpaceData::MQ135DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,1000);}
-float MQSpaceData::MQ136DataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,200);}
-float MQSpaceData::MQ303ADataAir(){return map(analogRead(_pin),1,(_bitadc-1),10,10000);}
-float MQSpaceData::MQ309ADataAir(){return map(analogRead(_pin),1,(_bitadc-1),30,3000);}
-
-//**************************************MQ-2**************************************\\
-
-float MQSpaceData::MQ2DataH2(){_va = 987.99;_vb = -2.162;return readValue();}
-float MQSpaceData::MQ2DataLPG(){_va = 574.25;_vb = -2.222; return readValue();}
-float MQSpaceData::MQ2DataCO(){_va = 36974;_vb = -3.109;return readValue();}
-float MQSpaceData::MQ2DataAlcohol(){_va = 3616.1;_vb = -2.675;return readValue();}
-float MQSpaceData::MQ2DataPropane(){_va = 658.71;_vb = -2.168;return readValue();}
-
-//**************************************MQ-3**************************************\\
-
-float MQSpaceData::MQ3DataLPG(){_va = 44771;_vb = -3.245;return readValue();}
-float MQSpaceData::MQ3DataCH4(){_va = 2*10^31;_vb = 19.01;return readValue();}
-float MQSpaceData::MQ3DataCO(){_va = 521853;_vb = -3.821;return readValue();}
-float MQSpaceData::MQ3DataAlcohol(){_va = 0.3934;_vb = -1.504;return readValue();}
-float MQSpaceData::MQ3DataBenzene(){_va = 4.8387;_vb = -2.68;return readValue();}
-float MQSpaceData::MQ3DataHexane(){_va = 7585.3;_vb = -2.849;return readValue();}
-
-//**************************************MQ-4**************************************\\
-
-float MQSpaceData::MQ4DataLPG(){_va = 3811.9;_vb = -3.113;return readValue();}
-float MQSpaceData::MQ4DataCH4(){_va = 1012.7;_vb = -2.786;return readValue();}
-float MQSpaceData::MQ4DataCO(){_va = 200000000000000;_vb = -19.05;return readValue();}
-float MQSpaceData::MQ4DataAlcohol(){_va = 60000000000;_vb = -14.01;return readValue();}
-float MQSpaceData::MQ4DataSmoke(){_va = 30000000;_vb = -8.308;return readValue();}
-
-//**************************************MQ-5**************************************\\
-
-float MQSpaceData::MQ5DataH2(){_va = 1163.8;_vb = -3.874;return readValue();}
-float MQSpaceData::MQ5DataLPG(){_va = 80.897; _vb = -2.431;return readValue();}
-float MQSpaceData::MQ5DataCH4(){_va = 177.65;_vb = -2.56;return readValue();}
-float MQSpaceData::MQ5DataCO(){_va = 491204; _vb = -5.826; return readValue();}
-float MQSpaceData::MQ5DataAlcohol(){_va = 97124;_vb = -4.918;return readValue();}
-
-//**************************************MQ-6**************************************\\
-
-float MQSpaceData::MQ6DataH2(){_va = 88158;_vb =  -3.597;return readValue();}
-float MQSpaceData::MQ6DataLPG(){_va = 1009.2;_vb =  -2.35; return readValue();}
-float MQSpaceData::MQ6DataCH4(){_va = 2127.2;  _vb = -2.526;return readValue();}
-float MQSpaceData::MQ6DataCO(){_va = 1000000000000000; _vb = -13.5;return readValue();}
-float MQSpaceData::MQ6DataAlcohol(){_va = 50000000;_vb = -6.017;return readValue();}
-
-//**************************************MQ-7**************************************\\
-
-float MQSpaceData::MQ7DataH2(){_va = 69.014;_vb = -1.374; return readValue();}
-float MQSpaceData::MQ7DataLPG(){_va = 700000000;_vb = -7.703;return readValue();}
-float MQSpaceData::MQ7DataCH4(){_va = 60000000000000;_vb = -10.54;return readValue();}
-float MQSpaceData::MQ7DataCO(){_va = 99.042;_vb = -1.518;return readValue();}
-float MQSpaceData::MQ7DataAlcohol(){_va = 40000000000000000;_vb = -12.35;return readValue();}
-
-//**************************************MQ-8**************************************\\
-
-float MQSpaceData::MQ8DataH2(){_va = 976.97;_vb = -0.688;return readValue();}
-float MQSpaceData::MQ8DataLPG(){_va = 10000000;_vb = -3.12;return readValue();}
-float MQSpaceData::MQ8DataCH4(){_va = 80000000000000;_vb = -6.666;return readValue();}
-float MQSpaceData::MQ8DataCO(){_va = 2000000000000000000;_vb = -8.074;return readValue();}
-float MQSpaceData::MQ8DataAlcohol(){_va = 76101; _vb = -1.86;return readValue();}
-
-//**************************************MQ-9**************************************\\
-
-float MQSpaceData::MQ9DataLPG(){_va = 1000.5;_vb = -2.186;return readValue();}
-float MQSpaceData::MQ9DataCH4(){_va = 4269.6;_vb = -2.648;return readValue();}
-float MQSpaceData::MQ9DataCO(){_va = 599.65;_vb = -2.244;return readValue();}
-
-//**************************************MQ-131**************************************\\
-
-float MQSpaceData::MQ131DataNOx(){_va = -462.43;_vb = -2.204;return readValue();}
-float MQSpaceData::MQ131DataCL2(){_va = 47.209;_vb = -1.186;return readValue();}
-float MQSpaceData::MQ131DataO3(){_va = 23.943;_vb = -1.11;return readValue();}
-
-//**************************************MQ-135**************************************\\
-
-float MQSpaceData::MQ135DataCO(){_va = 605.18;_vb = -3.937;return readValue();}
-float MQSpaceData::MQ135DataAlcohol(){_va = 77.255;_vb = -3.18;return readValue();}
-float MQSpaceData::MQ135DataCO2(){_va = 110.47;_vb = -2.862; return readValue();}
-float MQSpaceData::MQ135DataToluen(){_va = 44.947;_vb = -3.445;return readValue();}
-float MQSpaceData::MQ135DataNH4(){_va = 102.2;_vb = -2.473;return readValue();}
-float MQSpaceData::MQ135DataAceton(){_va = 34.668;_vb = -3.369; return readValue();}
-
-//**************************************MQ-136**************************************\\
-
-float MQSpaceData::MQ136DataH2S(){_va = 36.737;_vb = -3.536;return readValue();}
-float MQSpaceData::MQ136DataNH4(){_va = 98.551;_vb = -2.475;return readValue();}
-float MQSpaceData::MQ136DataCO(){_va = 503.34;_vb = -3.774;return readValue();}
-
-//**************************************MQ-303A**************************************\\
-
-float MQSpaceData::MQ303ADataIso(){_va = 6.2144;_vb = -2.894;return readValue();}
-float MQSpaceData::MQ303ADataHyd(){_va = 4.1487;_vb = -2.716;return readValue();}
-float MQSpaceData::MQ303ADataEthanol(){_va = 3.4916;_vb = -2.432;return readValue();}
-
-//**************************************MQ-309A**************************************\\
-
-float MQSpaceData::MQ309ADataH2(){_va = 1532.9;_vb = -1.951;return readValue();}
-float MQSpaceData::MQ309ADataCH4(){_va = 980.24;_vb = -1.68;return readValue();}
-float MQSpaceData::MQ309ADataCO(){_va = 1000000;_vb = -4.01;return readValue();}
-float MQSpaceData::MQ309ADataAlcohol(){_va = 473622;_vb = -3.647;return readValue();}
-
-calibrateR0::calibrateR0(float RSR0, float Rload, float voltage, int bitadc, byte pin)
+float MQSpaceData::logValue()
 {
-_RSR0=RSR0;
-_Rload = Rload;
-_voltage=voltage;
-_bitadc=pow(2,bitadc)-1;
-_pin = pin;
-};
-
-void calibrateR0::begin()
-{
-    pinMode(_pin, INPUT);
+ _ratio = (_Rload*_bitadc/analogRead(_pin)-_Rload)/(_Rload*100/_percentile-_Rload)*_RSRo;
+ return pow(10,((log10(_ratio)-_blog)/_mlog));
 }
 
-float calibrateR0::readVoltage()
-{
-    float _sensorValue = 0;
-    for (int x = 0; x < 500; x++)
-    {
-        _sensorValue = _sensorValue + analogRead(_pin);
-    }
-    _sensorValue = _sensorValue / 500.0;
-    return _sensorValue * (_voltage / _bitadc);
-}
+//**************************************ppm Value**************************************
 
-float calibrateR0::calculateR0()
-{
-    _RS = ((_voltage * _Rload) / readVoltage()) - (_Rload);
-    _R0 = (_RS / _RSR0);
-    return _R0;
-}
+int MQSpaceData::MQData100(){return map(analogRead(_pin),0,(_bitadc),0,100);}
+int MQSpaceData::MQ2DataAir(){return map(analogRead(_pin),1,(_bitadc),200,10000);}
+int MQSpaceData::MQ3DataAir(){return map(analogRead(_pin),1,(_bitadc),25,500);}
+int MQSpaceData::MQ4DataAir(){return map(analogRead(_pin),1,(_bitadc),200,10000);}
+int MQSpaceData::MQ5DataAir(){return map(analogRead(_pin),1,(_bitadc),200,10000);}
+int MQSpaceData::MQ6DataAir(){return map(analogRead(_pin),1,(_bitadc),300,10000);}
+int MQSpaceData::MQ7DataAir(){return map(analogRead(_pin),1,(_bitadc),50,4000);}
+int MQSpaceData::MQ8DataAir(){return map(analogRead(_pin),1,(_bitadc),200,10000);}
+int MQSpaceData::MQ9DataAir(){return map(analogRead(_pin),1,(_bitadc),200,10000);}
+int MQSpaceData::MQ131DataAir(){return map(analogRead(_pin),1,(_bitadc),5,100);}
+int MQSpaceData::MQ135DataAir(){return map(analogRead(_pin),1,(_bitadc),10,200);}
+int MQSpaceData::MQ136DataAir(){return map(analogRead(_pin),1,(_bitadc),10,200);}
+int MQSpaceData::MQ137DataAir(){return map(analogRead(_pin),1,(_bitadc),10,200);}
+float MQSpaceData::MQ303ADataAir(){return (map(analogRead(_pin),1,(_bitadc),12,345))/10;}
+int MQSpaceData::MQ309ADataAir(){return map(analogRead(_pin),1,(_bitadc),160,260);}
 
-calibrateR0VeryEasy::calibrateR0VeryEasy(float RSR0, float Rleasy)
-{
-  _RSR0=RSR0;
-  _Rload=Rleasy;
-}
+//**************************************MQ-2**************************************
 
-float calibrateR0VeryEasy::calculateR0VeryEasy(float percentile)
-{
-    _RS = (100 * _Rload / percentile) - (_Rload);
-    _R0 = (_RS / _RSR0);
-    return _R0;
-}
+float MQSpaceData::MQ2DataLPG(){_va = 17.6135;_vb =  -0.4539; return readValue();}
+float MQSpaceData::MQ2DataPropane(){_va = 19.5575;_vb = -0.461;return readValue();}
+float MQSpaceData::MQ2DataH2(){_va = 25.7473;_vb = -0.4731;return readValue();}
+float MQSpaceData::MQ2DataAlcohol(){_va = 19.2641;_vb = -0.3604;return readValue();}
+float MQSpaceData::MQ2DataCH4(){_va = 20.7074;_vb = -0.36;return readValue();}
+float MQSpaceData::MQ2Datasmoke(){_va = 26.4698;_vb = -0.3876;return readValue();}
+float MQSpaceData::MQ2DataCO(){_va = 28.024;_vb = -0.3182;return readValue();}
 
-result::result(float y, float y0, float x, float x0, float AverageY)
-{
-  _y=y;
-  _y0=y0;
-  _x=x;
-  _x0=x0;
-  _AverageY=AverageY;
-}
+/*
+Gas    | a       | b
+LPG    | 17.6135 | -0.4539
+propane| 19.5575 | -0.461 
+H2     | 25.7473 | -0.4731
+alcohol| 19.2641 | -0.3604
+CH4    | 20.7074 | -0.36  
+smoke  | 26.4698 | -0.3876
+CO     | 28.024  | -0.3182
+ */
 
-float result::resultA(){
-return log10(_y/_y0) / log10(_x/_x0);    
-}
+//**************************************MQ-3**************************************
 
-float result::resultB(){
-return log10(_AverageY) - resultA()*log10(_x/2);
-}
+float MQSpaceData::MQ3DataAlcohol(){_va = 0.5565;_vb = -0.6333;return readValue();}
+float MQSpaceData::MQ3DataBenzene(){_va = 1.7957;_vb = -0.369;return readValue();}
+float MQSpaceData::MQ3DataHexane(){_va = 22.9337;_vb = -0.358;return readValue();}
+float MQSpaceData::MQ3DataLPG(){_va = 27.8286;_vb = -0.2847;return readValue();}
+float MQSpaceData::MQ3DataCO(){_va = 31.9559;_vb = -0.2325;return readValue();}
+float MQSpaceData::MQ3DataCH4(){_va = 44.8389;_vb = -0.0476;return readValue();}
+
+/*
+Gas    | a       | b
+Alcohol| 0.5565  | -0.6333
+Benzene| 1.7957  | -0.369 
+Hexane | 22.9337 | -0.358 
+LPG    | 27.8286 | -0.2847
+CO     | 31.9559 | -0.2325
+CH4    | 44.8389 | -0.0476
+ */
+
+//**************************************MQ-4**************************************
+
+float MQSpaceData::MQ4DataCH4(){_va = 11.6605;_vb = -0.3558;return readValue();}
+float MQSpaceData::MQ4DataLPG(){_va = 13.9134;_vb = -0.3186;return readValue();}
+float MQSpaceData::MQ4DataH2(){_va = 9.6559;_vb = -0.1765;return readValue();}
+float MQSpaceData::MQ4DataSmoke(){_va = 7.05;_vb = -0.1065;return readValue();}
+float MQSpaceData::MQ4DataAlcohol(){_va = 5.7994;_vb = -0.0696;return readValue();}
+float MQSpaceData::MQ4DataCO(){_va = 5.4783;_vb = -0.0492;return readValue();}
+
+/*
+Gas    | a       | b
+CH4    | 11.6605 | -0.3558
+LPG    | 13.9134 | -0.3186
+H2     | 9.6559  | -0.1765
+smoke  | 7.05    | -0.1065
+alcohol| 5.7994  | -0.0696
+CO     | 5.4783  | -0.0492
+ */
+
+//**************************************MQ-5**************************************
+
+float MQSpaceData::MQ5DataLPG(){_va = 6.1067;_vb = -0.4102;return readValue();}
+float MQSpaceData::MQ5DataCH4(){_va = 6.987; _vb = -0.3777;return readValue();}
+float MQSpaceData::MQ5DataH2(){_va = 7.4265;_vb = -0.2847;return readValue();}
+float MQSpaceData::MQ5DataAlcohol(){_va = 10.8274;_vb = -0.2104;return readValue();}
+float MQSpaceData::MQ5DataCO(){_va = 8.2236;_vb = -0.1492;return readValue();}
+
+/*
+Gas    | a       | b
+LPG    | 6.1067  | -0.4102
+CH4    | 6.987   | -0.3777
+H2     | 7.4265  | -0.2847
+alcohol| 10.8274 | -0.2104
+CO     | 8.2236  | -0.1492
+ */
+
+//**************************************MQ-6**************************************
+
+float MQSpaceData::MQ6DataLPG(){_va = 20.3079;_vb = -0.4349;return readValue();}
+float MQSpaceData::MQ6DataCH4(){_va = 22.011;_vb =  -0.4029; return readValue();}
+float MQSpaceData::MQ6DataH2(){_va = 26.9497;_vb = -0.2956;return readValue();}
+float MQSpaceData::MQ6DataAlcohol(){_va = 19.3261; _vb = -0.1655;return readValue();}
+float MQSpaceData::MQ6DataCO(){_va = 13.4917;_vb = -0.0777;return readValue();}
+
+/*
+Gas    | a       | b
+LPG    | 20.3079 | -0.4349
+CH4    | 22.011  | -0.4029
+H2     | 26.9497 | -0.2956
+Alcohol| 19.3261 | -0.1655
+CO     | 13.4917 | -0.0777
+ */
+
+//**************************************MQ-7**************************************
+
+float MQSpaceData::MQ7DataH2(){_va = 21.1794;_vb = -0.7174;return readValue();}
+float MQSpaceData::MQ7DataCO(){_va = 20.89;_vb = -0.6568;return readValue();}
+float MQSpaceData::MQ7DataLPG(){_va = 14.9745;_vb = -0.1329;return readValue();}
+float MQSpaceData::MQ7DataCH4(){_va = 19.8094;_vb = -0.09;return readValue();}
+float MQSpaceData::MQ7DataAlcohol(){_va = 20.2524;_vb = -0.0655;return readValue();}
+
+/*
+Gas    | a       | b
+H2     | 21.1794 | -0.7174
+CO     | 20.89   | -0.6568
+LPG    | 14.9745 | -0.1329
+CH4    | 19.8094 | -0.09  
+Alcohol| 20.2524 | -0.0655
+ */
+
+//**************************************MQ-8**************************************
+
+float MQSpaceData::MQ8DataH2(){_va = 18391.5667;_vb = -1.4494;return readValue();}
+float MQSpaceData::MQ8DataAlcohol(){_va = 468.8045;_vb = -0.5574;return readValue();}
+float MQSpaceData::MQ8DataLPG(){_va = 152.1255;_vb = -0.2922;return readValue();}
+float MQSpaceData::MQ8DataCH4(){_va = 117.9639;_vb = -0.1448;return readValue();}
+float MQSpaceData::MQ8DataCO(){_va = 126.605; _vb = -0.1173;return readValue();}
+
+/*
+Gas    | a       | b
+H2     | 18391.5667| -1.4494
+alcohol| 468.8045| -0.5574
+LPG    | 152.1255| -0.2922
+CH4    | 117.9639| -0.1448
+CO     | 126.605 | -0.1173
+ */
+
+//**************************************MQ-9**************************************
+
+float MQSpaceData::MQ9DataCO(){_va = 17.3985;_vb = -0.4504;return readValue();}
+float MQSpaceData::MQ9DataLPG(){_va = 24.918;_vb = -0.4695;return readValue();}
+float MQSpaceData::MQ9DataCH4(){_va = 21.8247;_vb = -0.3663;return readValue();}
+
+/*
+Gas    | a       | b
+CO     | 17.3985 | -0.4504
+LPG    | 24.918  | -0.4695
+CH4    | 21.8247 | -0.3663
+ */
+
+//**************************************MQ-131**************************************
+
+float MQSpaceData::MQ131DataO3(){_va = 16.0871;_vb = -0.8603;return readValue();}
+float MQSpaceData::MQ131DataCL2(){_va = 18.9693;_vb = -0.7132;return readValue();}
+float MQSpaceData::MQ131DataNOx(){_va = 16.7059;_vb = -0.4684;return readValue();}
+
+/*
+Gas    | a       | b
+O3     | 16.0871 | -0.8603
+CL2    | 18.9693 | -0.7132
+NOx    | 16.7059 | -0.4684
+ */
+
+//**************************************MQ-135**************************************
+
+float MQSpaceData::MQ135DataAceton(){_va = 2.824;_vb = -0.2955;return readValue();}
+float MQSpaceData::MQ135DataToluen(){_va = 2.9897;_vb = -0.2909;return readValue();}
+float MQSpaceData::MQ135DataAlcohol(){_va = 3.8776;_vb = -0.3144;return readValue();}
+float MQSpaceData::MQ135DataCO2(){_va = 5.2146;_vb = -0.3574;return readValue();}
+float MQSpaceData::MQ135DataNH4(){_va = 6.4416;_vb = -0.3994;return readValue();}
+float MQSpaceData::MQ135DataCO(){_va = 5.0533;_vb = -0.2541;return readValue();}
+
+/*
+Gas    | a       | b
+Aceton | 2.824   | -0.2955
+Toluen | 2.9897  | -0.2909
+Alcohol| 3.8776  | -0.3144
+CO2    | 5.2146  | -0.3574
+NH4    | 6.4416  | -0.3994
+CO     | 5.0533  | -0.2541
+ */
+
+//**************************************MQ-136**************************************
+
+float MQSpaceData::MQ136DataH2S(){_va = 2.7684;_vb = -0.2832;return readValue();}
+float MQSpaceData::MQ136DataNH4(){_va = 6.4463;_vb = -0.4028;return readValue();}
+float MQSpaceData::MQ136DataCO(){_va = 5.277;_vb = -0.2622;return readValue();}
+
+/*
+Gas    | a       | b
+H2S    | 2.7684  | -0.2832
+NH4    | 6.4463  | -0.4028
+CO     | 5.277   | -0.2622
+ */
+
+//**************************************MQ-137**************************************
+
+float MQSpaceData::MQ137DataCO(){_va = 5.2245;_vb = -0.2617;return readValue();}
+float MQSpaceData::MQ137DataEthanol(){_va = 6.3348;_vb = -0.3978;return readValue();}
+float MQSpaceData::MQ137DataNH3(){_va = 2.7756;_vb = -0.2837;return readValue();}
+
+/*
+Gas    | a       | b
+CO     | 5.2245  | -0.2617
+Ethanol| 6.3348  | -0.3978
+NH3    | 2.7756  | -0.2837
+ */
+
+//**************************************MQ-303A**************************************
+
+float MQSpaceData::MQ303ADataHyd(){_va = 1.7955;_vb = -0.3767;return readValue();}
+float MQSpaceData::MQ303ADataEthanol(){_va = 1.5196;_vb = -0.367;return readValue();}
+float MQSpaceData::MQ303ADataIso(){_va = 1.9209;_vb = -0.3443;return readValue();}
+
+/*
+Gas    | a       | b
+Hydrogen| 1.7955  | -0.3767
+Ethanol| 1.5196  | -0.367 
+IsoButane| 1.9209  | -0.3443
+ */
+
+//**************************************MQ-309A**************************************
+
+float MQSpaceData::MQ309ADataH2(){_va = 44.3713;_vb = -0.5136;return readValue();}
+float MQSpaceData::MQ309ADataCH4(){_va = 65.5612;_vb = -0.6033;return readValue();}
+float MQSpaceData::MQ309ADataAlcohol(){_va = 34.1956;_vb = -0.2666;return readValue();}
+float MQSpaceData::MQ309ADataCO(){_va = 30.3019;_vb = -0.2336;return readValue();}
+
+/*
+Gas    | a       | b
+H2     | 44.3713 | -0.5136
+CH4    | 65.5612 | -0.6033
+alcohol| 34.1956 | -0.2666
+CO     | 30.3019 | -0.2336
+ */
 
 GeigerCounterPin::GeigerCounterPin(bool uSvhr, bool Avg1, bool CPM_Count, int LOG_PERIOD1, byte pin2)
 {
