@@ -113,6 +113,8 @@ class MQSpaceData
   float MQ309ADataCH4();
   float MQ309ADataCO();
   float MQ309ADataAlcohol();
+  float MQ309ADataLowCO();
+  float MQ309ADataSecondH2();
 };
 
 class GeigerCounterPin
