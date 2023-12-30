@@ -313,6 +313,15 @@ alcohol| 34.1956 | -0.2666
 CO     | 30.3019 | -0.2336
  */
 
+//**************************************MQ-309A-Low-Sensitivity-FOR-CO**************************************
+
+float MQSpaceData::MQ309ADataLowCO(){_va = 2081.7244;_vb = -1.6974;return limitValue1000(readValue());}
+float MQSpaceData::MQ309ADataSecondH2(){_va = 27540.4616;_vb = -0.8421;return limitValue3000(readValue());}
+
+// for old curve: float MQSpaceData::MQ309ADataSecondH2(){_va = 27540.4616;_vb = -0.8421;return limitValue3000(readValue());}
+// for new curve: float MQSpaceData::MQ309ADataSecondH2(){_va = 28764.2815;_vb = -0.8485;return limitValue3000(readValue());}
+
+
 GeigerCounterPin::GeigerCounterPin(bool uSvhr, bool Avg1, bool CPM_Count, int LOG_PERIOD1, byte pin2)
 {
   _pin2=pin2;
