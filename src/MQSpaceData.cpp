@@ -321,6 +321,11 @@ float MQSpaceData::MQ309ADataSecondH2(){_va = 27540.4616;_vb = -0.8421;return li
 // for old curve: float MQSpaceData::MQ309ADataSecondH2(){_va = 27540.4616;_vb = -0.8421;return limitValue3000(readValue());}
 // for new curve: float MQSpaceData::MQ309ADataSecondH2(){_va = 28764.2815;_vb = -0.8485;return limitValue3000(readValue());}
 
+/*
+Gas    | a       | b
+CO     | 2081.7244| -1.6974
+H2     | 28764.2815| -0.8485
+ */
 
 GeigerCounterPin::GeigerCounterPin(bool uSvhr, bool Avg1, bool CPM_Count, int LOG_PERIOD1, byte pin2)
 {
