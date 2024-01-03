@@ -16,12 +16,14 @@ class MQSpaceData
   float _vb;
   float _mlog;
   float _blog;
-  float limitValue10000(float Sensorvalue);
-  float limitValue7000(float Sensorvalue);
-  float limitValue4000(float Sensorvalue);
-  float limitValue500(float Sensorvalue);
-  float limitValue200(float Sensorvalue);
-  float limitValue100(float Sensorvalue);
+	float limitValue10000(float Sensorvalue);
+	float limitValue7000(float Sensorvalue);
+	float limitValue4000(float Sensorvalue);
+	float limitValue3000(float Sensorvalue);
+	float limitValue1000(float Sensorvalue);
+	float limitValue500(float Sensorvalue);
+	float limitValue200(float Sensorvalue);
+	float limitValue100(float Sensorvalue);
   public:
   MQSpaceData(int bitadc, float Rload, byte pin);
   void begin();
