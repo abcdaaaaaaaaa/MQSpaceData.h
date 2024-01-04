@@ -83,6 +83,8 @@ int MQSpaceData::MQ309ADataAir(){return map(analogRead(_pin),1,(_bitadc),160,260
 float MQSpaceData::limitValue10000(float Sensorvalue){if(Sensorvalue>10000)(Sensorvalue=10000);return Sensorvalue;}
 float MQSpaceData::limitValue7000(float Sensorvalue){if(Sensorvalue>7000)(Sensorvalue=7000);return Sensorvalue;}
 float MQSpaceData::limitValue4000(float Sensorvalue){if(Sensorvalue>4000)(Sensorvalue=4000);return Sensorvalue;}
+float MQSpaceData::limitValue3000(float Sensorvalue){if(Sensorvalue>3000)(Sensorvalue=3000);return Sensorvalue; }
+float MQSpaceData::limitValue1000(float Sensorvalue){if(Sensorvalue>1000)(Sensorvalue=1000);return Sensorvalue; }
 float MQSpaceData::limitValue500(float Sensorvalue){if(Sensorvalue>500)(Sensorvalue=500);return Sensorvalue;}
 float MQSpaceData::limitValue200(float Sensorvalue){if(Sensorvalue>200)(Sensorvalue=200);return Sensorvalue;}
 float MQSpaceData::limitValue100(float Sensorvalue){if(Sensorvalue>100)(Sensorvalue=100);return Sensorvalue;}
