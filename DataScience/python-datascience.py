@@ -127,7 +127,7 @@ match(SensorModel):
         plt.scatter(sequence, cy, label='CH4', color='#87CEEB', marker='o')
         plt.scatter(sequence, dy, label='CO', color='#ADD8E6', marker='o')
         plt.scatter(sequence, ey, label='Alcohol', color='#007FFF', marker='o')
-        plt.scatter(sequence, ey, label='Smoke', color='#40E0D0', marker='o')
+        plt.scatter(sequence, fy, label='Smoke', color='#40E0D0', marker='o')
     case 'MQ-5':
         plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-5.csv', 'r') as file:
@@ -220,11 +220,15 @@ match(SensorModel):
              by.append(int(row['CH4']))
              cy.append(int(row['CO']))
              dy.append(int(row['Alcohol']))
+             ey.append(int(row['LowCO']))
+             fy.append(int(row['SecondH2']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
         plt.scatter(sequence, ay, label='H2', color='#0000FF', marker='o')
         plt.scatter(sequence, by, label='CH4', color='#000e44', marker='o')
         plt.scatter(sequence, cy, label='CO', color='#87CEEB', marker='o')
         plt.scatter(sequence, dy, label='Alcohol', color='#ADD8E6', marker='o')
+        plt.scatter(sequence, ey, label='LowCO', color='#007FFF', marker='o')
+        plt.scatter(sequence, fy, label='SecondH2', color='#40E0D0', marker='o')
     case 'SpaceData':
         plt.ylim(0, 100)
         with open('../datascience/csv/SpaceData.csv', 'r') as file:
