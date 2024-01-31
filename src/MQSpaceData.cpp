@@ -1,16 +1,25 @@
 #include "MQSpaceData.h"
 #include "Arduino.h"
 
-MQSpaceData::MQSpaceData(int bitadc, float Rload, byte pin)
+MQSpaceData::MQSpaceData(int bitadc, byte pin)
 {
-  _pin=pin;
-  _Rload=Rload;
   _bitadc=pow(2,bitadc)-1;
+  _pin=pin;
 }
 
 void MQSpaceData::begin()
 {
-  pinMode(_pin,INPUT);
+ pinMode(_pin,INPUT);
+}
+
+void MQSpaceData::setRL(float Rload)
+{
+ _Rload=Rload;
+}
+
+void MQSpaceData::solderedRL()
+{
+ _Rload=1;
 }
 
 void MQSpaceData::valuea(float data1)
@@ -83,8 +92,8 @@ int MQSpaceData::MQ309ADataAir(){return map(analogRead(_pin),1,(_bitadc),160,260
 float MQSpaceData::limitValue10000(float Sensorvalue){if(Sensorvalue>10000)(Sensorvalue=10000);return Sensorvalue;}
 float MQSpaceData::limitValue7000(float Sensorvalue){if(Sensorvalue>7000)(Sensorvalue=7000);return Sensorvalue;}
 float MQSpaceData::limitValue4000(float Sensorvalue){if(Sensorvalue>4000)(Sensorvalue=4000);return Sensorvalue;}
-float MQSpaceData::limitValue3000(float Sensorvalue){if(Sensorvalue>3000)(Sensorvalue=3000);return Sensorvalue; }
-float MQSpaceData::limitValue1000(float Sensorvalue){if(Sensorvalue>1000)(Sensorvalue=1000);return Sensorvalue; }
+float MQSpaceData::limitValue3000(float Sensorvalue) { if (Sensorvalue > 4000)(Sensorvalue = 4000); return Sensorvalue; }
+float MQSpaceData::limitValue1000(float Sensorvalue) { if (Sensorvalue > 4000)(Sensorvalue = 4000); return Sensorvalue; }
 float MQSpaceData::limitValue500(float Sensorvalue){if(Sensorvalue>500)(Sensorvalue=500);return Sensorvalue;}
 float MQSpaceData::limitValue200(float Sensorvalue){if(Sensorvalue>200)(Sensorvalue=200);return Sensorvalue;}
 float MQSpaceData::limitValue100(float Sensorvalue){if(Sensorvalue>100)(Sensorvalue=100);return Sensorvalue;}
@@ -276,15 +285,15 @@ CO     | 5.277   | -0.2622
 
 //**************************************MQ-137**************************************
 
-float MQSpaceData::MQ137DataCO(){_va = 5.2245;_vb = -0.2617;return limitValue200(readValue());}
-float MQSpaceData::MQ137DataEthanol(){_va = 6.3348;_vb = -0.3978;return limitValue200(readValue());}
-float MQSpaceData::MQ137DataNH3(){_va = 2.7756;_vb = -0.2837;return limitValue200(readValue());}
+float MQSpaceData::MQ137DataCO(){_va = 5.277;_vb = -0.2622;return limitValue200(readValue());}
+float MQSpaceData::MQ137DataEthanol(){_va = 6.4463;_vb = -0.4028;return limitValue200(readValue());}
+float MQSpaceData::MQ137DataNH3(){_va = 2.7684;_vb = -0.2832;return limitValue200(readValue());}
 
 /*
 Gas    | a       | b
-CO     | 5.2245  | -0.2617
-Ethanol| 6.3348  | -0.3978
-NH3    | 2.7756  | -0.2837
+CO     | 5.277   | -0.2622
+Ethanol| 6.4463  | -0.4028
+NH3    | 2.7684  | -0.2832
  */
 
 //**************************************MQ-303A**************************************
