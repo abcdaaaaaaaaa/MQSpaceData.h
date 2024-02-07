@@ -30,8 +30,9 @@ public:
 	void setRL(float Rload);
 	void solderedRL();
 	int MQData100();
+	int read();
 	float readValue();
-	float readVoltage(float sensorValue, float voltage);
+	float readVoltage(float voltage);
 	float logValue();
 	void valuea(float data1);
 	void valueb(float data2);
