@@ -52,40 +52,45 @@ void MQSpaceData::dangerousPer(float per)
  _percentile = per;
 }
 
-float MQSpaceData::readVoltage(float sensorValue,float voltage)
+int MQSpaceData::read()
 {
- return sensorValue*(voltage/_bitadc);
+ return analogRead(_pin);
+}
+
+float MQSpaceData::readVoltage(float voltage)
+{
+ return read()*(voltage/_bitadc);
 }
 
 float MQSpaceData::readValue()
 {
- _ratio = (_Rload*_bitadc/analogRead(_pin)-_Rload)/(_Rload*100/_percentile-_Rload)*_RSRo;
+ _ratio = (_Rload*_bitadc/read()-_Rload)/(_Rload*100/_percentile-_Rload)*_RSRo;
  return pow(_ratio,_vb)*_va;
 }
 
 float MQSpaceData::logValue()
 {
- _ratio = (_Rload*_bitadc/analogRead(_pin)-_Rload)/(_Rload*100/_percentile-_Rload)*_RSRo;
+ _ratio = (_Rload*_bitadc/read()-_Rload)/(_Rload*100/_percentile-_Rload)*_RSRo;
  return pow(10,((log10(_ratio)-_blog)/_mlog));
 }
 
 //**************************************ppm Values**************************************
 
-int MQSpaceData::MQData100(){return map(analogRead(_pin),0,(_bitadc),0,100);}
-int MQSpaceData::MQ2DataAir(){return map(analogRead(_pin),1,(_bitadc),200,10000);}
-int MQSpaceData::MQ3DataAir(){return map(analogRead(_pin),1,(_bitadc),25,500);}
-int MQSpaceData::MQ4DataAir(){return map(analogRead(_pin),1,(_bitadc),200,10000);}
-int MQSpaceData::MQ5DataAir(){return map(analogRead(_pin),1,(_bitadc),200,10000);}
-int MQSpaceData::MQ6DataAir(){return map(analogRead(_pin),1,(_bitadc),300,10000);}
-int MQSpaceData::MQ7DataAir(){return map(analogRead(_pin),1,(_bitadc),50,4000);}
-int MQSpaceData::MQ8DataAir(){return map(analogRead(_pin),1,(_bitadc),200,10000);}
-int MQSpaceData::MQ9DataAir(){return map(analogRead(_pin),1,(_bitadc),200,10000);}
-int MQSpaceData::MQ131DataAir(){return map(analogRead(_pin),1,(_bitadc),5,100);}
-int MQSpaceData::MQ135DataAir(){return map(analogRead(_pin),1,(_bitadc),10,200);}
-int MQSpaceData::MQ136DataAir(){return map(analogRead(_pin),1,(_bitadc),10,200);}
-int MQSpaceData::MQ137DataAir(){return map(analogRead(_pin),1,(_bitadc),10,200);}
-float MQSpaceData::MQ303ADataAir(){return (map(analogRead(_pin),1,(_bitadc),12,345))/10;}
-int MQSpaceData::MQ309ADataAir(){return map(analogRead(_pin),1,(_bitadc),160,260);}
+int MQSpaceData::MQData100(){return map(read(),0,(_bitadc),0,100);}
+int MQSpaceData::MQ2DataAir(){return map(read(),1,(_bitadc),200,10000);}
+int MQSpaceData::MQ3DataAir(){return map(read(),1,(_bitadc),25,500);}
+int MQSpaceData::MQ4DataAir(){return map(read(),1,(_bitadc),200,10000);}
+int MQSpaceData::MQ5DataAir(){return map(read(),1,(_bitadc),200,10000);}
+int MQSpaceData::MQ6DataAir(){return map(read(),1,(_bitadc),300,10000);}
+int MQSpaceData::MQ7DataAir(){return map(read(),1,(_bitadc),50,4000);}
+int MQSpaceData::MQ8DataAir(){return map(read(),1,(_bitadc),200,10000);}
+int MQSpaceData::MQ9DataAir(){return map(read(),1,(_bitadc),200,10000);}
+int MQSpaceData::MQ131DataAir(){return map(read(),1,(_bitadc),5,100);}
+int MQSpaceData::MQ135DataAir(){return map(read(),1,(_bitadc),10,200);}
+int MQSpaceData::MQ136DataAir(){return map(read(),1,(_bitadc),10,200);}
+int MQSpaceData::MQ137DataAir(){return map(read(),1,(_bitadc),10,200);}
+float MQSpaceData::MQ303ADataAir(){return (map(read(),1,(_bitadc),12,345))/10;}
+int MQSpaceData::MQ309ADataAir(){return map(read(),1,(_bitadc),160,260);}
 
 //**************************************Limit Values**************************************
 
