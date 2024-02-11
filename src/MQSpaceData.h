@@ -12,6 +12,11 @@ private:
 	float _Rload;
 	byte _pin;
 	float _RSRo;
+	float _voltage;
+	float _setvoltage;
+	float _range;
+	float _RS;
+	float _Ro;
 	float _va;
 	float _vb;
 	float _mlog;
@@ -29,10 +34,13 @@ public:
 	void begin();
 	void setRL(float Rload);
 	void solderedRL();
+	void setVoltage(float voltage);
+	void setRange(int range);
 	int MQData100();
 	int read();
 	float readValue();
-	float readVoltage(float voltage);
+	float readVoltage();
+	float calculateRo();
 	float logValue();
 	void valuea(float data1);
 	void valueb(float data2);
