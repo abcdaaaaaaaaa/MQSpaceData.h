@@ -52,14 +52,35 @@ void MQSpaceData::dangerousPer(float per)
  _percentile = per;
 }
 
+void MQSpaceData::setVoltage(float voltage)
+{
+ _voltage = voltage;
+}
+
+void MQSpaceData::setRange(int range)
+{
+ _range = range;
+}
+
 int MQSpaceData::read()
 {
  return analogRead(_pin);
 }
 
-float MQSpaceData::readVoltage(float voltage)
+float MQSpaceData::readVoltage()
 {
- return read()*(voltage/_bitadc);
+ float sensorValue = 0;
+ for(int x = 0; x < _range; x++)(sensorValue = sensorValue + read());
+ sensorValue = sensorValue / _range;
+ _setvoltage = sensorValue*(_voltage/_bitadc);
+ return _setvoltage;
+}
+
+float MQSpaceData::calculateRo()
+{
+ _RS = _voltage * _Rload / readVoltage() - _Rload;
+ _Ro = _RS / _RSRo;
+ return _Ro;
 }
 
 float MQSpaceData::readValue()
