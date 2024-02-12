@@ -1,5 +1,5 @@
 # MQDataScience
-"The first and only Arduino library where Geiger Counter and MQ Sensors combine with data science"
+"The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
 ![MQ3datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/49a65210-5921-4a4c-acce-3c3c476c2d21)
 ![MQ2curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/14de872a-3f70-4c8b-b96f-7b368e7a5ec9)
 ![MQ3curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c33b986e-f253-4274-96a1-afeb6ab91d83)
