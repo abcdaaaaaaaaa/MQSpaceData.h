@@ -1,4 +1,20 @@
 # MQDataScience
+
+## Formulla 
+1) ppm = a*ratio^b (a: valuea b: valueb)
+2) ppm = 10^[(log10(ratio)-b)/m] (m: logm b: logb)
+ If r^2 equals 1 :
+a*ratio^b = 10^[(log10(ratio)-b)/m]
+logm = valueb, logb = log10(valuea)   
+        if r_squared >= 0.9995:            
+            x0, y0 = x[0], y[0]
+            xn, yn = x[-1], y[-1]
+            b = np.log10(yn/y0) / np.log10(xn/x0)
+            a = 10**(np.log10(yn) - b * np.log10(xn))
+            b2 = np.log10(yn) - b * np.log10(xn)
+            b2_rounded = round(b2, 4)
+            a_rounded = round(a, 4)
+            b_rounded = round(b, 4)
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
 ![MQ3datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/49a65210-5921-4a4c-acce-3c3c476c2d21)
 ![MQ2curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/14de872a-3f70-4c8b-b96f-7b368e7a5ec9)
