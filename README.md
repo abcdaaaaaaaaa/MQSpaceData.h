@@ -70,6 +70,19 @@ m = log10(y/y0) / log10(x/x0)
 
 b = log10(y) - m*log10(x)
 
+        if r_squared >= 0.9995:
+            print("R-squared value for {gas name} is above 0.9995, plotting against first and last values.")
+            
+            x0, y0 = x[0], y[0]
+            xn, yn = x[-1], y[-1]
+            b = np.log10(yn/y0) / np.log10(xn/x0)
+            a = 10**(np.log10(yn) - b * np.log10(xn))
+            b2 = np.log10(yn) - b * np.log10(xn)
+            b2_rounded = round(b2, 4)
+            a_rounded = round(a, 4)
+            b_rounded = round(b, 4)
+
+The first formula is determined according to all points, while the second formula is determined according to the first and last point. Therefore, in order to collect them all in the same formula and to increase the accuracy rate, we used the method in the second formula and took the logarithm (if R^2 = 1 (%100) always: logm = valueb, logb = log10(valuea)) for slopes greater than 99.95% and collected them all in the first formula, thus increasing the accuracy rate without having to use 2 different formulas.
 
 ## MQDataScience
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
