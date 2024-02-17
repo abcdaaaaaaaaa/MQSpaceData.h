@@ -10,22 +10,30 @@ logm = valueb, logb = log10(valuea)
 ###
 2]
 y = mx+ n                                                                                                                                                                       
-n = b                                                                                                                                                                           
-                                                                                                                                                                                
+n = b                                                                                                                                                                       
+                                                                                                                                                                            
 log10(y) = m*log10(x) + b
+
 -b = m*log10(x) - log10(y)
+
 last b = log10(y) - m*log10(x)
 
 m = (y - y0) / (x - x0)
+
 m = (log10(y) - log10(y0)) / (log10(x) - log10(x0))
+
 if y= a*x^b:
+
 last m = log10(y/y0) / log10(x/x0)
 
 m = slope of the line
+
 b = intersection point
 
 result:
+
 m = log10(y/y0) / log10(x/x0)
+
 b = log10(y) - m*log10(x)
 ## MQDataScience
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
