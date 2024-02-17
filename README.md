@@ -3,7 +3,8 @@
 ## Formulla 
 
 1) ppm = a*ratio^b (a: valuea b: valueb)
-2) ppm = 10^[(log10(ratio)-b)/m] (m: logm b: logb)                                                                                                                                                                                                                                                                                                              
+2) ppm = 10^[(log10(ratio)-b)/m] (m: logm b: logb)
+
 If r^2 equals 1 :
 
 a*ratio^b = 10^[(log10(ratio)-b)/m]                                                                                                                                             
