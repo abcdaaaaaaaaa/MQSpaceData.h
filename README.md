@@ -5,7 +5,7 @@
 1) ppm = a*ratio^b (a: valuea b: valueb)
 2) ppm = 10^[(log10(ratio)-b)/m] (m: logm b: logb)
 
-If r^2 equals 1 :
+If R^2 equals 1 :
 
 a*ratio^b = 10^[(log10(ratio)-b)/m]                                                                                                                                             
 logm = valueb, logb = log10(valuea)
@@ -69,6 +69,8 @@ b = intersection point
 m = log10(y/y0) / log10(x/x0)
 
 b = log10(y) - m*log10(x)
+
+
 ## MQDataScience
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
 ![MQ3datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/49a65210-5921-4a4c-acce-3c3c476c2d21)
