@@ -242,7 +242,7 @@ match(SensorModel):
         plt.scatter(sequence, fy, label='SecondH2', color='#40E0D0', marker='o')
     case 'SpaceData':
         plt.ylim(0, 100)
-        with open('../datascience/csv/SpaceData.csv', 'r') as file:
+        with open('../DataScience/csv/SpaceData.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
              y.append(int(row['Data']))
@@ -252,21 +252,21 @@ match(SensorModel):
       match(user_choice):
         case 1:
          plt.ylim(0.1, 10)
-         with open('../datascience/csv/GeigerCounter.csv', 'r') as file:
+         with open('../DataScience/csv/GeigerCounter.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
              y.append(int(row['Data']))
          plt.scatter(sequence, y, label='usv/hr', color='#000080', marker='o')
         case 2:
          plt.ylim(10, 100)
-         with open('../datascience/csv/GeigerCounter.csv', 'r') as file:
+         with open('../DataScience/csv/GeigerCounter.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
              y.append(int(row['Data']))
          plt.scatter(sequence, y, label='usv/hr', color='#000080', marker='o')
         case 3:
          plt.ylim(100, 1000)
-         with open('../datascience/csv/GeigerCounter.csv', 'r') as file:
+         with open('../DataScience/csv/GeigerCounter.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
              y.append(int(row['Data']))
