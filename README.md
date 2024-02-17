@@ -5,7 +5,28 @@
 2) ppm = 10^[(log10(ratio)-b)/m] (m: logm b: logb)
  If r^2 equals 1 :
 a*ratio^b = 10^[(log10(ratio)-b)/m]
-logm = valueb, logb = log10(valuea)   
+logm = valueb, logb = log10(valuea)
+
+2]
+y = mx+ n
+n = b
+
+log10(y) = m*log10(x) + b
+-b = m*log10(x) - log10(y)
+b = log10(y) -  m*log10(x)
+
+m = (y - y0) / (x - x0)
+m = (log10(y) - log10(y0)) / (log10(x) - log10(x0))
+if y= a*x^b:
+m = log10(y/y0) / log10(x/x0)
+
+m = slope of the line
+b = intersection point
+
+m = (log10(y) - log10(y0)) / (log10(x) - log10(x0))
+result:
+m = log10(y/y0) / log10(x/x0)
+b = log10(AverageY) - m * log10((x+x0)/2)
         if r_squared >= 0.9995:            
             x0, y0 = x[0], y[0]
             xn, yn = x[-1], y[-1]
