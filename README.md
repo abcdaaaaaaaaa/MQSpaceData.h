@@ -89,36 +89,65 @@ The first formula is determined according to all points, while the second formul
 ![MQ3datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/49a65210-5921-4a4c-acce-3c3c476c2d21)
 
 ## MQ-2
+### NewCurve:
 ![MQ2curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/14de872a-3f70-4c8b-b96f-7b368e7a5ec9)
+### OldCurve:
 ## MQ-3
+### NewCurve:
 ![MQ3curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c33b986e-f253-4274-96a1-afeb6ab91d83)
+### OldCurve:
 ## MQ-4
+### NewCurve:
 ![MQ4curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/590f4b79-e53b-4c9f-947c-b22d49a62d4d)
+### OldCurve:
 ## MQ-5
+### NewCurve:
 ![MQ5curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/4c6dfc36-8bfd-438e-bbf8-a03c7be40f2f)
+### OldCurve:
 ## MQ-6
+### NewCurve:
 ![MQ6curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/9eea767a-6f66-43f8-affd-6fac06999dd7)
+### OldCurve:
 ## MQ-7
+### NewCurve:
 ![MQ7curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/0435c61f-4bd4-4168-aadd-84972247c151)
+### OldCurve:
 ## MQ-8
+### NewCurve:
 ![MQ8curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/8c3cb2ac-765a-4d2a-9341-e5b1e2fbff23)
+### OldCurve:
 ## MQ-9
+### NewCurve:
 ![MQ9curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c7c34507-d8c1-4760-87ac-d5427cf690e5)
+### OldCurve:
 ## MQ131
+### NewCurve:
 ![MQ131curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/83dd8057-6c4f-4bbc-b696-a0b6a7b2f658)
+### OldCurve:
 ## MQ-135
+### NewCurve:
 ![MQ135curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/01ab414a-f1c1-46b8-9e44-e180cf8f96f5)
+### OldCurve:
 ## MQ-136
+### NewCurve:
 ![MQ136curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/b875eaeb-4bc8-4f10-871c-26ddbbbeab5e)
+### OldCurve:
 ## MQ-137
+### NewCurve:
 ![MQ137curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/31181760-c6a3-4041-9bba-e5d701e3eea7)
+### OldCurve:
 ## MQ303A
+### NewCurve:
 ![MQ303Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/0d6b8d22-e414-4076-81a6-60dd9905d889)
+### OldCurve:
 ## MQ309A HIGH SENSIVITY FOR CH4
+### NewCurve:
 ![MQ309Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/f2148e24-0a9d-412f-b523-449b008643fd)
+### OldCurve:
 ## MQ-309 LOW SENSIVITY FOR CO
+### NewCurve:
 ![MQ309A-LOW-curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/90c042a2-5498-4770-9ec7-ec327b875f27)
-
+### OldCurve:
 NOTE: [For detailed explanation, You can also check out the github wiki page]
 https://github.com/abcdaaaaaaaaa/MQSpaceData.h/wiki
 ## MQSpaceData Contents
