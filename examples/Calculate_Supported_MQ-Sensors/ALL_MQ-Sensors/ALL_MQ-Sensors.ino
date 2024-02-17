@@ -1,6 +1,6 @@
 #include <MQSpaceData.h>
 
-#define ADC_BIT_RESU  (10) // for Arduino UNO 10 // for ESP32 12 // for ESP32-S2 13
+#define ADC_BIT_RESU  (10) // for Arduino UNO 10 // for ESP32 12 // for ESP32-S2 13 // for ESP8266 10
 #define ANALOG_PIN    (A1)
 MQSpaceData MQ(ADC_BIT_RESU, ANALOG_PIN);
 
