@@ -39,11 +39,13 @@ a=e^2.31244 ≈ 9.947
 b  ≈ -1.2
 
 a ≈ 9.947
+
+
 2]
 
 y = mx+ n                                                                                                                                                                       
-n = b                                                                                                                                                                       
-                                                                                                                                                                            
+n = b                                                                                                                                                                      
+                                                                                                                                                                        
 log10(y) = m*log10(x) + b
 
 -b = m*log10(x) - log10(y)
@@ -61,8 +63,6 @@ last m = log10(y/y0) / log10(x/x0)
 m = slope of the line
 
 b = intersection point
-
-result:
 
 m = log10(y/y0) / log10(x/x0)
 
