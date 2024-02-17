@@ -10,7 +10,7 @@ If R^2 equals 1 :
 a*ratio^b = 10^[(log10(ratio)-b)/m]                                                                                                                                             
 logm = valueb, logb = log10(valuea)
 
-1]
+# 1]
 
 ![loghello](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/76cb0263-3cbf-4c50-a446-616039d5fbba)
 
@@ -37,17 +37,17 @@ ln(a) = − ln ˉ (y) - b ln ˉ (x) ≈ 1.5958−(−1.2)⋅0.5972≈2.31244
 
 a=e^2.31244 ≈ 9.947
 
+![loghello](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/76cb0263-3cbf-4c50-a446-616039d5fbba)
 
 # b  ≈ -1.2
 
 # a ≈ 9.947
 
 
-2]
+# 2]
 
 y = mx+ n                                                                                                                                                                       
-n = b                                                                                                                                                                      
-                                                                                                                                                                        
+n = b                                                                                                                                                                                                                                                                                                                                 
 log10(y) = m*log10(x) + b
 
 -b = m*log10(x) - log10(y)
