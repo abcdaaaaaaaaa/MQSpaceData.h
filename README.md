@@ -1,41 +1,33 @@
 # MQSpaceData
 
 ## Formulla 
+###
 1) ppm = a*ratio^b (a: valuea b: valueb)
 2) ppm = 10^[(log10(ratio)-b)/m] (m: logm b: logb)
- If r^2 equals 1 :
+###
+If r^2 equals 1 :
 a*ratio^b = 10^[(log10(ratio)-b)/m]
 logm = valueb, logb = log10(valuea)
-
+###
 2]
 y = mx+ n
 n = b
 
 log10(y) = m*log10(x) + b
 -b = m*log10(x) - log10(y)
-b = log10(y) -  m*log10(x)
+last b = log10(y) - m*log10(x)
 
 m = (y - y0) / (x - x0)
 m = (log10(y) - log10(y0)) / (log10(x) - log10(x0))
 if y= a*x^b:
-m = log10(y/y0) / log10(x/x0)
+last m = log10(y/y0) / log10(x/x0)
 
 m = slope of the line
 b = intersection point
 
-m = (log10(y) - log10(y0)) / (log10(x) - log10(x0))
 result:
 m = log10(y/y0) / log10(x/x0)
-b = log10(AverageY) - m * log10((x+x0)/2)
-        if r_squared >= 0.9995:            
-            x0, y0 = x[0], y[0]
-            xn, yn = x[-1], y[-1]
-            b = np.log10(yn/y0) / np.log10(xn/x0)
-            a = 10**(np.log10(yn) - b * np.log10(xn))
-            b2 = np.log10(yn) - b * np.log10(xn)
-            b2_rounded = round(b2, 4)
-            a_rounded = round(a, 4)
-            b_rounded = round(b, 4)
+b = log10(y) - m*log10(x)
 ## MQDataScience
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
 ![MQ3datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/49a65210-5921-4a4c-acce-3c3c476c2d21)
