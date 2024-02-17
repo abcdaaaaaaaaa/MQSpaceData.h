@@ -1,18 +1,17 @@
 # MQSpaceData
 
 ## Formulla 
-###
+
 1) ppm = a*ratio^b (a: valuea b: valueb)
-2) ppm = 10^[(log10(ratio)-b)/m] (m: logm b: logb)
-###
+2) ppm = 10^[(log10(ratio)-b)/m] (m: logm b: logb)                                                                                                                                                                                                                                                                                                              
 If r^2 equals 1 :
-a*ratio^b = 10^[(log10(ratio)-b)/m]
+a*ratio^b = 10^[(log10(ratio)-b)/m]                                                                                                                                             
 logm = valueb, logb = log10(valuea)
 ###
 2]
-y = mx+ n
-n = b
-
+y = mx+ n                                                                                                                                                                       
+n = b                                                                                                                                                                           
+                                                                                                                                                                                
 log10(y) = m*log10(x) + b
 -b = m*log10(x) - log10(y)
 last b = log10(y) - m*log10(x)
