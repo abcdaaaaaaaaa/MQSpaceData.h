@@ -110,7 +110,8 @@ int MQSpaceData::MQ131DataAir(){return map(read(),1,(_bitadc),5,100);}
 int MQSpaceData::MQ135DataAir(){return map(read(),1,(_bitadc),10,200);}
 int MQSpaceData::MQ136DataAir(){return map(read(),1,(_bitadc),10,200);}
 int MQSpaceData::MQ137DataAir(){return map(read(),1,(_bitadc),10,200);}
-float MQSpaceData::MQ303ADataAir(){return (map(read(),1,(_bitadc),12,345))/10;}
+_MQ303AAir = map(read(),1,(_bitadc),12,345);
+float MQSpaceData::MQ303ADataAir(){return _MQ303AAir/10}
 int MQSpaceData::MQ309ADataAir(){return map(read(),1,(_bitadc),160,260);}
 
 //**************************************Limit Values**************************************
