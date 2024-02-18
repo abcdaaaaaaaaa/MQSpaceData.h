@@ -21,6 +21,7 @@ private:
 	float _vb;
 	float _mlog;
 	float _blog;
+        float _MQ303AAir;
 	float limitValue10000(float Sensorvalue);
 	float limitValue7000(float Sensorvalue);
 	float limitValue4000(float Sensorvalue);
