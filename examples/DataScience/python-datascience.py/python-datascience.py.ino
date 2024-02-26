@@ -251,7 +251,7 @@ match(SensorModel):
       user_choice = int(input("Low mode, Medium mode, or High mode? (1/2/3): "))
       match(user_choice):
         case 1:
-         plt.ylim(0.1, 10)
+         plt.ylim(0, 10) # 0.1, 10
          with open('../DataScience/csv/GeigerCounter.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
