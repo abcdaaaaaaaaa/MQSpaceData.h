@@ -47,12 +47,12 @@ plt.xlim(0, depth)
 def RealTime(file):
     csv_reader = csv.DictReader(file)
     for row in csv_reader:
-        y.append(int(row['Data']))
-        ay.append(int(row['H2']))
-        by.append(int(row['LPG']))
-        cy.append(int(row['CH4']))
-        dy.append(int(row['CO']))
-        ey.append(int(row['Alcohol']))
+        y.append(float(row['Data']))
+        ay.append(float(row['H2']))
+        by.append(float(row['LPG']))
+        cy.append(float(row['CH4']))
+        dy.append(float(row['CO']))
+        ey.append(float(row['Alcohol']))
     plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
     plt.scatter(sequence, ay, label='H2', color='#0000FF', marker='o')
     plt.scatter(sequence, by, label='LPG', color='#000e44', marker='o')
@@ -66,13 +66,13 @@ match(SensorModel):
         with open('../DataScience/csv/MQ-135.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
-             ay.append(int(row['CO']))
-             by.append(int(row['Alcohol']))
-             cy.append(int(row['CO2']))
-             dy.append(int(row['Toluen']))
-             ey.append(int(row['NH4']))
-             fy.append(int(row['Aceton']))
+             y.append(float(row['Data']))
+             ay.append(float(row['CO']))
+             by.append(float(row['Alcohol']))
+             cy.append(float(row['CO2']))
+             dy.append(float(row['Toluen']))
+             ey.append(float(row['NH4']))
+             fy.append(float(row['Aceton']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
         plt.scatter(sequence, ay, label='CO', color='#0000FF', marker='o')
         plt.scatter(sequence, by, label='Alcohol', color='#000e44', marker='o')
@@ -81,18 +81,18 @@ match(SensorModel):
         plt.scatter(sequence, ey, label='NH4', color='#007FFF', marker='o')
         plt.scatter(sequence, fy, label='Aceton', color='#40E0D0', marker='o')
     case 'MQ-2':
-        plt.ylim(0, 10000)
+        # plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-2.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
-             ay.append(int(row['H2']))
-             by.append(int(row['LPG']))
-             cy.append(int(row['CO']))
-             dy.append(int(row['Alcohol']))
-             ey.append(int(row['Propane']))
-             fy.append(int(row['CH4']))
-             gy.append(int(row['Smoke']))
+             y.append(float(row['Data']))
+             ay.append(float(row['H2']))
+             by.append(float(row['LPG']))
+             cy.append(float(row['CO']))
+             dy.append(float(row['Alcohol']))
+             ey.append(float(row['Propane']))
+             fy.append(float(row['CH4']))
+             gy.append(float(row['Smoke']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
         plt.scatter(sequence, ay, label='H2', color='#0000FF', marker='o')
         plt.scatter(sequence, by, label='LPG', color='#000e44', marker='o')
@@ -102,17 +102,17 @@ match(SensorModel):
         plt.scatter(sequence, fy, label='CH4', color='#40E0D0', marker='o')
         plt.scatter(sequence, ey, label='Smoke', color='#40E0B0', marker='o')
     case 'MQ-3':
-        plt.ylim(0, 500)
+        # plt.ylim(0, 500)
         with open('../DataScience/csv/MQ-3.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
-             ay.append(int(row['LPG']))
-             by.append(int(row['CH4']))
-             cy.append(int(row['CO']))
-             dy.append(int(row['Alcohol']))
-             ey.append(int(row['Benzene']))
-             fy.append(int(row['Hexane']))
+             y.append(float(row['Data']))
+             ay.append(float(row['LPG']))
+             by.append(float(row['CH4']))
+             cy.append(float(row['CO']))
+             dy.append(float(row['Alcohol']))
+             ey.append(float(row['Benzene']))
+             fy.append(float(row['Hexane']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
         plt.scatter(sequence, ay, label='LPG', color='#0000FF', marker='o')
         plt.scatter(sequence, by, label='CH4', color='#000e44', marker='o')
@@ -121,17 +121,17 @@ match(SensorModel):
         plt.scatter(sequence, ey, label='Benzene', color='#007FFF', marker='o')
         plt.scatter(sequence, fy, label='Hexane', color='#40E0D0', marker='o')
     case 'MQ-4':
-        plt.ylim(0, 10000)
+        # plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-4.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
-             ay.append(int(row['H2']))
-             by.append(int(row['LPG']))
-             cy.append(int(row['CH4']))
-             dy.append(int(row['CO']))
-             ey.append(int(row['Alcohol']))
-             fy.append(int(row['Smoke']))
+             y.append(float(row['Data']))
+             ay.append(float(row['H2']))
+             by.append(float(row['LPG']))
+             cy.append(float(row['CH4']))
+             dy.append(float(row['CO']))
+             ey.append(float(row['Alcohol']))
+             fy.append(float(row['Smoke']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
         plt.scatter(sequence, ay, label='H2', color='#0000FF', marker='o')
         plt.scatter(sequence, by, label='LPG', color='#000e44', marker='o')
@@ -140,99 +140,99 @@ match(SensorModel):
         plt.scatter(sequence, ey, label='Alcohol', color='#007FFF', marker='o')
         plt.scatter(sequence, fy, label='Smoke', color='#40E0D0', marker='o')
     case 'MQ-5':
-        plt.ylim(0, 10000)
+        # plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-5.csv', 'r') as file:
            RealTime(file)
     case 'MQ-6':
-        plt.ylim(0, 10000)
+        # plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-6.csv', 'r') as file:
            RealTime(file)
     case 'MQ-7':
-        plt.ylim(0, 4000)
+        # plt.ylim(0, 4000)
         with open('../DataScience/csv/MQ-7.csv', 'r') as file:
            RealTime(file)
     case 'MQ-8':
-        plt.ylim(0, 10000)
+        # plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-8.csv', 'r') as file:
            RealTime(file)
     case 'MQ-9':
-        plt.ylim(0, 10000)
+        # plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-9.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
-             by.append(int(row['LPG']))
-             cy.append(int(row['CH4']))
-             dy.append(int(row['CO']))
+             y.append(float(row['Data']))
+             by.append(float(row['LPG']))
+             cy.append(float(row['CH4']))
+             dy.append(float(row['CO']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
         plt.scatter(sequence, ay, label='LPG', color='#0000FF', marker='o')
         plt.scatter(sequence, by, label='CH4', color='#000e44', marker='o')
         plt.scatter(sequence, cy, label='CO', color='#87CEEB', marker='o')
     case 'MQ-131':
-        plt.ylim(0, 100)
+        # plt.ylim(0, 100)
         with open('../DataScience/csv/MQ-131.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
-             by.append(int(row['NOX']))
-             cy.append(int(row['CL2']))
-             dy.append(int(row['O3']))
+             y.append(float(row['Data']))
+             by.append(float(row['NOX']))
+             cy.append(float(row['CL2']))
+             dy.append(float(row['O3']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
         plt.scatter(sequence, ay, label='NOX', color='#0000FF', marker='o')
         plt.scatter(sequence, by, label='CL2', color='#000e44', marker='o')
         plt.scatter(sequence, cy, label='O3', color='#87CEEB', marker='o')
     case 'MQ-136':
-        plt.ylim(0, 200)
+        # plt.ylim(0, 200)
         with open('../DataScience/csv/MQ-136.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
-             by.append(int(row['H2S']))
-             cy.append(int(row['NH4']))
-             dy.append(int(row['CO']))
+             y.append(float(row['Data']))
+             by.append(float(row['H2S']))
+             cy.append(float(row['NH4']))
+             dy.append(float(row['CO']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
         plt.scatter(sequence, ay, label='H2S', color='#0000FF', marker='o')
         plt.scatter(sequence, by, label='NH4', color='#000e44', marker='o')
         plt.scatter(sequence, cy, label='CO', color='#87CEEB', marker='o')
     case 'MQ-137':
-        plt.ylim(0, 200)
+        # plt.ylim(0, 200)
         with open('../DataScience/csv/MQ-137.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
-             by.append(int(row['CO']))
-             cy.append(int(row['Ethanol']))
-             dy.append(int(row['NH3']))
+             y.append(float(row['Data']))
+             by.append(float(row['CO']))
+             cy.append(float(row['Ethanol']))
+             dy.append(float(row['NH3']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
         plt.scatter(sequence, by, label='CO', color='#0000FF', marker='o')
         plt.scatter(sequence, cy, label='Ethanol', color='#000e44', marker='o')
         plt.scatter(sequence, dy, label='NH3', color='#87CEEB', marker='o')
     case 'MQ-303A':
-        plt.ylim(0, 10000)
+        # plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-303A.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
-             by.append(int(row['Isobuthane']))
-             cy.append(int(row['Hydrogen']))
-             dy.append(int(row['Ethanol']))
+             y.append(float(row['Data']))
+             by.append(float(row['Isobuthane']))
+             cy.append(float(row['Hydrogen']))
+             dy.append(float(row['Ethanol']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
         plt.scatter(sequence, ay, label='Isobuthane', color='#0000FF', marker='o')
         plt.scatter(sequence, by, label='Hydrogen', color='#000e44', marker='o')
         plt.scatter(sequence, cy, label='Ethanol', color='#87CEEB', marker='o')
 
     case 'MQ-309A':
-        plt.ylim(0, 7000)
+        # plt.ylim(0, 7000)
         with open('../DataScience/csv/MQ-309A.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
-             ay.append(int(row['H2']))
-             by.append(int(row['CH4']))
-             cy.append(int(row['CO']))
-             dy.append(int(row['Alcohol']))
-             ey.append(int(row['LowCO']))
-             fy.append(int(row['SecondH2']))
+             y.append(float(row['Data']))
+             ay.append(float(row['H2']))
+             by.append(float(row['CH4']))
+             cy.append(float(row['CO']))
+             dy.append(float(row['Alcohol']))
+             ey.append(float(row['LowCO']))
+             fy.append(float(row['SecondH2']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
         plt.scatter(sequence, ay, label='H2', color='#0000FF', marker='o')
         plt.scatter(sequence, by, label='CH4', color='#000e44', marker='o')
@@ -241,35 +241,38 @@ match(SensorModel):
         plt.scatter(sequence, ey, label='LowCO', color='#007FFF', marker='o')
         plt.scatter(sequence, fy, label='SecondH2', color='#40E0D0', marker='o')
     case 'SpaceData':
-        plt.ylim(0, 100)
+        # plt.ylim(0, 100)
         with open('../DataScience/csv/SpaceData.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
+             y.append(float(row['Data']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
     case 'GeigerCounter':
-      user_choice = int(input("Low mode, Medium mode, or High mode? (1/2/3): "))
+      user_choice = float(input("Low mode, Medium mode, High mode or Special mode? (1/2/3/4): "))
       match(user_choice):
         case 1:
-         plt.ylim(0, 10) # 0.1, 10
+         plt.ylim(0.1, 10)
          with open('../DataScience/csv/GeigerCounter.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
+             y.append(float(row['Data']))
          plt.scatter(sequence, y, label='usv/hr', color='#000080', marker='o')
         case 2:
          plt.ylim(10, 100)
          with open('../DataScience/csv/GeigerCounter.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
+             y.append(float(row['Data']))
          plt.scatter(sequence, y, label='usv/hr', color='#000080', marker='o')
         case 3:
          plt.ylim(100, 1000)
          with open('../DataScience/csv/GeigerCounter.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
+        case 4:
+         with open('../DataScience/csv/GeigerCounter.csv', 'r') as file:
+           csv_reader = csv.DictReader(file)
            for row in csv_reader:
-             y.append(int(row['Data']))
+             y.append(float(row['Data']))
          plt.scatter(sequence, y, label='usv/hr', color='#000080', marker='o')
 
 # x_values = sequence  
