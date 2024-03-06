@@ -177,6 +177,9 @@ The first formula is determined according to all points, while the second formul
 ![MQ303Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/0d6b8d22-e414-4076-81a6-60dd9905d889)
 ### OldCurve:
 ![MQ303Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/55e4f706-e9b7-478c-a253-2ae7b0e3b107)
+### DataScience:
+![MQ303AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/9ea3893d-f9cd-4e58-80e6-eb79daa8a635)
+
 ## MQ309A HIGH SENSIVITY FOR CH4
 ### NewCurve:
 ![MQ309Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/f2148e24-0a9d-412f-b523-449b008643fd)
