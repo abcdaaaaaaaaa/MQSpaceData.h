@@ -115,14 +115,14 @@ The first formula is determined according to all points, while the second formul
 ### OldCurve:
 ![MQ5curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5cb6f4f4-2d24-4e10-be19-849f186f0332)
 ### DataScience:
-
+![MQ5Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/f684c037-880d-4a40-8883-a6268b9b3829)
 ## MQ-6
 ### NewCurve:
 ![MQ6curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/9eea767a-6f66-43f8-affd-6fac06999dd7)
 ### OldCurve:
 ![MQ6curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/ede333c9-5132-46c9-830b-5e904eb06759)
 ### DataScience:
-![MQ6Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/3416920e-a8c1-4623-a02a-c643a9f3c066)
+![MQ6Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/afb8ff0c-83b7-46ac-8b20-2505b7a706cb)
 ## MQ-7
 ### NewCurve:
 ![MQ7curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/0435c61f-4bd4-4168-aadd-84972247c151)
@@ -157,7 +157,7 @@ The first formula is determined according to all points, while the second formul
 ### OldCurve:
 ![MQ135curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/d4c4b505-4750-47db-b0a9-ec1d211c7296)
 ### DataScience:
-
+![MQ135Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c41773f3-3567-41f1-a94e-1f70bb029fb6)
 ## MQ-136
 ### NewCurve:
 ![MQ136curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/b875eaeb-4bc8-4f10-871c-26ddbbbeab5e)
@@ -192,6 +192,8 @@ The first formula is determined according to all points, while the second formul
 ![MQ309A-LOW-curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c7ea730d-b4d7-40af-bd94-2a5dbb2fd835)
 ## DataScience for MQ309A
 ### DataScience:
+![MQ309AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/b90a7427-7779-4ae4-ae2c-a44fcb82070c)
+
 
 NOTE: [For detailed explanation, You can also check out the github wiki page]
 https://github.com/abcdaaaaaaaaa/MQSpaceData.h/wiki
