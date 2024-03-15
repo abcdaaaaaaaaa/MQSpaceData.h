@@ -185,7 +185,7 @@ The first formula is determined according to all points, while the second formul
 ![MQ309Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/f2148e24-0a9d-412f-b523-449b008643fd)
 ### OldCurve:
 ![MQ309Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/6758cd50-fb59-4500-9358-98c7f502d9fd)
-## MQ-309 LOW SENSIVITY FOR CO
+## MQ-309A LOW SENSIVITY FOR CO
 ### NewCurve:
 ![MQ309A-LOW-curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/90c042a2-5498-4770-9ec7-ec327b875f27)
 ### OldCurve:
