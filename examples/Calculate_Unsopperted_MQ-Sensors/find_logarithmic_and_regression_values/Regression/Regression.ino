@@ -1,5 +1,5 @@
 """
-python -m pip install matplotlib==3.8.0
+python -m pip install matplotlib==3.8.3
 python -m pip install numpy==1.23.5
 python -m pip install scipy==1.10.1
 """
