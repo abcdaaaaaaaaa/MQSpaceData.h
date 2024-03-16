@@ -3,7 +3,9 @@ import csv
 import numpy as np
 from scipy.stats import linregress
 
-hello = int(input("Would you prefer to focus on Radioactivity or ppm values for Gas Sensors or Percentile for Data (1/2/3): "))
+mode  = int(input("Would you prefer Y content ​to be static or malleable range to the DataScience chart? (0/1)?: "))
+hello = int(input("Would you prefer to focus on Radioactivity or ppm values for Gas Sensors or Percentile for Data (1/2/3)?: "))
+
 match(hello):
     case 1:
         SensorModel  = 'GeigerCounter'
@@ -44,7 +46,7 @@ with open('../DataScience/csv/{}.csv'.format(SensorModel), 'r') as file:
 sequence = generate_sequence(depth)
 plt.xlim(0, depth)
 
-def RealTime(file):
+def MQTime(file):
     csv_reader = csv.DictReader(file)
     for row in csv_reader:
         y.append(float(row['Data']))
@@ -60,9 +62,17 @@ def RealTime(file):
     plt.scatter(sequence, dy, label='CO', color='#007FFF', marker='o')
     plt.scatter(sequence, ey, label='Alcohol', color='#40E0D0', marker='o')
 
+def GeigerTime(file):
+    with open('../DataScience/csv/GeigerCounter.csv', 'r') as file:
+     csv_reader = csv.DictReader(file)
+     for row in csv_reader:
+       y.append(float(row['Data']))
+    plt.scatter(sequence, y, label='usv/hr', color='#000080', marker='o')
+
 match(SensorModel):
     case 'MQ-135':
-        # plt.ylim(0, 200)
+        if (mode == 0):
+         plt.ylim(0, 200)
         with open('../DataScience/csv/MQ-135.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
@@ -81,7 +91,8 @@ match(SensorModel):
         plt.scatter(sequence, ey, label='NH4', color='#007FFF', marker='o')
         plt.scatter(sequence, fy, label='Aceton', color='#40E0D0', marker='o')
     case 'MQ-2':
-        # plt.ylim(0, 10000)
+        if (mode == 0):
+         plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-2.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
@@ -102,7 +113,8 @@ match(SensorModel):
         plt.scatter(sequence, fy, label='CH4', color='#40E0D0', marker='o')
         plt.scatter(sequence, ey, label='Smoke', color='#40E0B0', marker='o')
     case 'MQ-3':
-        # plt.ylim(0, 500)
+        if (mode == 0):
+         plt.ylim(0, 500)
         with open('../DataScience/csv/MQ-3.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
@@ -121,7 +133,8 @@ match(SensorModel):
         plt.scatter(sequence, ey, label='Benzene', color='#007FFF', marker='o')
         plt.scatter(sequence, fy, label='Hexane', color='#40E0D0', marker='o')
     case 'MQ-4':
-        # plt.ylim(0, 10000)
+        if (mode == 0):
+         plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-4.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
@@ -140,23 +153,28 @@ match(SensorModel):
         plt.scatter(sequence, ey, label='Alcohol', color='#007FFF', marker='o')
         plt.scatter(sequence, fy, label='Smoke', color='#40E0D0', marker='o')
     case 'MQ-5':
-        # plt.ylim(0, 10000)
+        if (mode == 0):
+         plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-5.csv', 'r') as file:
-           RealTime(file)
+           MQTime(file)
     case 'MQ-6':
-        # plt.ylim(0, 10000)
+        if (mode == 0):
+         plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-6.csv', 'r') as file:
-           RealTime(file)
+           MQTime(file)
     case 'MQ-7':
-        # plt.ylim(0, 4000)
+        if (mode == 0):
+         plt.ylim(0, 4000)
         with open('../DataScience/csv/MQ-7.csv', 'r') as file:
-           RealTime(file)
+           MQTime(file)
     case 'MQ-8':
-        # plt.ylim(0, 10000)
+        if (mode == 0):
+         plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-8.csv', 'r') as file:
-           RealTime(file)
+           MQTime(file)
     case 'MQ-9':
-        # plt.ylim(0, 10000)
+        if (mode == 0):
+         plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-9.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
@@ -169,7 +187,8 @@ match(SensorModel):
         plt.scatter(sequence, by, label='CH4', color='#000e44', marker='o')
         plt.scatter(sequence, cy, label='CO', color='#87CEEB', marker='o')
     case 'MQ-131':
-        # plt.ylim(0, 100)
+        if (mode == 0):
+         plt.ylim(0, 100)
         with open('../DataScience/csv/MQ-131.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
@@ -182,7 +201,8 @@ match(SensorModel):
         plt.scatter(sequence, by, label='CL2', color='#000e44', marker='o')
         plt.scatter(sequence, cy, label='O3', color='#87CEEB', marker='o')
     case 'MQ-136':
-        # plt.ylim(0, 200)
+        if (mode == 0):
+         plt.ylim(0, 200)
         with open('../DataScience/csv/MQ-136.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
@@ -195,7 +215,8 @@ match(SensorModel):
         plt.scatter(sequence, by, label='NH4', color='#000e44', marker='o')
         plt.scatter(sequence, cy, label='CO', color='#87CEEB', marker='o')
     case 'MQ-137':
-        # plt.ylim(0, 200)
+        if (mode == 0):
+         plt.ylim(0, 200)
         with open('../DataScience/csv/MQ-137.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
@@ -208,7 +229,8 @@ match(SensorModel):
         plt.scatter(sequence, by, label='Ethanol', color='#000e44', marker='o')
         plt.scatter(sequence, cy, label='NH3', color='#87CEEB', marker='o')
     case 'MQ-303A':
-        # plt.ylim(0, 10000)
+        if (mode == 0):
+         plt.ylim(0, 10000)
         with open('../DataScience/csv/MQ-303A.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
@@ -222,7 +244,8 @@ match(SensorModel):
         plt.scatter(sequence, cy, label='Ethanol', color='#87CEEB', marker='o')
 
     case 'MQ-309A':
-        # plt.ylim(0, 7000)
+        if (mode == 0):
+         plt.ylim(0, 7000)
         with open('../DataScience/csv/MQ-309A.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
@@ -241,39 +264,30 @@ match(SensorModel):
         plt.scatter(sequence, ey, label='LowCO', color='#007FFF', marker='o')
         plt.scatter(sequence, fy, label='SecondH2', color='#40E0D0', marker='o')
     case 'SpaceData':
-        # plt.ylim(0, 100)
+        if (mode == 0):
+         plt.ylim(0, 100)
         with open('../DataScience/csv/SpaceData.csv', 'r') as file:
            csv_reader = csv.DictReader(file)
            for row in csv_reader:
              y.append(float(row['Data']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
     case 'GeigerCounter':
-      user_choice = float(input("Low mode, Medium mode, High mode or Special mode? (1/2/3/4): "))
+      if (mode == 1):
+        user_choice = 4
+      if (mode == 0):
+        user_choice = float(input("Low mode, Medium mode, High mode or Special mode? (1/2/3/4): "))
       match(user_choice):
         case 1:
          plt.ylim(0.1, 10)
-         with open('../DataScience/csv/GeigerCounter.csv', 'r') as file:
-           csv_reader = csv.DictReader(file)
-           for row in csv_reader:
-             y.append(float(row['Data']))
-         plt.scatter(sequence, y, label='usv/hr', color='#000080', marker='o')
+         GeigerTime(file)
         case 2:
          plt.ylim(10, 100)
-         with open('../DataScience/csv/GeigerCounter.csv', 'r') as file:
-           csv_reader = csv.DictReader(file)
-           for row in csv_reader:
-             y.append(float(row['Data']))
-         plt.scatter(sequence, y, label='usv/hr', color='#000080', marker='o')
+         GeigerTime(file)
         case 3:
          plt.ylim(100, 1000)
-         with open('../DataScience/csv/GeigerCounter.csv', 'r') as file:
-           csv_reader = csv.DictReader(file)
+         GeigerTime(file)
         case 4:
-         with open('../DataScience/csv/GeigerCounter.csv', 'r') as file:
-           csv_reader = csv.DictReader(file)
-           for row in csv_reader:
-             y.append(float(row['Data']))
-         plt.scatter(sequence, y, label='usv/hr', color='#000080', marker='o')
+         GeigerTime(file)
 
 # x_values = sequence  
 # y_values = y  
