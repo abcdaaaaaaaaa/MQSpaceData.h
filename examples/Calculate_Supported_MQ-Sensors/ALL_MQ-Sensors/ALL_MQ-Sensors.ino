@@ -333,6 +333,8 @@ float CO = MQ.MQ309ADataCO();
 MQ.dangerousPer(49.0909);
 float Alcohol = MQ.MQ309ADataAlcohol();
 
+float Air = MQ.MQ309ADataAir();
+
 // MQ309A has two data graphs, 
 // these values ​​are according to the 2nd graph, 
 // CO is low sensitivity in this graph
@@ -342,8 +344,6 @@ float LOW_CO = MQ.MQ309ADataLowCO();
 
 MQ.dangerousPer(81.9);
 float SecondH2 = MQ.MQ309ADataSecondH2();
-
-float Air = MQ.MQ309ADataAir();
 }
 
 // Note: 
