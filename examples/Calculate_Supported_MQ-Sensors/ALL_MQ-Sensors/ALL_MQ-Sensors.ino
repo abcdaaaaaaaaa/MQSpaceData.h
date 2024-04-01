@@ -321,8 +321,8 @@ float Air = MQ.MQ303ADataAir();
 }
 
 void MQ309A(){
-MQ.RSRoMQAir(11);
 MQ.setRL(50);
+MQ.RSRoMQAir(11);
 
 // MQ309A has two data graphs, 
 // these values ​​are according to the 1st graph, 
@@ -345,6 +345,8 @@ float Air = MQ.MQ309ADataAir();
 // MQ309A has two data graphs, 
 // these values ​​are according to the 2nd graph, 
 // CO is low sensitivity in this graph
+
+MQ.RSRoMQAir(100);
 
 MQ.dangerousPer(0.15); 
 float LOW_CO = MQ.MQ309ADataLowCO();
