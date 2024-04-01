@@ -82,18 +82,25 @@ MQ.setRL(20);
 
 MQ.dangerousPer(10.2); 
 float H2 = MQ.MQ2DataH2();
+
 MQ.dangerousPer(7.96);
 float LPG = MQ.MQ2DataLPG();
+
 MQ.dangerousPer(31.63);
 float CO = MQ.MQ2DataCO();
+
 MQ.dangerousPer(16.33);
 float Alcohol = MQ.MQ2DataAlcohol();
+
 MQ.dangerousPer(8.38);
 float Propane = MQ.MQ2DataPropane();
+
 MQ.dangerousPer(17.86);
 float CH4 = MQ.MQ2DataCH4(); 
+
 MQ.dangerousPer(18.98);
 float Smoke = MQ.MQ2Datasmoke();
+
 float Air = MQ.MQ2DataAir();
 }
 
