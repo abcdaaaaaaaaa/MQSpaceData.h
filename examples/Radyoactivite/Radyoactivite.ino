@@ -15,7 +15,7 @@ GeigerCounterPin Radyoactivite(uSvhr1, Avg1, CPM_Count1, LOG_PERIOD1, GeigerPin1
  
 void setup(){
 Serial.begin(9600);
-Serial.print();
+Serial.print("");
 Radyoactivite.begin();
 }
 
