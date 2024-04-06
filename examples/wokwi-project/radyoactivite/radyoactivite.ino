@@ -1,6 +1,6 @@
 /*
 You can find the simulation link here: 
-https://wokwi.com/projects/394051270178042881
+https://wokwi.com/projects/394418379944749057
 */
 
 #include <MQSpaceData.h>
@@ -20,7 +20,7 @@ GeigerCounterPin Radyoactivite(uSvhr1, Avg1, CPM_Count1, LOG_PERIOD1, GeigerPin1
  
 void setup(){
 Serial.begin(9600);
-Serial.print("");
+Serial.print(" ");
 Radyoactivite.begin();
 }
 
