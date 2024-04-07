@@ -3,8 +3,8 @@
 
 MQSpaceData::MQSpaceData(int bitadc, byte pin)
 {
-  _bitadc=pow(2,bitadc)-1;
-  _pin=pin;
+  _bitadc = pow(2,bitadc)-1;
+  _pin = pin;
 }
 
 void MQSpaceData::begin()
