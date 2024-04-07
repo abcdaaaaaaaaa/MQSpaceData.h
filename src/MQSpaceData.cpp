@@ -14,12 +14,12 @@ void MQSpaceData::begin()
 
 void MQSpaceData::setRL(float Rload)
 {
- _Rload=Rload;
+ _Rload = Rload;
 }
 
 void MQSpaceData::solderedRL()
 {
- _Rload=1;
+ _Rload = 1;
 }
 
 void MQSpaceData::valuea(float data1)
@@ -110,8 +110,12 @@ int MQSpaceData::MQ131DataAir(){return map(read(),1,(_bitadc),5,100);}
 int MQSpaceData::MQ135DataAir(){return map(read(),1,(_bitadc),10,200);}
 int MQSpaceData::MQ136DataAir(){return map(read(),1,(_bitadc),10,200);}
 int MQSpaceData::MQ137DataAir(){return map(read(),1,(_bitadc),10,200);}
-_MQ303AAir = map(read(),1,(_bitadc),12,345);
-float MQSpaceData::MQ303ADataAir(){return _MQ303AAir/10;}
+float MQSpaceData::MQ303ADataAir()
+{
+_MQ303AAir = map(read(),1,(_bitadc),120,345);
+return _MQ303AAir/100;
+}
+// https://wokwi.com/projects/394502355682092033 (MQ303A Details)
 int MQSpaceData::MQ309ADataAir(){return map(read(),1,(_bitadc),160,260);}
 
 //**************************************Limit Values**************************************
