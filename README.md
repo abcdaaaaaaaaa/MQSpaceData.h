@@ -226,9 +226,7 @@ https://github.com/abcdaaaaaaaaa/MQSpaceData.h/wiki
 * [Radioactivity For Geiger Counter](#Radioactivity)
 # MQSpaceData MQ Sensor List
 MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ131, MQ-135, MQ-136, MQ-137, MQ303A , MQ309A]
-
-<img width="720" alt="MQSensorList" src="https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/45e06f79-c655-42f5-840d-aee6edfeced0"></img>
-
+![MQSensorList](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/4fbb9ab5-21a6-46fe-bf88-a904105a2634)
 # MQSpaceData Geiger Counter
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/27061f03-3224-4ccd-91d6-92396889c9fd)
 ## You can access the library's article <a href="https://www.spacepedia.info/MQDataScience">here
