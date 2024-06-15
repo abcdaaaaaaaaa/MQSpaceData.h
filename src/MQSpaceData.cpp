@@ -355,10 +355,10 @@ alcohol| 34.1956 | -0.2666
 CO     | 30.3019 | -0.2336
  */
 
-//**************************************MQ-309A-Low-Sensitivity-FOR-CO**************************************
+//**************************************MQ-307A & MQ-309A-Low-Sensitivity-FOR-CO**************************************
 
-float MQSpaceData::MQ309ADataLowCO(){_va = 2336.2698;_vb = -1.7255;return limitValue1000(readValue());}
-float MQSpaceData::MQ309ADataSecondH2(){_va = 25051.8177;_vb = -0.8318;return limitValue3000(readValue());}
+float MQSpaceData::MQ307ACO(){_va = 2336.2698;_vb = -1.7255;return limitValue1000(readValue());}
+float MQSpaceData::MQ307AH2(){_va = 25051.8177;_vb = -0.8318;return limitValue3000(readValue());}
 
 // for old curve: float MQSpaceData::MQ309ADataSecondH2(){_va = 25051.8177;_vb = -0.8318;return limitValue3000(readValue());}
 // for new curve: float MQSpaceData::MQ309ADataSecondH2(){_va = 24759.2442;_vb = -0.8301;return limitValue3000(readValue());}
