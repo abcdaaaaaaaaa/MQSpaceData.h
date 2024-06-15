@@ -189,18 +189,11 @@ The first formula is determined according to all points (OldCurve.py, OldCurve),
 ![MQ303Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/55e4f706-e9b7-478c-a253-2ae7b0e3b107)
 ### DataScience:
 ![MQ303AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/9ea3893d-f9cd-4e58-80e6-eb79daa8a635)
-
-## MQ309A HIGH SENSIVITY FOR CH4
+## MQ309A
 ### NewCurve:
 ![MQ309Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/f2148e24-0a9d-412f-b523-449b008643fd)
 ### OldCurve:
 ![MQ309Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/6758cd50-fb59-4500-9358-98c7f502d9fd)
-## MQ-309A LOW SENSIVITY FOR CO
-### NewCurve:
-![MQ309A-LOW-curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/90c042a2-5498-4770-9ec7-ec327b875f27)
-### OldCurve:
-![MQ309A-LOW-curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c7ea730d-b4d7-40af-bd94-2a5dbb2fd835)
-## MQ309A DataScience
 ### DataScience:
 ![MQ309AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/b90a7427-7779-4ae4-ae2c-a44fcb82070c)
 
@@ -235,9 +228,11 @@ https://github.com/abcdaaaaaaaaa/MQSpaceData.h/wiki
   * [Python Virtual Calibrate Ro dangerousPer()](#dangerousPer)
 * [Geiger Counter](#GeigerCounter)
   * [Radioactivity](#Radioactivity)
+
 # MQSpaceData MQ Sensor List
 MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ131, MQ-135, MQ-136, MQ-137, MQ303A, MQ307A, MQ309A]
-![MQSensorList](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/4fbb9ab5-21a6-46fe-bf88-a904105a2634)
+![MQSensorList](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/bbaf16d0-9646-4751-9307-2ad09320bd4c)
+
 # MQSpaceData Geiger Counter
-![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/27061f03-3224-4ccd-91d6-92396889c9fd)
+![GeigerCounter](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/27061f03-3224-4ccd-91d6-92396889c9fd)
 ## You can access the library's article <a href="https://www.spacepedia.info/MQDataScience">here
