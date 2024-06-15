@@ -12,6 +12,7 @@ Range       Sensor RVID
 10kΩ-47kΩ   MQ-136 20kΩ
 10kΩ-100kΩ  MQ-137 47kΩ
 (Variable>47kΩ) MQ303A 47kΩ
+20kΩ-200kΩ   MQ-307A 50kΩ (?? %5)
 (not available) MQ309A 50kΩ (?? %5)
 
 // SENSITVITY ADJUSTMENT
