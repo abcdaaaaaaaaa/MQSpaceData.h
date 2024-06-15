@@ -37,12 +37,9 @@ ln(a) = − ln ˉ (y) - b ln ˉ (x) ≈ 1.5958−(−1.2)⋅0.5972≈2.31244
 
 a=e^2.31244 ≈ 9.947
 
-![loghello](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/76cb0263-3cbf-4c50-a446-616039d5fbba)
-
 # b  ≈ -1.2
 
 # a ≈ 9.947
-
 
 # 2]
 
