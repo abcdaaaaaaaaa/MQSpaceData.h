@@ -187,7 +187,7 @@ The first formula is determined according to all points (OldCurve.py, OldCurve),
 ![MQ309A-LOW-curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/90c042a2-5498-4770-9ec7-ec327b875f27)
 ### OldCurve:
 ![MQ309A-LOW-curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c7ea730d-b4d7-40af-bd94-2a5dbb2fd835)
-## DataScience for MQ309A
+## MQ309A DataScience
 ### DataScience:
 ![MQ309AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/b90a7427-7779-4ae4-ae2c-a44fcb82070c)
 
