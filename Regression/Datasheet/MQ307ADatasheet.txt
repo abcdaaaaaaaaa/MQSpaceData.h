@@ -9,6 +9,10 @@ Gas    | a         | b
 CO     | 2336.2698 | -1.7255
 H2     | 24759.2442| -0.8301
 
+Old Curve:
+H2     | 24759.2442| -0.8301
+Exceptional: The value in the OldCurve was used in this H2 gas
+
 for ppm = 10^[(log10(ratio)-b)/m]:
 
 Gas    | m       | b
@@ -35,7 +39,3 @@ Exceptional: Since H2 has no value at the clean air point (100ppm), H2 dangerous
 
 %56.107
 [(1000,80.054), (2000,44.89), (3000,32.16)]
-
-
-
-
