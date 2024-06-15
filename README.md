@@ -194,7 +194,7 @@ The first formula is determined according to all points (OldCurve.py, OldCurve),
 ### NewCurve:
 ![MQ307AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/ff8d5d71-8e98-4b55-8944-cae35230cc14)
 ### OldCurve:
-![[MQ307AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/fcc04650-26a3-4bb2-a218-3ec134795fc8)
+![MQ307AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/fcc04650-26a3-4bb2-a218-3ec134795fc8)
 ### DataScience:
 ![MQ307AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/41db1c54-592d-4259-a1a2-15cc1607ca99)
 ## MQ309A
