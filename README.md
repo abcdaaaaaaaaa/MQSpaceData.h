@@ -212,17 +212,18 @@ https://github.com/abcdaaaaaaaaa/MQSpaceData.h/wiki
 * [Configure your RL value](#ConfigureRL)
   * [for Soldered Model](#for-soldered)
   * [for Normal Model](#for-normal)
-* [Redefine Your Values](#Arduino)
-  * [Regression (a and b)](#Regression)
-  * [Regression (m and b)](#Regression)
-  * [Calibrate Ro with python dangerousPer()](#R0python)
-* [Calculate With Python](#Python)
-  * [Redefine your value a and b with Regression](#Regression_a_and_b)
-  * [Calibrate Ro with percentile](#R0python)
-  * [Calculating the percentile of the dangerousPer() function](#dangerousPer)
-* [Radioactivity For Geiger Counter](#Radioactivity)
+* [Calculate ppm Values](#Arduino)
+  * [Python Regression (a and b)](#Regression)
+  * [Python Regression (m and b)](#Regression)
+  * [Python Calibrate Ro dangerousPer()](#R0python)
+* [Calibrate Ro](#Python)
+  * [Calibrate Ro Arduino](#Regression_a_and_b)
+  * [Python Virtual Calibration](#R0python)
+  * [[Python Virtual Calibrate Ro dangerousPer()](#dangerousPer)
+* [Geiger Counter](#GeigerCounter)
+  * [Radioactivity](#Radioactivity)
 # MQSpaceData MQ Sensor List
-MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ131, MQ-135, MQ-136, MQ-137, MQ303A , MQ309A]
+MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ131, MQ-135, MQ-136, MQ-137, MQ303A, MQ307A, MQ309A]
 ![MQSensorList](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/4fbb9ab5-21a6-46fe-bf88-a904105a2634)
 # MQSpaceData Geiger Counter
 ![download](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/27061f03-3224-4ccd-91d6-92396889c9fd)
