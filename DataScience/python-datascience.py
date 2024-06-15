@@ -242,7 +242,16 @@ match(SensorModel):
         plt.scatter(sequence, ay, label='Isobuthane', color='#0000FF', marker='o')
         plt.scatter(sequence, by, label='Hydrogen', color='#000e44', marker='o')
         plt.scatter(sequence, cy, label='Ethanol', color='#87CEEB', marker='o')
-
+    case 'MQ-307A':
+        if (mode == 0):
+         plt.ylim(0, 3000)
+        with open('../DataScience/csv/MQ-307A.csv', 'r') as file:
+           csv_reader = csv.DictReader(file)
+           for row in csv_reader:
+             y.append(float(row['CO']))
+             ay.append(float(row['H2']))
+        plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
+        plt.scatter(sequence, ay, label='H2', color='#0000FF', marker='o')
     case 'MQ-309A':
         if (mode == 0):
          plt.ylim(0, 7000)
@@ -254,15 +263,11 @@ match(SensorModel):
              by.append(float(row['CH4']))
              cy.append(float(row['CO']))
              dy.append(float(row['Alcohol']))
-             ey.append(float(row['LowCO']))
-             fy.append(float(row['SecondH2']))
         plt.scatter(sequence, y, label=SensorModel, color='#000080', marker='o')
         plt.scatter(sequence, ay, label='H2', color='#0000FF', marker='o')
         plt.scatter(sequence, by, label='CH4', color='#000e44', marker='o')
         plt.scatter(sequence, cy, label='CO', color='#87CEEB', marker='o')
         plt.scatter(sequence, dy, label='Alcohol', color='#ADD8E6', marker='o')
-        plt.scatter(sequence, ey, label='LowCO', color='#007FFF', marker='o')
-        plt.scatter(sequence, fy, label='SecondH2', color='#40E0D0', marker='o')
     case 'SpaceData':
         if (mode == 0):
          plt.ylim(0, 100)
