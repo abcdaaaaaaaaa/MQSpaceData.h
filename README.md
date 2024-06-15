@@ -216,10 +216,10 @@ https://github.com/abcdaaaaaaaaa/MQSpaceData.h/wiki
   * [Python Regression (a and b)](#Regression)
   * [Python Regression (m and b)](#Regression)
   * [Python Calibrate Ro dangerousPer()](#R0python)
-* [Calibrate Ro](#Python)
-  * [Calibrate Ro Arduino](#Regression_a_and_b)
+* [Calibrate Ro](#calibrateRo)
+  * [Calibrate Ro Arduino](#calibrateRoArduino)
   * [Python Virtual Calibration](#R0python)
-  * [[Python Virtual Calibrate Ro dangerousPer()](#dangerousPer)
+  * [Python Virtual Calibrate Ro dangerousPer()](#dangerousPer)
 * [Geiger Counter](#GeigerCounter)
   * [Radioactivity](#Radioactivity)
 # MQSpaceData MQ Sensor List
