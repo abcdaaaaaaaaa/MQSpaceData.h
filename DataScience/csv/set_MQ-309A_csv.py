@@ -17,7 +17,7 @@ while True:
         'H2': h2,
         'CH4': ch4,
         'CO': co,
-        'Alcohol': alcohol,
+        'Alcohol': alcohol
     }
 
     data_list.append(data_entry)
