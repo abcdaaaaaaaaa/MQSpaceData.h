@@ -22,7 +22,7 @@ while True:
 
     data_number += 1
 
-with open('MQ-131.csv', mode, newline='') as file:
+with open('MQ-307A.csv', mode, newline='') as file:
     fieldnames = ['CO', 'H2']
     writer = csv.DictWriter(file, fieldnames=fieldnames)
     
