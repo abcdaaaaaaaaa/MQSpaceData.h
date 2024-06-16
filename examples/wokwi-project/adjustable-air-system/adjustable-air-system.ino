@@ -54,7 +54,8 @@ void loop() {
     case (11): MQ136(); break;
     case (12): MQ137(); break;
     case (13): MQ303A(); break;
-    case (14): MQ309A(); break;
+    case (14): MQ307A(); break;
+    case (15): MQ309A(); break;
   }
 }
 
@@ -512,19 +513,39 @@ void MQ309A() {
 
   Air = MQ.MQ309ADataAir();
 
+/*
 // MQ309A has two data graphs, 
-// these values ​​are according to the 2nd graph, 
+// these values ​​are according to the 2nd graph,
+// The second graph of MQ309A is the same as MQ307A
 // CO is low sensitivity in this graph  xname = "LOW_CO";
 
   MQ.RSRoMQAir(100);
 
-  MQ.dangerousPer(0.15);
-  x = MQ.MQ309ADataLowCO();
+  xname = "LOW_CO";
+  MQ.dangerousPer(0.96);
+  x = MQ.MQ307ADataCO();
   hello();
 
   xname = "SecondH2";
-  MQ.dangerousPer(81.9);
-  x = MQ.MQ309ADataSecondH2();
+  MQ.dangerousPer(56.107);
+  x = MQ.MQ307ADataH2();
+  hello();
+  */
+}
+
+void MQ307A(){
+  mode = "MQ307A";
+  MQ.setRL(50);
+  MQ.RSRoMQAir(100);
+
+  xname = "CO";
+  MQ.dangerousPer(0.96);
+  x = MQ.MQ307ADataCO();
+  hello();
+
+  xname = "H2";
+  MQ.dangerousPer(56.107);
+  x = MQ.MQ307ADataH2();
   hello();
 }
 
