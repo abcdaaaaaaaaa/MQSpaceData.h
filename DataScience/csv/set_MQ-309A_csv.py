@@ -11,8 +11,6 @@ while True:
     ch4 = input("CH4: ")
     co = input("CO: ")
     alcohol = input("Alcohol: ")
-    LC = input("LowCO: ")
-    SH = input("SecondH2: ")
 
     data_entry = {
         'Data': data,
@@ -20,9 +18,6 @@ while True:
         'CH4': ch4,
         'CO': co,
         'Alcohol': alcohol,
-        'LowCO': LC,
-        'SecondH2': SH
-
     }
 
     data_list.append(data_entry)
