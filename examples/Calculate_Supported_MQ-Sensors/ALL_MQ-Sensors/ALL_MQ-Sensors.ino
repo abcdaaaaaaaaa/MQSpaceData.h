@@ -40,6 +40,7 @@ You can also determine the appropriate resistance by looking at the suggestedRL 
 //MQ136();
 //MQ137();
 //MQ303A();
+//MQ307A();
 //MQ309A();
 GasPercentileForAllMQs();
 //delay(1500);
@@ -343,16 +344,30 @@ float Alcohol = MQ.MQ309ADataAlcohol();
 float Air = MQ.MQ309ADataAir();
 
 // MQ309A has two data graphs, 
-// these values ​​are according to the 2nd graph, 
+// these values ​​are according to the 2nd graph,
+// The second graph of MQ309A is the same as MQ307A
 // CO is low sensitivity in this graph
 
+/*
 MQ.RSRoMQAir(100);
 
-MQ.dangerousPer(0.15); 
-float LOW_CO = MQ.MQ309ADataLowCO();
+MQ.dangerousPer(0.96); 
+float LOW_CO = MQ.MQ307ADataCO(); // Low Sensitivity
 
-MQ.dangerousPer(81.9);
-float SecondH2 = MQ.MQ309ADataSecondH2();
+MQ.dangerousPer(56.107);
+float Second_H2 = MQ.MQ307ADataH2(); // Low Sensitivity
+ */
+}
+
+void MQ307A(){
+MQ.setRL(50);
+MQ.RSRoMQAir(100);
+
+MQ.dangerousPer(0.96); 
+float CO = MQ.MQ307ADataCO(); // Low Sensitivity
+
+MQ.dangerousPer(56.107);
+float H2 = MQ.MQ307ADataH2(); // Low Sensitivity
 }
 
 // Note: 
