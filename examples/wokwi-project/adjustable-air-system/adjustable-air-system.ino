@@ -1,6 +1,6 @@
 /*
 You can find the simulation link here: 
-https://wokwi.com/projects/400828974909121537
+https://wokwi.com/projects/401757196986275841
 */
 
 #include <MQSpaceData.h>
@@ -40,7 +40,7 @@ void setup() {
 }
 
 void loop() {
-  switch (map(pot, 0, (1 << ADC_BIT_RESU) - 1, 1, 14)) {
+  switch (map(pot, 0, (1 << ADC_BIT_RESU) - 1, 1, 15)) {
     case (1): MQ135(); break;
     case (2): MQ2(); break;
     case (3): MQ3(); break;
