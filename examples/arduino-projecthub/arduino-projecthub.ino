@@ -25,7 +25,7 @@ void setup() {
 }
 
 void loop() {
-  switch (map(pot, 0, (1 << ADC_BIT_RESU) - 1, 1, 14)) {
+  switch (map(pot, 0, (1 << ADC_BIT_RESU) - 1, 1, 15)) {
     case (1): MQ135(); break;
     case (2): MQ2(); break;
     case (3): MQ3(); break;
