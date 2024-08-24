@@ -1,5 +1,5 @@
 H2S 5ppm
-Benene 5ppm
+Benzene 5ppm
 Hexane 50ppm
 CH4 1000ppm
 CO 200ppm
