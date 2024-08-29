@@ -261,15 +261,15 @@ MQ.RSRoMQAir(12);
 MQ.setRL(100);
 
 MQ.dangerousPer(23.75);
-float NOx = MQ.MQ131DataNOx();
+float NOx = 1 / MQ.MQ131DataNOx();
 
 MQ.dangerousPer(8.33);
-float CL2 = MQ.MQ131DataCL2();
+float CL2 = 1 / MQ.MQ131DataCL2();
 
 MQ.dangerousPer(4.166);
-float O3 = MQ.MQ131DataO3();
+float O3 = 1 / MQ.MQ131DataO3();
 
-float Air = MQ.MQ131DataAir();
+float Air = 1 / MQ.MQ131DataAir();
 }
 
 
@@ -309,13 +309,13 @@ void MQ303A(){
 MQ.RSRoMQAir(1);
 MQ.setRL(47);
 
-MQ.dangerousPer(17);
+MQ.dangerousPer(28);
 float IsoButane = MQ.MQ303ADataIso();
 
-MQ.dangerousPer(13);
+MQ.dangerousPer(27);
 float Hydrogen = MQ.MQ303ADataHyd();
 
-MQ.dangerousPer(10);
+MQ.dangerousPer(21);
 float Ethanol = MQ.MQ303ADataEthanol();
 
 float Air = MQ.MQ303ADataAir();
@@ -323,7 +323,8 @@ float Air = MQ.MQ303ADataAir();
 
 void MQ309A(){
 MQ.setRL(50);
-MQ.RSRoMQAir(11);
+// MQ.RSRoMQAir(11);
+ MQ.RSRoMQAir(1);
 
 // MQ309A has two data graphs, 
 // these values ​​are according to the 1st graph, 
@@ -349,7 +350,7 @@ float Air = MQ.MQ309ADataAir();
 // CO is low sensitivity in this graph
 
 /*
-MQ.RSRoMQAir(100);
+MQ.RSRoMQAir(1);
 
 MQ.dangerousPer(0.96); 
 float LOW_CO = MQ.MQ307ADataCO(); // Low Sensitivity
@@ -361,7 +362,7 @@ float Second_H2 = MQ.MQ307ADataH2(); // Low Sensitivity
 
 void MQ307A(){
 MQ.setRL(50);
-MQ.RSRoMQAir(100);
+MQ.RSRoMQAir(1);
 
 MQ.dangerousPer(0.96); 
 float CO = MQ.MQ307ADataCO(); // Low Sensitivity
