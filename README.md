@@ -82,7 +82,8 @@ b = log10(y) - m*log10(x)
             b_rounded = round(b, 4)
 
 The first formula is determined according to all points (OldCurve.py, OldCurve), while the second formula is determined according to the first and last point. Therefore, in order to collect them all in the same formula and to increase the accuracy rate, we used the method in the second formula and took the logarithm (if R^2 = 1 (%100) always: logm = valueb, logb = log10(valuea)) for slopes greater than 99.95% and collected them all in the first formula, thus we increased the accuracy rate without having to use 2 different formulas (Regression.py, NewCurve).
-## ratio
+
+## V = I x R
 V = I x R -> VRL = [VC / (RS + RL)] x RL  VRL = (VC x RL) / (RS + RL)
 
 RS: -> VRL x (RS + RL) = VC x RL  (VRL x RS) + (VRL x RL) = VC x RL  (VRL x RS) = (VC x RL) - (VRL x RL)
@@ -91,13 +92,20 @@ RS = [(VC x RL) - (VRL x RL)] / VRL  RS = [(VC x RL) / VRL] – RL
 
 Rs = (voltage * Rload) / (voltage/2^n-1)) - (Rload)
 
-analogRead(pin) / bitadc  calibrationPercentile / 100
+analogRead(pin) / bitadc -> calibrationPercentile / 100
 
 Rs = bitadc * Rload / analogRead(pin) - Rload -> calibrationRs = 100 * Rload / calibrationPercentile – Rload
 
-Ro = Kalibrasyon_Rs / Air ||| ratio = Rs / Ro -> ratio = Rs / (calibrationRs / Air) -> ratio = Rs x Air / calibrationRs
+Ro = calibrationRs / Air ||| ratio = Rs / Ro -> ratio = Rs / (calibrationRs / Air) -> ratio = Rs x Air / calibrationRs
 
-Ratio = (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir / (100 * Rload / calibrationPercentile – Rload)
+Ratio = (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir / (100 * Rload / calibrationPercentile – Rload) [Rs / Ro]
+
+## ratio
+(1) if ratio = Rs / Ro: ratio = (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir / (100 * Rload / calibrationPercentile – Rload) 
+
+(2) if ratio = Rs / Rs: ratio = (bitadc * Rload / analogRead(pin) – Rload) / (100 * Rload / Kalibrasyon_Persentili – Rload) [No RsRoMQAir]
+
+(3) if ratio = Ro / Rs: ratio =  (100 * Rload / calibrationPercentile – Rload) / (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir [1 / ratio]
 
 ## MQDataScience
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
