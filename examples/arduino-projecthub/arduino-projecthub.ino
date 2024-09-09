@@ -26,21 +26,21 @@ void setup() {
 
 void loop() {
   switch (map(pot, 0, (1 << ADC_BIT_RESU) - 1, 1, 15)) {
-    case (1): MQ135(); break;
-    case (2): MQ2(); break;
-    case (3): MQ3(); break;
-    case (4): MQ4(); break;
-    case (5): MQ5(); break;
-    case (6): MQ6(); break;
-    case (7): MQ7(); break;
-    case (8): MQ8(); break;
-    case (9): MQ9(); break;
-    case (10): MQ131(); break;
-    case (11): MQ136(); break;
-    case (12): MQ137(); break;
-    case (13): MQ303A(); break;
-    case (14): MQ307A(); break;
-    case (15): MQ309A(); break;
+    case (1): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(3.6); MQ.setRL(20); mode = "MQ-135"; MQ135(); break;
+    case (2): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(9.8); MQ.setRL(20); mode = "MQ-2"; MQ2(); break;
+    case (3): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(60.53); MQ.setRL(200); mode = "MQ-3"; MQ3(); break;
+    case (4): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(4.4); MQ.setRL(20); mode = "MQ-4"; MQ4(); break;
+    case (5): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(6.5); MQ.setRL(20); mode = "MQ-5"; MQ5(); break;
+    case (6): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(10); MQ.setRL(20); mode = "MQ-6"; MQ6(); break;
+    case (7): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(26); MQ.setRL(10); mode = "MQ-7"; MQ7(); break;
+    case (8): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(70); MQ.setRL(10); mode = "MQ-8"; MQ8(); break;
+    case (9): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(9.7); MQ.setRL(20); mode = "MQ-9"; MQ9(); break;
+    case (10): MQ.setRatio("Ro/Rs"); MQ.RSRoMQAir(12); MQ.setRL(100); mode = "MQ131"; MQ131(); break;
+    case (11): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(3.54); MQ.setRL(20); mode = "MQ-135"; MQ136(); break;
+    case (12): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(3.54); MQ.setRL(47); mode = "MQ-135"; MQ137(); break;
+    case (13): MQ.setRatio("Rs/Rs"); MQ.setRL(47); mode = "MQ303A"; MQ303A(); break;
+    case (14): MQ.setRatio("Rs/Rs"); MQ.setRL(50); mode = "MQ307A"; MQ307A(); break;
+    case (15): MQ.setRatio("Rs/Rs"); MQ.setRL(50); mode = "MQ309A"; MQ309A(); break;
   }
 }
 
@@ -59,10 +59,6 @@ void hello() {
 }
 
 void MQ135(){
-  MQ.RSRoMQAir(3.6);
-  MQ.setRL(20); 
-  mode = "MQ-135";
-
   xname = "CO";
   MQ.dangerousPer(42.5); 
   x = MQ.MQ135DataCO();
@@ -97,10 +93,6 @@ void MQ135(){
 }
 
 void MQ2() {
-  MQ.RSRoMQAir(9.8);
-  MQ.setRL(20);
-  mode = "MQ-2";
-
   xname = "H2";
   MQ.dangerousPer(10.2);
   x = MQ.MQ2DataH2();
@@ -140,10 +132,6 @@ void MQ2() {
 }
 
 void MQ3() {
-  MQ.RSRoMQAir(9.8);
-  MQ.setRL(20);
-  mode = "MQ-3";
-
   xname = "H2";
   MQ.dangerousPer(10.2);
   x = MQ.MQ2DataH2();
@@ -183,10 +171,6 @@ void MQ3() {
 }
 
 void MQ4() {
-  MQ.RSRoMQAir(4.4);
-  MQ.setRL(20);
-  mode = "MQ-4";
-
   xname = "H2";
   MQ.dangerousPer(64.43);
   x = MQ.MQ4DataH2();
@@ -221,10 +205,6 @@ void MQ4() {
 }
 
 void MQ5() {
-  MQ.RSRoMQAir(6.5);
-  MQ.setRL(20);
-  mode = "MQ-5";
-
   xname = "H2";
   MQ.dangerousPer(15.12);
   x = MQ.MQ5DataH2();
@@ -254,10 +234,6 @@ void MQ5() {
 }
 
 void MQ6() {
-  MQ.RSRoMQAir(10);
-  MQ.setRL(20);
-  mode = "MQ-6";
-
   xname = "H2";
   MQ.dangerousPer(33.7);
   x = MQ.MQ6DataH2();
@@ -287,10 +263,6 @@ void MQ6() {
 }
 
 void MQ7() {
-  MQ.RSRoMQAir(26);
-  MQ.setRL(10);
-  mode = "MQ-7";
-
   xname = "H2";
   MQ.dangerousPer(3.08);
   x = MQ.MQ7DataH2();
@@ -320,10 +292,6 @@ void MQ7() {
 }
 
 void MQ8() {
-  MQ.RSRoMQAir(70);
-  MQ.setRL(10);
-  mode = "MQ-8";
-
   xname = "H2";
   MQ.dangerousPer(1.43);
   x = MQ.MQ8DataH2();
@@ -353,10 +321,6 @@ void MQ8() {
 }
 
 void MQ9() {
-  MQ.RSRoMQAir(9.7);
-  MQ.setRL(20);
-  mode = "MQ-9";
-
   xname = "LPG";
   MQ.dangerousPer(10.31);
   x = MQ.MQ9DataLPG();
@@ -376,10 +340,6 @@ void MQ9() {
 }
 
 void MQ131() {
-  MQ.RSRoMQAir(12);
-  MQ.setRL(100);
-  mode = "MQ131";
-
   xname = "NOx";
   MQ.dangerousPer(23.75);
   x = MQ.MQ131DataNOx();
@@ -399,10 +359,6 @@ void MQ131() {
 }
 
 void MQ136() {
-  MQ.RSRoMQAir(3.54);
-  MQ.setRL(20);
-  mode = "MQ-136";
-
   xname = "H2S";
   MQ.dangerousPer(40.68);
   x = MQ.MQ136DataH2S();
@@ -422,10 +378,6 @@ void MQ136() {
 }
 
 void MQ137() {
-  MQ.RSRoMQAir(3.54);
-  MQ.setRL(47);
-  mode = "MQ-137";
-
   xname = "CO";
   MQ.dangerousPer(81.64);
   x = MQ.MQ137DataCO();
@@ -445,22 +397,18 @@ void MQ137() {
 }
 
 void MQ303A() {
-  MQ.RSRoMQAir(1);
-  MQ.setRL(47);
-  mode = "MQ303A";
-
   xname = "IsoButane";
-  MQ.dangerousPer(17);
+  MQ.dangerousPer(28);
   x = MQ.MQ303ADataIso();
   hello();
 
   xname = "Hydrogen";
-  MQ.dangerousPer(13);
+  MQ.dangerousPer(21);
   x = MQ.MQ303ADataHyd();
   hello();
 
   xname = "Ethanol";
-  MQ.dangerousPer(10);
+  MQ.dangerousPer(27);
   x = MQ.MQ303ADataEthanol();
   hello();
 
@@ -468,10 +416,6 @@ void MQ303A() {
 }
 
 void MQ309A() {
-  mode = "MQ309A";
-  MQ.setRL(50);
-  MQ.RSRoMQAir(11);
-
   xname = "H2";
   MQ.dangerousPer(11.4545);
   x = MQ.MQ309ADataH2();
@@ -496,10 +440,6 @@ void MQ309A() {
 }
 
 void MQ307A(){
-  mode = "MQ307A";
-  MQ.setRL(50);
-  MQ.RSRoMQAir(100);
-
   xname = "CO";
   MQ.dangerousPer(0.96);
   x = MQ.MQ307ADataCO();
