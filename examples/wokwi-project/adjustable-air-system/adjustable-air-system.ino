@@ -41,21 +41,21 @@ void setup() {
 
 void loop() {
   switch (map(pot, 0, (1 << ADC_BIT_RESU) - 1, 1, 15)) {
-    case (1): MQ135(); break;
-    case (2): MQ2(); break;
-    case (3): MQ3(); break;
-    case (4): MQ4(); break;
-    case (5): MQ5(); break;
-    case (6): MQ6(); break;
-    case (7): MQ7(); break;
-    case (8): MQ8(); break;
-    case (9): MQ9(); break;
-    case (10): MQ131(); break;
-    case (11): MQ136(); break;
-    case (12): MQ137(); break;
-    case (13): MQ303A(); break;
-    case (14): MQ307A(); break;
-    case (15): MQ309A(); break;
+    case (1): MQ.setRatio("Rs/Ro"); MQ135(); break;
+    case (2): MQ.setRatio("Rs/Ro"); MQ2(); break;
+    case (3): MQ.setRatio("Rs/Ro"); MQ3(); break;
+    case (4): MQ.setRatio("Rs/Ro"); MQ4(); break;
+    case (5): MQ.setRatio("Rs/Ro"); MQ5(); break;
+    case (6): MQ.setRatio("Rs/Ro"); MQ6(); break;
+    case (7): MQ.setRatio("Rs/Ro"); MQ7(); break;
+    case (8): MQ.setRatio("Rs/Ro"); MQ8(); break;
+    case (9): MQ.setRatio("Rs/Ro"); MQ9(); break;
+    case (10): MQ.setRatio("Ro/Rs"); MQ131(); break;
+    case (11): MQ.setRatio("Rs/Ro"); MQ136(); break;
+    case (12): MQ.setRatio("Rs/Ro"); MQ137(); break;
+    case (13): MQ.setRatio("Rs/Rs"); MQ303A(); break;
+    case (14): MQ.setRatio("Rs/Rs"); MQ307A(); break;
+    case (15): MQ.setRatio("Rs/Rs"); MQ309A(); break;
   }
 }
 
@@ -460,22 +460,21 @@ void MQ137() {
 }
 
 void MQ303A() {
-  MQ.RSRoMQAir(1);
   MQ.setRL(47);
   mode = "MQ303A";
 
   xname = "IsoButane";
-  MQ.dangerousPer(17);
+  MQ.dangerousPer(28);
   x = MQ.MQ303ADataIso();
   hello();
 
   xname = "Hydrogen";
-  MQ.dangerousPer(13);
+  MQ.dangerousPer(21);
   x = MQ.MQ303ADataHyd();
   hello();
 
   xname = "Ethanol";
-  MQ.dangerousPer(10);
+  MQ.dangerousPer(27);
   x = MQ.MQ303ADataEthanol();
   hello();
 
@@ -485,7 +484,6 @@ void MQ303A() {
 void MQ309A() {
   mode = "MQ309A";
   MQ.setRL(50);
-  MQ.RSRoMQAir(11);
 
 // MQ309A has two data graphs, 
 // these values ​​are according to the 1st graph, 
@@ -519,8 +517,6 @@ void MQ309A() {
 // The second graph of MQ309A is the same as MQ307A
 // CO is low sensitivity in this graph  xname = "LOW_CO";
 
-  MQ.RSRoMQAir(100);
-
   xname = "LOW_CO";
   MQ.dangerousPer(0.96);
   x = MQ.MQ307ADataCO();
@@ -536,7 +532,6 @@ void MQ309A() {
 void MQ307A(){
   mode = "MQ307A";
   MQ.setRL(50);
-  MQ.RSRoMQAir(100);
 
   xname = "CO";
   MQ.dangerousPer(0.96);
