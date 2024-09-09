@@ -29,14 +29,16 @@ def calculateRoVeryEasy(defpercentile):
     Ro = RS / RSRoMQAir
     return Ro
 
-def calculateRsVeryEasy(defpercentile):
-    Rs = (100 * Rload / defpercentile) - Rload
-    return Rs
-    
 MyRovalue = calculateRoVeryEasy(percentile) 
 
 print("Your Ro value is:")
 print(MyRovalue)
+
+"""
+def calculateRsVeryEasy(defpercentile):
+    Rs = (100 * Rload / defpercentile) - Rload
+    return Rs
+"""
 
 # for MQ303A, MQ307A, MQ309A  [A models]
 # MyRsvalue = calculateRsVeryEasy(percentile) 
