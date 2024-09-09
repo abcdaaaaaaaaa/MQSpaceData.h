@@ -7,6 +7,7 @@ MQSpaceData MQ(ADC_BIT_RESU, ANALOG_PIN);
 void setup() {
   Serial.begin(115200);  
   MQ.begin();
+  // MQ.setRatio("Rs/Ro");
 }
 
 void loop() {
@@ -47,6 +48,7 @@ GasPercentileForAllMQs();
 }
 
 void MQ135(){
+MQ.setRatio("Rs/Ro");
 // Setup for MQ-135 calculation
 MQ.RSRoMQAir(3.6);
 // configure your resistance kΩ
@@ -78,6 +80,7 @@ float Air = MQ.MQ135DataAir();
 }
 
 void MQ2(){
+MQ.setRatio("Rs/Ro");
 MQ.RSRoMQAir(9.8);
 MQ.setRL(20);
 
@@ -106,6 +109,10 @@ float Air = MQ.MQ2DataAir();
 }
 
 void MQ3(){
+MQ.setRatio("Rs/Ro");
+MQ.RSRoMQAir(60.53);
+MQ.setRL(200);
+
 MQ.dangerousPer(48.97);
 float LPG = MQ.MQ3DataLPG();
 
@@ -128,6 +135,7 @@ float Air = MQ.MQ3DataAir();
 }
 
 void MQ4(){
+MQ.setRatio("Rs/Ro");
 MQ.RSRoMQAir(4.4);
 MQ.setRL(20);
 
@@ -153,6 +161,7 @@ float Air = MQ.MQ4DataAir();
 }
 
 void MQ5(){
+MQ.setRatio("Rs/Ro");
 MQ.RSRoMQAir(6.5);
 MQ.setRL(20);
 
@@ -175,6 +184,7 @@ float Air = MQ.MQ5DataAir();
 }
 
 void MQ6(){
+MQ.setRatio("Rs/Ro");
 MQ.RSRoMQAir(10);
 MQ.setRL(20);
 
@@ -197,6 +207,7 @@ float Air = MQ.MQ6DataAir();
 }
 
 void MQ7(){
+MQ.setRatio("Rs/Ro");
 MQ.RSRoMQAir(26);
 MQ.setRL(10);
 
@@ -219,6 +230,7 @@ float Air = MQ.MQ7DataAir();
 }
 
 void MQ8(){
+MQ.setRatio("Rs/Ro");
 MQ.RSRoMQAir(70);
 MQ.setRL(10);
 
@@ -241,6 +253,7 @@ float Air = MQ.MQ8DataAir();
 }
 
 void MQ9(){
+MQ.setRatio("Rs/Ro");
 MQ.RSRoMQAir(9.7);
 MQ.setRL(20);
 
@@ -257,23 +270,25 @@ float Air = MQ.MQ9DataAir();
 }
 
 void MQ131(){
+MQ.setRatio("Ro/Rs"); // WARNING: not "Rs/Ro"
 MQ.RSRoMQAir(12);
 MQ.setRL(100);
 
 MQ.dangerousPer(23.75);
-float NOx = 1 / MQ.MQ131DataNOx();
+float NOx = MQ.MQ131DataNOx();
 
 MQ.dangerousPer(8.33);
-float CL2 = 1 / MQ.MQ131DataCL2();
+float CL2 = MQ.MQ131DataCL2();
 
 MQ.dangerousPer(4.166);
-float O3 = 1 / MQ.MQ131DataO3();
+float O3 = MQ.MQ131DataO3();
 
-float Air = 1 / MQ.MQ131DataAir();
+float Air = MQ.MQ131DataAir();
 }
 
 
 void MQ136(){
+MQ.setRatio("Rs/Ro");
 MQ.RSRoMQAir(3.54);
 MQ.setRL(20);
 
@@ -290,6 +305,7 @@ float Air = MQ.MQ136DataAir();
 }
 
 void MQ137(){
+MQ.setRatio("Rs/Ro");
 MQ.RSRoMQAir(3.54);
 MQ.setRL(47);
 
@@ -306,25 +322,29 @@ float Air = MQ.MQ137DataAir();
 }
 
 void MQ303A(){
-MQ.RSRoMQAir(1);
+MQ.setRatio("Rs/Rs"); // WARNING: not "Rs/Ro"
+// Rs/Rs mean: RSRoMQAir is not important
+// MQ.RSRoMQAir(1);
 MQ.setRL(47);
 
 MQ.dangerousPer(28);
 float IsoButane = MQ.MQ303ADataIso();
 
-MQ.dangerousPer(27);
+MQ.dangerousPer(21);
 float Hydrogen = MQ.MQ303ADataHyd();
 
-MQ.dangerousPer(21);
+MQ.dangerousPer(27);
 float Ethanol = MQ.MQ303ADataEthanol();
 
 float Air = MQ.MQ303ADataAir();
 }
 
 void MQ309A(){
-MQ.setRL(50);
+MQ.setRatio("Rs/Rs"); // WARNING: not "Rs/Ro"
+// Rs/Rs mean: RSRoMQAir is not important
 // MQ.RSRoMQAir(11);
- MQ.RSRoMQAir(1);
+MQ.setRL(50);
+
 
 // MQ309A has two data graphs, 
 // these values ​​are according to the 1st graph, 
@@ -350,7 +370,10 @@ float Air = MQ.MQ309ADataAir();
 // CO is low sensitivity in this graph
 
 /*
-MQ.RSRoMQAir(1);
+MQ.setRatio("Rs/Rs"); // WARNING: not "Rs/Ro"
+// Rs/Rs mean: RSRoMQAir is not important
+// MQ.RSRoMQAir(NONE);
+MQ.setRL(50);
 
 MQ.dangerousPer(0.96); 
 float LOW_CO = MQ.MQ307ADataCO(); // Low Sensitivity
@@ -361,8 +384,10 @@ float Second_H2 = MQ.MQ307ADataH2(); // Low Sensitivity
 }
 
 void MQ307A(){
+MQ.setRatio("Rs/Rs"); // WARNING: not "Rs/Ro"
+// Rs/Rs mean: RSRoMQAir is not important
+// MQ.RSRoMQAir(NONE);
 MQ.setRL(50);
-MQ.RSRoMQAir(1);
 
 MQ.dangerousPer(0.96); 
 float CO = MQ.MQ307ADataCO(); // Low Sensitivity
