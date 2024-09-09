@@ -6,22 +6,27 @@
 class MQSpaceData
 {
 private:
-	float _ratio;
-	float _percentile;
+	String _ratioMode;
+	byte _pin;
 	int _bitadc;
 	float _Rload;
-	byte _pin;
-	float _RSRo;
+	float _ratio;
+	float _percentile;
+	float _Air;
 	float _voltage;
 	float _setvoltage;
 	float _range;
 	float _RS;
+	float _RO;
+	float _Rs;
+	float _calibrationRs;
 	float _Ro;
 	float _va;
 	float _vb;
 	float _mlog;
 	float _blog;
-        float _MQ303AAir;
+    float _MQ303AAir;
+	float ratio();
 	float limitValue10000(float Sensorvalue);
 	float limitValue7000(float Sensorvalue);
 	float limitValue4000(float Sensorvalue);
@@ -37,6 +42,7 @@ public:
 	void solderedRL();
 	void setVoltage(float voltage);
 	void setRange(int range);
+	void setRatio(String ratioMode);
 	int MQData100();
 	int read();
 	float readValue();
