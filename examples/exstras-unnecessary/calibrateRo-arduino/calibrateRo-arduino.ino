@@ -58,7 +58,7 @@ MQ.setVoltage(Voltage);
 
 /*
 """
----RS/Ro VALUE---
+---Air VALUE---
 MQ-2: 9.8
 MQ-3: 60.53
 MQ-4: 4.4
@@ -67,18 +67,19 @@ MQ-6: 10
 MQ-7: 26
 MQ-8: 70
 MQ-9: 9.7
-MQ-131: 12
+MQ131: 12
 MQ-135: 3.6
 MQ-136: 3.54
 MQ-137: 3.54
-MQ-303A: 1
-MQ-309A: 11
+MQ303A: 1 (Not Important)
+MQ307A: No Air (Not Important)
+MQ309A 11 (Not Important)
 """
  */
 }
 
 void loop(){
-// imp -> important:
+// Important:
 // AverageRange: We (recommend 500)
 // This value gives the average, for example, 
 // if you define 500, measuring this value 500 times, 
@@ -87,23 +88,32 @@ void loop(){
 
 Percentile = MQ.MQData100();
 
-MQ.setRange(AverageRange); // The average is taken as the value defined here (imp -> important).
+MQ.setRange(AverageRange); // The average is taken as the value defined here MQ.setRange(500)
 LastVoltage = MQ.readVoltage();
-LastRoValue = MQ.calculateRo();
+LastRoValue = MQ.calculateRo(); // for MQ-2 ratio = Ro/Rs, MQ-3, MQ-4, MQ-5 ... MQ131, MQ-135, MQ-136, MQ-137 || WARNING: only -> MQ131 ratio = Rs/Ro.
+LastRsValue = MQ.calculateRs(); // for MQ303A, MQ307A, MQ309A Because in these sensors, we do not need the Ro value since the ratio = Rs/Rs.
 MQ.setRange(1); // just to get the final result, we define this value as 1
 // because here the value is defined as 1 since only the last value will be taken into account when getting the result.
 AverageVoltage = MQ.readVoltage();
 AverageRoValue = MQ.calculateRo();
-
+AverageRsValue = MQ.calculateRo();
 Serial.print("Percentile:");
 Serial.println(Percentile);
 Serial.print("AverageVoltage:");
 Serial.println(AverageVoltage);
 Serial.print("LastVoltage:");
 Serial.println(LastVoltage);
+
+// for MQ-2 ratio = Ro/Rs, MQ-3, MQ-4, MQ-5 ... MQ131, MQ-135, MQ-136, MQ-137
 Serial.print("AverageRoValue:");
 Serial.println(AverageRoValue);
 Serial.print("LastRoValue:");
 Serial.println(LastRoValue);
+
+// for MQ303A, MQ307A, MQ309A [A models]
+Serial.print("AverageRsValue:");
+Serial.println(AverageRsValue);
+Serial.print("LastRsValue:");
+Serial.println(LastRsValue);
 delay(3000);
 }
