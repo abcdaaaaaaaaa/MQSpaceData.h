@@ -44,7 +44,7 @@ void MQSpaceData::logb(float data2)
 
 void MQSpaceData::RSRoMQAir(float RSRo)
 {
- _RSRo = RSRo;
+ _Air = RSRo;
 }
 
 void MQSpaceData::dangerousPer(float per)
@@ -60,6 +60,11 @@ void MQSpaceData::setVoltage(float voltage)
 void MQSpaceData::setRange(int range)
 {
  _range = range;
+}
+
+void MQSpaceData::setRatio(String ratioMode)
+{
+_ratioMode = ratioMode;	
 }
 
 int MQSpaceData::read()
@@ -79,20 +84,29 @@ float MQSpaceData::readVoltage()
 float MQSpaceData::calculateRo()
 {
  _RS = _voltage * _Rload / readVoltage() - _Rload;
- _Ro = _RS / _RSRo;
- return _Ro;
+ _RO = _RS / _Air;
+ return _RO;
+}
+
+float MQSpaceData::ratio()
+{
+ _calibrationRs = _Rload * 100 / _percentile - _Rload;
+ _Rs = _Rload * _bitadc / read() - _Rload;
+ if (_ratioMode = "Rs/Rs") _ratio = _Rs / _calibrationRs; 
+ else _Ro = _calibrationRs / _Air;
+ if (_ratioMode = "Rs/Ro") _ratio = _Rs / _Ro;
+ if (_ratioMode = "Ro/Rs") _ratio = _Ro / _Rs;
+ return _ratio;	
 }
 
 float MQSpaceData::readValue()
 {
- _ratio = (_Rload*_bitadc/read()-_Rload)/(_Rload*100/_percentile-_Rload)*_RSRo;
- return pow(_ratio,_vb)*_va;
+ return pow(ratio(),_vb)*_va;
 }
 
 float MQSpaceData::logValue()
 {
- _ratio = (_Rload*_bitadc/read()-_Rload)/(_Rload*100/_percentile-_Rload)*_RSRo;
- return pow(10,((log10(_ratio)-_blog)/_mlog));
+ return pow(10,((log10(ratio())-_blog)/_mlog));
 }
 
 //**************************************ppm Values**************************************
