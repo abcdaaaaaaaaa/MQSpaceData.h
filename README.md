@@ -103,7 +103,7 @@ Ratio = (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir / (100 * Rload 
 ## Calculate Ratio
 (1) if ratio = Rs / Ro: ratio = (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir / (100 * Rload / calibrationPercentile – Rload) 
 
-(2) if ratio = Rs / Rs: ratio = (bitadc * Rload / analogRead(pin) – Rload) / (100 * Rload / Kalibrasyon_Persentili – Rload) [No RsRoMQAir]
+(2) if ratio = Rs / Rs: ratio = (bitadc * Rload / analogRead(pin) – Rload) / (100 * Rload / calibrationPercentile – Rload) [No RsRoMQAir]
 
 (3) if ratio = Ro / Rs: ratio =  (100 * Rload / calibrationPercentile – Rload) / (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir [1 / ratio]
 
