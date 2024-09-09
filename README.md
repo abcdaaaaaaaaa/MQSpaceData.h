@@ -83,9 +83,9 @@ b = log10(y) - m*log10(x)
 
 The first formula is determined according to all points (OldCurve.py, OldCurve), while the second formula is determined according to the first and last point. Therefore, in order to collect them all in the same formula and to increase the accuracy rate, we used the method in the second formula and took the logarithm (if R^2 = 1 (%100) always: logm = valueb, logb = log10(valuea)) for slopes greater than 99.95% and collected them all in the first formula, thus we increased the accuracy rate without having to use 2 different formulas (Regression.py, NewCurve).
 ## ratio
-V = I x R  VRL = [VC / (RS + RL)] x RL  VRL = (VC x RL) / (RS + RL)
+V = I x R -> VRL = [VC / (RS + RL)] x RL  VRL = (VC x RL) / (RS + RL)
 
-RS:  VRL x (RS + RL) = VC x RL  (VRL x RS) + (VRL x RL) = VC x RL  (VRL x RS) = (VC x RL) - (VRL x RL)
+RS: -> VRL x (RS + RL) = VC x RL  (VRL x RS) + (VRL x RL) = VC x RL  (VRL x RS) = (VC x RL) - (VRL x RL)
 
 RS = [(VC x RL) - (VRL x RL)] / VRL  RS = [(VC x RL) / VRL] – RL
 
@@ -95,7 +95,7 @@ analogRead(pin) / bitadc  calibrationPercentile / 100
 
 Rs = bitadc * Rload / analogRead(pin) - Rload -> calibrationRs = 100 * Rload / calibrationPercentile – Rload
 
-Ro = Kalibrasyon_Rs / Air ||| ratio = Rs / Ro -> ratio = Rs / (Kalibrasyon_Rs / Air) -> ratio = Rs x Air / calibrationRs
+Ro = Kalibrasyon_Rs / Air ||| ratio = Rs / Ro -> ratio = Rs / (calibrationRs / Air) -> ratio = Rs x Air / calibrationRs
 
 Ratio = (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir / (100 * Rload / calibrationPercentile – Rload)
 
