@@ -81,10 +81,15 @@ float MQSpaceData::readVoltage()
  return _setvoltage;
 }
 
-float MQSpaceData::calculateRo()
+float MQSpaceData::calculateRs()
 {
  _RS = _voltage * _Rload / readVoltage() - _Rload;
- _RO = _RS / _Air;
+ return _RS;
+}
+
+float MQSpaceData::calculateRo()
+{
+ _RO = calculateRs() / _Air;
  return _RO;
 }
 
