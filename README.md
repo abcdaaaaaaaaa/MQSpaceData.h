@@ -113,7 +113,7 @@ ratio = (bitadc * Rload / analogRead(pin) – Rload) / (100 * Rload / calibratio
 
 ratio =  (100 * Rload / calibrationPercentile – Rload) / (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir [1 / ratio]
 
-
+## Ratio for Sensors
 STATUS 1: MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-135, MQ-136, MQ-137 [Almost All & Standart]
 
 STATUS 2: MQ303A, MQ307A, MQ309A [A models]
