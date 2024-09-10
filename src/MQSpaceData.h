@@ -25,7 +25,7 @@ private:
 	float _vb;
 	float _mlog;
 	float _blog;
-        float _MQ303AAir;
+	float _MQ303AAir;
 	float ratio();
 	float limitValue10000(float Sensorvalue);
 	float limitValue7000(float Sensorvalue);
@@ -47,6 +47,7 @@ public:
 	int read();
 	float readValue();
 	float readVoltage();
+	float calculateRs();
 	float calculateRo();
 	float logValue();
 	void valuea(float data1);
