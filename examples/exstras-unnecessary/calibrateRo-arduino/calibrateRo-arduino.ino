@@ -31,7 +31,7 @@ MQSpaceData MQ(ADC_BIT_RESU, space);
 #define AverageRange      (500) // We recommend 500
 #define Voltage           (5)   // for Arduino UNO 5V // for ESP32 3.3V // for ESP32-S2 3.3V  // for ESP8266 3.3V
 
-float Percentile, AverageVoltage, LastVoltage, AverageRoValue, LastRoValue;
+float Percentile, AverageVoltage, LastVoltage, AverageRoValue, LastRoValue, AverageRsValue, LastRsValue;
 
 void setup(){
 Serial.begin(9600);
