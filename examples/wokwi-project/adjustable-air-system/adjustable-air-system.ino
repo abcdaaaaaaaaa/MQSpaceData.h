@@ -1,6 +1,6 @@
 /*
 You can find the simulation link here: 
-https://wokwi.com/projects/408583370970645505
+https://wokwi.com/projects/408648066881619969
 */
 
 #include <MQSpaceData.h>
@@ -51,8 +51,8 @@ void loop() {
     case (8): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(70); MQ.setRL(10); mode = "MQ-8"; MQ8(); break;
     case (9): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(9.7); MQ.setRL(20); mode = "MQ-9"; MQ9(); break;
     case (10): MQ.setRatio("Ro/Rs"); MQ.RSRoMQAir(12); MQ.setRL(100); mode = "MQ131"; MQ131(); break;
-    case (11): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(3.54); MQ.setRL(20); mode = "MQ-135"; MQ136(); break;
-    case (12): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(3.54); MQ.setRL(47); mode = "MQ-135"; MQ137(); break;
+    case (11): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(3.54); MQ.setRL(20); mode = "MQ-136"; MQ136(); break;
+    case (12): MQ.setRatio("Rs/Ro"); MQ.RSRoMQAir(3.54); MQ.setRL(47); mode = "MQ-137"; MQ137(); break;
     case (13): MQ.setRatio("Rs/Rs"); MQ.setRL(47); mode = "MQ303A"; MQ303A(); break;
     case (14): MQ.setRatio("Rs/Rs"); MQ.setRL(50); mode = "MQ307A"; MQ307A(); break;
     case (15): MQ.setRatio("Rs/Rs"); MQ.setRL(50); mode = "MQ309A"; MQ309A(); break;
