@@ -86,7 +86,7 @@ The first formula is determined according to all points (OldCurve.py, OldCurve),
 ## V = I x R
 V = I x R -> VRL = [VC / (RS + RL)] x RL -> VRL = (VC x RL) / (RS + RL)
 
-RS: -> VRL x (RS + RL) = VC x RL -> (VRL x RS) + (VRL x RL) = VC x RL  (VRL x RS) = (VC x RL) - (VRL x RL)
+RS: -> VRL x (RS + RL) = VC x RL -> (VRL x RS) + (VRL x RL) = VC x RL -> (VRL x RS) = (VC x RL) - (VRL x RL)
 
 RS = [(VC x RL) - (VRL x RL)] / VRL -> RS = [(VC x RL) / VRL] – RL
 
