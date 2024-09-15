@@ -95,13 +95,16 @@ float MQSpaceData::calculateRo()
 
 float MQSpaceData::ratio()
 {
- _calibrationRs = _Rload * 100 / _percentile - _Rload;
- _Rs = _Rload * _bitadc / read() - _Rload;
- if (_ratioMode = "Rs/Rs") _ratio = _Rs / _calibrationRs; 
- else _Ro = _calibrationRs / _Air;
- if (_ratioMode = "Rs/Ro") _ratio = _Rs / _Ro;
- if (_ratioMode = "Ro/Rs") _ratio = _Ro / _Rs;
- return _ratio;	
+_calibrationRs = _Rload * 100 / _percentile - _Rload;
+_Rs = _Rload * _bitadc / read() - _Rload;
+
+if (_ratioMode == "Rs/Rs") _ratio = _Rs / _calibrationRs; 
+else _Ro = _calibrationRs / _Air;
+
+if (_ratioMode == "Rs/Ro") _ratio = _Rs / _Ro;
+if (_ratioMode == "Ro/Rs") _ratio = _Ro / _Rs;
+
+return _ratio;
 }
 
 float MQSpaceData::readValue()
