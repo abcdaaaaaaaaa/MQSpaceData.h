@@ -10,6 +10,7 @@ MQSpaceData::MQSpaceData(int bitadc, byte pin)
 void MQSpaceData::begin()
 {
  pinMode(_pin,INPUT);
+ _ratioMode == "Rs/Ro";
 }
 
 void MQSpaceData::setRL(float Rload)
@@ -104,13 +105,13 @@ float MQSpaceData::ratio()
 
 float MQSpaceData::readValue()
 {
- if (_ratioMode == "Ro/Rs") _vb = _vb * -1
+ if (_ratioMode == "Ro/Rs") _vb = _vb * -1;
  return pow(ratio(),_vb)*_va;
 }
 
 float MQSpaceData::logValue()
 {
- if (_ratioMode == "Ro/Rs") _mlog = _mlog * -1
+ if (_ratioMode == "Ro/Rs") _mlog = _mlog * -1;
  return pow(10,((log10(ratio())-_blog)/_mlog));
 }
 
