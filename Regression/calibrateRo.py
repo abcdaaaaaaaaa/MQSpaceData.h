@@ -10,13 +10,13 @@ MQ-6: 10
 MQ-7: 26
 MQ-8: 70
 MQ-9: 9.7
-MQ131: 12
+MQ-131: 12
 MQ-135: 3.6
 MQ-136: 3.54
 MQ-137: 3.54
-MQ303A: 1 (Not Important)
-MQ307A: No Air (Not Important)
-MQ309A 11 (Not Important)
+MQ-303A: 1 (Since it does not fall within the ppm range where gases are defined, it is not valid for gas calculations.)
+MQ-307A: Does not contain any Air values.
+MQ-309A: 11 (Since it does not fall within the ppm range where gases are defined, it is not valid for gas calculations.)
 """
 
 # for soldered this value is 1
