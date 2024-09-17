@@ -17,7 +17,8 @@ MQSpaceData MQ(ADC_BIT_RESU, space);
 
 void setup(){
 Serial.begin(9600);
-MQ.begin();  
+MQ.begin();  // WARNING: Since the ratio is automatically set to Rs/Ro with the begin() command and the ratio is Rs/Ro in MQ-2, we did not additionally use the setRatio() command here.
+// If your gas sensor operates in a different ratio mode, please define like MQ.setRatio("Rs/Rs")
 MQ.solderedRL(); // 1kΩ for soldered model
 /*
 If you install a new resistor in the soldered model or 
