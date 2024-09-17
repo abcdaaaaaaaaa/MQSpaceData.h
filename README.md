@@ -268,9 +268,9 @@ https://github.com/abcdaaaaaaaaa/MQSpaceData.h/wiki
   * [Python Calibrate Sensors with dangerousPer()](#R0python)
 * [Calibrate Ro](#calibrateRo)
   * [Calibrate Ro Arduino](#calibrateRoArduino)
-  * [Python Virtual Calibration](#R0python)
-  * [Python Virtual Calibrate Ro dangerousPer()](#dangerousPer)
-  * [Calibrate Rs for MQ A models: MQ303A, MQ307A, MQ309A](#calibrateRsArduino)
+  * [Python Virtual Calibration](#dangerousPerPython)
+  * [Python Virtual Sensors with dangerousPer()](#dangerousPerPython)
+  * [Calibrate Rs for MQ A models: MQ303A, MQ307A, MQ309A](#calibrateRsforAmodels)
 * [Geiger Counter](#GeigerCounter)
   * [Radioactivity](#Radioactivity)
 
