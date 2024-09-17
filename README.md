@@ -265,11 +265,12 @@ https://github.com/abcdaaaaaaaaa/MQSpaceData.h/wiki
 * [Calculate ppm Values](#Arduino)
   * [Python Regression (a and b)](#Regression)
   * [Python Regression (m and b)](#Regression)
-  * [Python Calibrate Ro dangerousPer()](#R0python)
+  * [Python Calibrate Sensors with dangerousPer()](#R0python)
 * [Calibrate Ro](#calibrateRo)
   * [Calibrate Ro Arduino](#calibrateRoArduino)
   * [Python Virtual Calibration](#R0python)
   * [Python Virtual Calibrate Ro dangerousPer()](#dangerousPer)
+  * [Calibrate Rs for MQ A models: MQ303A, MQ307A, MQ309A](#calibrateRsArduino)
 * [Geiger Counter](#GeigerCounter)
   * [Radioactivity](#Radioactivity)
 
