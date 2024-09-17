@@ -111,7 +111,25 @@ ratio = (bitadc * Rload / analogRead(pin) – Rload) / (100 * Rload / calibratio
 
 (3) if ratio = Ro / Rs: 
 
-ratio =  (100 * Rload / calibrationPercentile – Rload) / (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir [1 / ratio]
+ratio = (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir / (100 * Rload / calibrationPercentile – Rload) 
+
+But: slpoe = slope x -1
+
+valueb() = valueb() * -1
+
+logm() = logm() * -1
+
+        float MQSpaceData::readValue()
+        {
+         if (_ratioMode == "Ro/Rs") _vb = _vb * -1;
+         return pow(ratio(),_vb)*_va;
+        }
+        
+        float MQSpaceData::logValue()
+        {
+         if (_ratioMode == "Ro/Rs") _mlog = _mlog * -1;
+         return pow(10,((log10(ratio())-_blog)/_mlog));
+        }
 
 ## Ratio for Sensors
 STATUS 1: MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-135, MQ-136, MQ-137 [Almost All & Standart]
