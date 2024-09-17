@@ -11,7 +11,7 @@ void setup() {
   // Rs/Ro for: MQ135, MQ2 MQ3, MQ4, MQ5, MQ6, MQ7 MQ8, MQ9, MQ136, MQ137
   // Rs/Rs for: MQ303A, MQ307A, MQ309A
   // Ro/Rs for: MQ131
-  // If you are going to use different rate modes constantly, you need to specify this every time, even if the rate is Rs/Ro.
+  // If you are going to use different ratio modes constantly, you need to specify this every time, even if the ratio is Rs/Ro.
   // Because the current ratio mode will work according to the mode you last set.
 }
 
