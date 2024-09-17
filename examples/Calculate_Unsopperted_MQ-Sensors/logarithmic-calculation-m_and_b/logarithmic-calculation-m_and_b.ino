@@ -19,6 +19,13 @@ void setup(){
 Serial.begin(9600);
 MQ.begin();  // WARNING: Since the ratio is automatically set to Rs/Ro with the begin() command and the ratio is Rs/Ro in MQ-2, we did not additionally use the setRatio() command here.
 // If your gas sensor operates in a different ratio mode, please define like MQ.setRatio("Rs/Rs")
+  
+  // Rs/Ro for: MQ135, MQ2 MQ3, MQ4, MQ5, MQ6, MQ7 MQ8, MQ9, MQ136, MQ137
+  // Rs/Rs for: MQ303A, MQ307A, MQ309A (A Models)
+  // Ro/Rs for: MQ131 The slope here is steeper than expected.
+  // If you are going to use different ratio modes constantly, you need to specify this every time, even if the ratio is Rs/Ro.
+  // Because the current ratio mode will work according to the mode you last set.
+  
 MQ.solderedRL(); // 1kΩ for soldered model
 /*
 If you install a new resistor in the soldered model or 
@@ -35,10 +42,11 @@ The recommended load resistance for each gas sensor is determined in the datashe
 // recommended resistance according to datasheet (suggestedRL)
 // for MQ-2 suggestedRL: 20kΩ MQ.setRL(20);
 
-MQ.RSRoMQAir(9.8); // for MQ-2
+MQ.RSRoMQAir(9.8); // for MQ-2 
+// RsRoMQAir(): This command is not valid for calculations of A models. (MQ303A, MQ307A, MQ309A)
 /*
 """
----RS/Ro VALUE---
+---Air VALUE---
 MQ-2: 9.8
 MQ-3: 60.53
 MQ-4: 4.4
@@ -51,8 +59,9 @@ MQ-131: 12
 MQ-135: 3.6
 MQ-136: 3.54
 MQ-137: 3.54
-MQ-303A: 1
-MQ-309A: 11
+MQ-303A: 1 (not required for ppm)
+MQ-307A: NO AIR
+MQ-309A: 11 (not required for ppm)
 """
  */
 }
