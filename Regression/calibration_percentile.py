@@ -1,7 +1,7 @@
 RSRoMQAir = float(input("Enter the MQAir Rs/Ro: "))  # Rs/Ro VALUE
 
 """
----RS/Ro VALUE---
+---Air VALUE---
 MQ-2: 9.8
 MQ-3: 60.53
 MQ-4: 4.4
@@ -14,8 +14,9 @@ MQ-131: 12
 MQ-135: 3.6
 MQ-136: 3.54
 MQ-137: 3.54
-MQ-303A: 1
-MQ-309A: 11
+MQ-303A: 1 (Since it does not fall within the ppm range where gases are defined, it is not valid for gas calculations.)
+MQ-307A: Does not contain any Air values.
+MQ-309A: 11 (Since it does not fall within the ppm range where gases are defined, it is not valid for gas calculations.)
 """
 
 clean_air = int(input(
