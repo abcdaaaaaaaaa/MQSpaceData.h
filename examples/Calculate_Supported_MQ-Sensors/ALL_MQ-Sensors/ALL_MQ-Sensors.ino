@@ -15,6 +15,30 @@ void setup() {
   // Because the current ratio mode will work according to the mode you last set.
 }
 
+// WARNING:
+
+// RsRoMQAir(): This command is not valid for calculations of A models. (MQ303A, MQ307A, MQ309A)
+/*
+"""
+---Air VALUE---
+MQ-2: 9.8
+MQ-3: 60.53
+MQ-4: 4.4
+MQ-5: 6.5
+MQ-6: 10
+MQ-7: 26
+MQ-8: 70
+MQ-9: 9.7
+MQ-131: 12
+MQ-135: 3.6
+MQ-136: 3.54
+MQ-137: 3.54
+MQ-303A: 1 (Since it does not fall within the ppm range where gases are defined, it is not valid for gas calculations.)
+MQ-307A: Does not contain any Air values.
+MQ-309A: 11 (Since it does not fall within the ppm range where gases are defined, it is not valid for gas calculations.)
+"""
+ */
+
 void loop() {
 /*
 If you install a new resistor in the soldered model or 
@@ -348,6 +372,7 @@ void MQ309A(){
 MQ.setRatio("Rs/Rs"); // WARNING: not "Rs/Ro"
 // Rs/Rs mean: RSRoMQAir is not important
 // MQ.RSRoMQAir(11);
+
 MQ.setRL(50);
 
 
