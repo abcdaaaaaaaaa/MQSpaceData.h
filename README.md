@@ -170,106 +170,76 @@ STATUS 3: MQ131 [MQ131 only]
 ![MQ2curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/14de872a-3f70-4c8b-b96f-7b368e7a5ec9)
 ### OldCurve:
 ![MQ2curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/a427bd97-08cf-42d1-9d62-03c4d546369c)
-### DataScience:
-![MQ2Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/63bb0837-d85f-437f-b34b-dcf3c8051a09)
 ## MQ-3
 ### NewCurve:
 ![MQ3curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c33b986e-f253-4274-96a1-afeb6ab91d83)
 ### OldCurve:
 ![MQ3curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/d33aac86-89d1-4f50-bb71-c080acd13011)
-### DataScience:
-![MQ3Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c9cf3792-ec7b-48a5-9114-be9a31fc04db)
 ## MQ-4
 ### NewCurve:
 ![MQ4curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/590f4b79-e53b-4c9f-947c-b22d49a62d4d)
 ### OldCurve:
 ![MQ4curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/26d9234d-e11f-4250-b194-2cd024c68258)
-### DataScience:
-![MQ4Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/4cd4536f-9e8c-4451-96e4-0b34bc7a9230)
 ## MQ-5
 ### NewCurve:
 ![MQ5curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/4c6dfc36-8bfd-438e-bbf8-a03c7be40f2f)
 ### OldCurve:
 ![MQ5curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5cb6f4f4-2d24-4e10-be19-849f186f0332)
-### DataScience:
-![MQ5Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/f684c037-880d-4a40-8883-a6268b9b3829)
 ## MQ-6
 ### NewCurve:
 ![MQ6curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/9eea767a-6f66-43f8-affd-6fac06999dd7)
 ### OldCurve:
 ![MQ6curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/ede333c9-5132-46c9-830b-5e904eb06759)
-### DataScience:
-![MQ6Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/afb8ff0c-83b7-46ac-8b20-2505b7a706cb)
 ## MQ-7
 ### NewCurve:
 ![MQ7curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/0435c61f-4bd4-4168-aadd-84972247c151)
 ### OldCurve:
 ![MQ7curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/0c6e93d0-5f60-4964-ad06-2308c65be39c)
-### DataScience:
-![MQ7Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/9c03ba5c-1b1f-4246-b56b-57d3c5b1902c)
 ## MQ-8
 ### NewCurve:
 ![MQ8curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/8c3cb2ac-765a-4d2a-9341-e5b1e2fbff23)
 ### OldCurve:
 ![MQ8curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/bc9e2299-dd0f-472b-aea3-288d3ce11f46)
-### DataScience:
-![MQ8Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/4eb7ca67-6a9b-493f-bf71-749cf5ded362)
 ## MQ-9
 ### NewCurve:
 ![MQ9curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c7c34507-d8c1-4760-87ac-d5427cf690e5)
 ### OldCurve:
 ![MQ9curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/f9d41512-c13d-4952-b7bd-8367d613476c)
-### DataScience:
-![MQ9Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/7207e899-2755-4789-a294-a4e20774962f)
 ## MQ131
 ### NewCurve:
 ![MQ131curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/83dd8057-6c4f-4bbc-b696-a0b6a7b2f658)
 ### OldCurve:
 ![MQ131curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/7e87e4be-b43a-410d-827a-4942f822cb32)
-### DataScience:
-![MQ131Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/cfdbcdea-6dde-4dd6-9244-a1fea7544327)
 ## MQ-135
 ### NewCurve:
 ![MQ135curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/01ab414a-f1c1-46b8-9e44-e180cf8f96f5)
 ### OldCurve:
 ![MQ135curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/d4c4b505-4750-47db-b0a9-ec1d211c7296)
-### DataScience:
-![MQ135Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c41773f3-3567-41f1-a94e-1f70bb029fb6)
 ## MQ-136
 ### NewCurve:
 ![MQ136curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/b875eaeb-4bc8-4f10-871c-26ddbbbeab5e)
 ### OldCurve:
 ![MQ136curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/e9e1516f-27e9-43dd-9d68-02deda75deeb)
-### DataScience:
-![MQ136Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/244d4a98-541a-4c4e-818c-3154e54dedb8)
 ## MQ-137
 ### NewCurve:
 ![MQ137curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/31181760-c6a3-4041-9bba-e5d701e3eea7)
 ### OldCurve:
 ![MQ137curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/795298b2-792d-4906-af2e-25bfffacb3f6)
-### DataScience:
-![MQ137Science](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/0de65a24-85fb-43c2-847d-bd1c35098af0)
 ## MQ303A
 ### NewCurve:
 ![MQ303Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/0d6b8d22-e414-4076-81a6-60dd9905d889)
 ### OldCurve:
 ![MQ303Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/55e4f706-e9b7-478c-a253-2ae7b0e3b107)
-### DataScience:
-![MQ303AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/9ea3893d-f9cd-4e58-80e6-eb79daa8a635)
 ## MQ307A
 ### NewCurve:
 ![MQ307AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/ff8d5d71-8e98-4b55-8944-cae35230cc14)
 ### OldCurve:
 ![MQ307AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/fcc04650-26a3-4bb2-a218-3ec134795fc8)
-### DataScience:
-![MQ307AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/41db1c54-592d-4259-a1a2-15cc1607ca99)
 ## MQ309A
 ### NewCurve:
 ![MQ309Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/f2148e24-0a9d-412f-b523-449b008643fd)
 ### OldCurve:
 ![MQ309Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/6758cd50-fb59-4500-9358-98c7f502d9fd)
-### DataScience:
-![MQ309AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/b90a7427-7779-4ae4-ae2c-a44fcb82070c)
 
 NOTE: [For detailed explanation, You can also check out the github wiki page]
 https://github.com/abcdaaaaaaaaa/MQSpaceData.h/wiki
