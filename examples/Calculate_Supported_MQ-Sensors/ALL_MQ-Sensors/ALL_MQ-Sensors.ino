@@ -9,8 +9,8 @@ void setup() {
   MQ.begin(); // If you are not going to use a rate other than Rs/Ro, you do not need to specify this. The ratio will automatically be set to Rs/Ro with the MQ.begin() command.
   // MQ.setRatio("Rs/Ro");
   // Rs/Ro for: MQ135, MQ2 MQ3, MQ4, MQ5, MQ6, MQ7 MQ8, MQ9, MQ136, MQ137
-  // Rs/Rs for: MQ303A, MQ307A, MQ309A
-  // Ro/Rs for: MQ131
+  // Rs/Rs for: MQ303A, MQ307A, MQ309A (A Models)
+  // Ro/Rs for: MQ131 The slope here is steeper than expected.
   // If you are going to use different ratio modes constantly, you need to specify this every time, even if the ratio is Rs/Ro.
   // Because the current ratio mode will work according to the mode you last set.
 }
