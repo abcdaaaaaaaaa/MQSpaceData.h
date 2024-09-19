@@ -100,6 +100,7 @@ float MQSpaceData::ratio()
  _Rs = _Rload * _bitadc / read() - _Rload;
  if (_ratioMode == "Rs/Rs") _ratio = _Rs / _calibrationRs; 
  else _Ro = _calibrationRs / _Air; _ratio = _Rs / _Ro;
+ if (_ratioMode == "Ro/Rs") _ratio = _ppmlimit - _ratio; 
  return _ratio;
 }
 
@@ -133,7 +134,7 @@ int MQSpaceData::MQ137DataAir(){return map(read(),1,(_bitadc),10,200);}
 float MQSpaceData::MQ303ADataAir()
 {
 _MQ303AAir = map(read(),1,(_bitadc),120,345);
-return _MQ303AAir/100;
+return _MQ303AAir / 100;
 }
 // https://wokwi.com/projects/394502355682092033 (MQ303A Details)
 int MQSpaceData::MQ309ADataAir(){return map(read(),1,(_bitadc),160,260);}
@@ -291,9 +292,9 @@ CH4    | 21.8247 | -0.3663
 
 //**************************************MQ-131**************************************
 
-float MQSpaceData::MQ131DataO3(){_va = 16.0871;_vb = -0.8603;return limitValue100(readValue());}
-float MQSpaceData::MQ131DataCL2(){_va = 18.9693;_vb = -0.7132;return limitValue100(readValue());}
-float MQSpaceData::MQ131DataNOx(){_va = 16.7059;_vb = -0.4684;return limitValue100(readValue());}
+float MQSpaceData::MQ131DataO3(){_ppmlimit=100;_va = 16.0871;_vb = -0.8603;return limitValue100(readValue());}
+float MQSpaceData::MQ131DataCL2(){_ppmlimit=100;_va = 18.9693;_vb = -0.7132;return limitValue100(readValue());}
+float MQSpaceData::MQ131DataNOx(){_ppmlimit=100;_va = 16.7059;_vb = -0.4684;return limitValue100(readValue());}
 
 /*
 Gas    | a       | b
