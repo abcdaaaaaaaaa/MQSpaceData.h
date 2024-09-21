@@ -100,19 +100,18 @@ float MQSpaceData::ratio()
  _Rs = _Rload * _bitadc / read() - _Rload;
  if (_ratioMode == "Rs/Rs") _ratio = _Rs / _calibrationRs; 
  else _Ro = _calibrationRs / _Air; _ratio = _Rs / _Ro;
- if (_ratioMode == "Ro/Rs") _ratio = _ppmlimit - _ratio; 
  return _ratio;
 }
 
 float MQSpaceData::readValue()
 {
- if (_ratioMode == "Ro/Rs") _vb = _vb * -1;
+ if (_ratioMode == "Ro/Rs") _vb = _vb * -1; ratio() = ratio() * -1 + _ppmlimit;
  return pow(ratio(),_vb)*_va;
 }
 
 float MQSpaceData::logValue()
 {
- if (_ratioMode == "Ro/Rs") _mlog = _mlog * -1;
+ if (_ratioMode == "Ro/Rs") _vb = _vb * -1; ratio() = ratio() * -1 + _ppmlimit;
  return pow(10,((log10(ratio())-_blog)/_mlog));
 }
 
