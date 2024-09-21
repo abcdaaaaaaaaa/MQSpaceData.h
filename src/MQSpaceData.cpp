@@ -105,14 +105,19 @@ float MQSpaceData::ratio()
 
 float MQSpaceData::readValue()
 {
- if (_ratioMode == "Ro/Rs") _vb = _vb * -1; ratio() = ratio() * -1 + _ppmlimit;
+ if (_ratioMode == "Ro/Rs") _vb = _vb * -1;
  return pow(ratio(),_vb)*_va;
 }
 
 float MQSpaceData::logValue()
 {
- if (_ratioMode == "Ro/Rs") _vb = _vb * -1; ratio() = ratio() * -1 + _ppmlimit;
+ if (_ratioMode == "Ro/Rs") _mlog = _mlog * -1;
  return pow(10,((log10(ratio())-_blog)/_mlog));
+}
+
+float MQSpaceData:: readRoRsratio(float gasvalue, float maxppm)
+{
+ return maxppm - gasvalue;
 }
 
 //**************************************ppm Values**************************************
@@ -291,9 +296,9 @@ CH4    | 21.8247 | -0.3663
 
 //**************************************MQ-131**************************************
 
-float MQSpaceData::MQ131DataO3(){_ppmlimit=100;_va = 16.0871;_vb = -0.8603;return limitValue100(readValue());}
-float MQSpaceData::MQ131DataCL2(){_ppmlimit=100;_va = 18.9693;_vb = -0.7132;return limitValue100(readValue());}
-float MQSpaceData::MQ131DataNOx(){_ppmlimit=100;_va = 16.7059;_vb = -0.4684;return limitValue100(readValue());}
+float MQSpaceData::MQ131DataO3(){_va = 16.0871;_vb = -0.8603;return limitValue100(readValue());}
+float MQSpaceData::MQ131DataCL2(){_va = 18.9693;_vb = -0.7132;return limitValue100(readValue());}
+float MQSpaceData::MQ131DataNOx(){_va = 16.7059;_vb = -0.4684;return limitValue100(readValue());}
 
 /*
 Gas    | a       | b
