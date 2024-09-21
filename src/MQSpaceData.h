@@ -26,7 +26,6 @@ private:
 	float _mlog;
 	float _blog;
 	float _MQ303AAir;
-        float _ppmlimit;
 	float ratio();
 	float limitValue10000(float Sensorvalue);
 	float limitValue7000(float Sensorvalue);
@@ -51,6 +50,7 @@ public:
 	float calculateRs();
 	float calculateRo();
 	float logValue();
+	float readRoRsratio(float gasvalue, float maxppm);
 	void valuea(float data1);
 	void valueb(float data2);
 	void logm(float data1);
