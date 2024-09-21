@@ -427,15 +427,15 @@ void GeigerCounterPin::begin()
 
 void GeigerCounterPin::radyoactivite()
 {
-    if (_cpmcountbool == true)(count = _counts);
-    if (_cpmcountbool == false)(count = 0);
+    if (_cpmcountbool == true)  (count = _counts);
+    if (_cpmcountbool == false) (count = 0);
 
     unsigned long currentMillis = millis();
-  if (currentMillis - previousMillis > _LOG_PERIOD) {
+    if (currentMillis - previousMillis > _LOG_PERIOD) {
     previousMillis = currentMillis;
     _CPMArray[_currentCPM] = _counts * 2;
 
-    if (_usvhrbool == true) (usvhr = outputSieverts(_CPMArray[_currentCPM]));
+    if (_usvhrbool == true)  (usvhr = outputSieverts(_CPMArray[_currentCPM]));
     if (_usvhrbool == false) (usvhr = 0);
 
     _counts = 0;
