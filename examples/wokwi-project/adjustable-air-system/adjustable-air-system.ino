@@ -357,6 +357,10 @@ void MQ9() {
 void MQ131() {
   // If ppm = Ro/Rs use this command: MQ.readRoRsratio()
   float MaxAir = 100; // Max Air Value 100 ppm for MQ131
+
+  // Why we use this command unlike other ratio mode for Ro/Rs?
+  // Ro/Rs, unlike standard slopes, operates on the opposite slope, so the reading will be opposite to the actual value. 
+  // This problem be prevented by reversing the result with the readRoRsratio() command.
   
   xname = "NOx";
   MQ.dangerousPer(23.75);
