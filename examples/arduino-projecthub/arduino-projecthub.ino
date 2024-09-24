@@ -340,19 +340,21 @@ void MQ9() {
 }
 
 void MQ131() {
+  float MaxAir = 100; 
+  
   xname = "NOx";
   MQ.dangerousPer(23.75);
-  x = MQ.MQ131DataNOx();
+  x = MQ.readRoRsratio(MQ.MQ131DataNOx(), MaxAir);
   hello();
 
   xname = "CL2";
   MQ.dangerousPer(8.33);
-  x = MQ.MQ131DataCL2();
+  x = MQ.readRoRsratio(MQ.MQ131DataCL2(), MaxAir);
   hello();
 
   xname = "O3";
   MQ.dangerousPer(4.166);
-  x = MQ.MQ131DataO3();
+  x = MQ.readRoRsratio(MQ.MQ131DataO3(), MaxAir);
   hello();
 
   Air = MQ.MQ131DataAir();
