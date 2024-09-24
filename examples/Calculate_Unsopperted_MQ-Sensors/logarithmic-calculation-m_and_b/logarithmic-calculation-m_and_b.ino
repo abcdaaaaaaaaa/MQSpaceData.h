@@ -22,7 +22,7 @@ MQ.begin();  // WARNING: Since the ratio is automatically set to Rs/Ro with the 
   
   // Rs/Ro for: MQ135, MQ2 MQ3, MQ4, MQ5, MQ6, MQ7 MQ8, MQ9, MQ136, MQ137
   // Rs/Rs for: MQ303A, MQ307A, MQ309A (A Models)
-  // Ro/Rs for: MQ131 The slope here is steeper than expected.
+  // Ro/Rs for: MQ131 The slope here is opposite to what was expected. When you want to read don't forget to use this command for Ro/Rs: MQ.readRoRsratio()
   // If you are going to use different ratio modes constantly, you need to specify this every time, even if the ratio is Rs/Ro.
   // Because the current ratio mode will work according to the mode you last set.
   
@@ -44,6 +44,15 @@ The recommended load resistance for each gas sensor is determined in the datashe
 
 MQ.RSRoMQAir(9.8); // for MQ-2 
 // RsRoMQAir(): This command is not valid for calculations of A models. (MQ303A, MQ307A, MQ309A)
+  
+// WARNING: If ppm = Ro/Rs don't forget to use this command: MQ.readRoRsratio()
+// For Example Like This:
+// float MaxNOxPpmValue = 100; // Max NOx Value 100 ppm for MQ131
+// float NOx = MQ.readRoRsratio(MQ.MQ131DataNOx(), MaxNOxPpmValue); // You can chech from: Calculate_Supported_MQ-Sensors examples
+  
+// Why we use this command unlike other ratio mode for Ro/Rs?
+// Ro/Rs, unlike standard slopes, operates on the opposite slope, so the reading will be opposite to the actual value. 
+// This problem be prevented by reversing the result with the readRoRsratio() command.
 /*
 """
 ---Air VALUE---
