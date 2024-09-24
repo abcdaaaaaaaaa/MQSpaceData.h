@@ -356,7 +356,7 @@ void MQ9() {
 
 void MQ131() {
   // If ppm = Ro/Rs use this command: MQ.readRoRsratio()
-  MaxAir = 100; // Max Air Value 100 ppm for MQ131
+  float MaxAir = 100; // Max Air Value 100 ppm for MQ131
   
   xname = "NOx";
   MQ.dangerousPer(23.75);
