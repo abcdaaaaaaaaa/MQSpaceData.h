@@ -44,6 +44,12 @@ The recommended load resistance for each gas sensor is determined in the datashe
 
 MQ.RSRoMQAir(9.8); // for MQ-2 
 // RsRoMQAir(): This command is not valid for calculations of A models. (MQ303A, MQ307A, MQ309A)
+  
+// WARNING: If ppm = Ro/Rs don't forget to use this command: MQ.readRoRsratio()
+// For Example Like This:
+// float MaxNOxPpmValue = 100; // Max NOx Value 100 ppm for MQ131
+// float NOx = MQ.readRoRsratio(MQ.MQ131DataNOx(), MaxNOxPpmValue); 
+
 /*
 """
 ---Air VALUE---
