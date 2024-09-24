@@ -298,19 +298,22 @@ float CO = MQ.MQ9DataCO();
 float Air = MQ.MQ9DataAir();
 }
 
-void MQ131(){
+void MQ131(){  
 MQ.setRatio("Ro/Rs"); // WARNING: not "Rs/Ro"
 MQ.RSRoMQAir(12);
 MQ.setRL(100);
 
+// If ppm = Ro/Rs use this command: MQ.readRoRsratio()
+float MaxAir = 100; // Max Air Value 100 ppm for MQ131
+
 MQ.dangerousPer(23.75);
-float NOx = MQ.MQ131DataNOx();
+float NOx = MQ.readRoRsratio(MQ.MQ131DataNOx(), MaxAir); // It is defined this way because the maximum ppm of each gas is equal to the maximum ppm of air.
 
 MQ.dangerousPer(8.33);
-float CL2 = MQ.MQ131DataCL2();
+float CL2 = MQ.readRoRsratio(MQ.MQ131DataCL2(), MaxAir); // It is defined this way because the maximum ppm of each gas is equal to the maximum ppm of air.
 
 MQ.dangerousPer(4.166);
-float O3 = MQ.MQ131DataO3();
+float O3 = MQ.readRoRsratio(MQ.MQ131DataO3(), MaxAir); // It is defined this way because the maximum ppm of each gas is equal to the maximum ppm of air.
 
 float Air = MQ.MQ131DataAir();
 }
