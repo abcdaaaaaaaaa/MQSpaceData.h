@@ -355,19 +355,22 @@ void MQ9() {
 }
 
 void MQ131() {
+  // If ppm = Ro/Rs use this command: MQ.readRoRsratio()
+  MaxAir = 100; // Max Air Value 100 ppm for MQ131
+  
   xname = "NOx";
   MQ.dangerousPer(23.75);
-  x = MQ.MQ131DataNOx();
+  x = MQ.readRoRsratio(MQ.MQ131DataNOx(), MaxAir); // It is defined this way because the maximum ppm of each gas is equal to the maximum ppm of air.
   hello();
 
   xname = "CL2";
   MQ.dangerousPer(8.33);
-  x = MQ.MQ131DataCL2();
+  x = MQ.readRoRsratio(MQ.MQ131DataCL2(), MaxAir); // It is defined this way because the maximum ppm of each gas is equal to the maximum ppm of air.
   hello();
 
   xname = "O3";
   MQ.dangerousPer(4.166);
-  x = MQ.MQ131DataO3();
+  x = MQ.readRoRsratio(MQ.MQ131DataO3(), MaxAir); // It is defined this way because the maximum ppm of each gas is equal to the maximum ppm of air.
   hello();
 
   Air = MQ.MQ131DataAir();
