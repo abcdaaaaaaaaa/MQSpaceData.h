@@ -1,6 +1,9 @@
 # MQSpaceData
 
-https://projecthub.arduino.cc/abcda123/adjustable-air-quality-monitoring-analysis-platform-with-plug-unplug-system-8a0057
+## Sample Projects
+| Category | Project Name |
+|----------|----------|
+| Getting Started | [Adjustable Air Quality Monitoring & Analysis Platform](https://projecthub.arduino.cc/abcda123/adjustable-air-quality-monitoring-analysis-platform-with-plug-unplug-system-8a0057) |
 
 ## Formulla 
 
