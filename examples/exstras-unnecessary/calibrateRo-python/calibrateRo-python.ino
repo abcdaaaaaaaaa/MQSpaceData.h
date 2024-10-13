@@ -16,7 +16,7 @@ MQ-136: 3.54
 MQ-137: 3.54
 MQ303A: 1 (Not Important)
 MQ307A: No Air (Not Important)
-MQ309A 11 (Not Important)
+MQ309A: 11 (Not Important)
 """
 
 # for soldered this value is 1
