@@ -57,7 +57,6 @@ MQ.RSRoMQAir(9.8); // for MQ-2
 MQ.setVoltage(Voltage);
 
 /*
-"""
 ---Air VALUE---
 MQ-2: 9.8
 MQ-3: 60.53
@@ -73,8 +72,7 @@ MQ-136: 3.54
 MQ-137: 3.54
 MQ303A: 1 (Not Important)
 MQ307A: No Air (Not Important)
-MQ309A 11 (Not Important)
-"""
+MQ309A: 11 (Not Important)
  */
 }
 
