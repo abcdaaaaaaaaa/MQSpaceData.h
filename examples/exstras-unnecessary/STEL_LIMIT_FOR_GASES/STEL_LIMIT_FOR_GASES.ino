@@ -14,6 +14,6 @@ CL2 1ppm
 NH4 35ppm
 Ethanol 1000ppm
 IsoButane 1000ppm
-CO2 30000
-Toulen 150ppm (Türkiye)
+CO2 30000ppn
+Toulen 150ppm
 H2 NO STEL BUT WE CAN DEFINE 1000ppm
