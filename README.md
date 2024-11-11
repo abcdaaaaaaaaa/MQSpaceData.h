@@ -168,6 +168,8 @@ STATUS 3: MQ131 [MQ131 only]
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
 ![SpaceDataScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/4baff79d-4477-49fe-ad24-85167c06fb9b)
 
+## MQ-135
+![newplotMQ-135](https://github.com/user-attachments/assets/18ad9653-8fa7-49bf-b687-e6776842c52b)
 ## MQ-2
 ### NewCurve:
 ![MQ2curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/14de872a-3f70-4c8b-b96f-7b368e7a5ec9)
@@ -213,11 +215,6 @@ STATUS 3: MQ131 [MQ131 only]
 ![MQ131curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/83dd8057-6c4f-4bbc-b696-a0b6a7b2f658)
 ### OldCurve:
 ![MQ131curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/7e87e4be-b43a-410d-827a-4942f822cb32)
-## MQ-135
-### NewCurve:
-![MQ135curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/01ab414a-f1c1-46b8-9e44-e180cf8f96f5)
-### OldCurve:
-![MQ135curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/d4c4b505-4750-47db-b0a9-ec1d211c7296)
 ## MQ-136
 ### NewCurve:
 ![MQ136curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/b875eaeb-4bc8-4f10-871c-26ddbbbeab5e)
