@@ -171,6 +171,7 @@ STATUS 3: MQ131 [MQ131 only]
 ## MQ-135
 ![newplotMQ-135](https://github.com/user-attachments/assets/18ad9653-8fa7-49bf-b687-e6776842c52b)
 ![newplotMQ-135TH)](https://github.com/user-attachments/assets/fbfc3d5c-4648-402f-a21e-382ec0d27b23)
+![newplotMQ-135TH4)](https://github.com/user-attachments/assets/8b1ab785-5375-42ff-8a19-0c9706db949e)
 
 ## MQ-2
 ### NewCurve:
