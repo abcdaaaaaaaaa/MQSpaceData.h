@@ -2,7 +2,7 @@
 
 ## What awaits v4.0.0?
 ![newplotMQ-135curves](https://github.com/user-attachments/assets/b2a34329-fcf4-48e7-9bcc-67f244939534)
-![newplotMQ-135TH)](https://github.com/user-attachments/assets/fbfc3d5c-4648-402f-a21e-382ec0d27b23)
+![newplotMQ-135TH](https://github.com/user-attachments/assets/1921246c-c8a2-4a64-a9d8-ab923e564688)
 ![newplotMQ-135TH4)](https://github.com/user-attachments/assets/d4abe66d-4f5f-4180-97ae-a1b545c88619)
 
 ## Sample Projects
@@ -175,7 +175,7 @@ STATUS 3: MQ131 [MQ131 only]
 
 ## MQ-135
 ![newplotMQ-135curves](https://github.com/user-attachments/assets/b2a34329-fcf4-48e7-9bcc-67f244939534)
-![newplotMQ-135TH)](https://github.com/user-attachments/assets/fbfc3d5c-4648-402f-a21e-382ec0d27b23)
+![newplotMQ-135TH](https://github.com/user-attachments/assets/1921246c-c8a2-4a64-a9d8-ab923e564688)
 ![newplotMQ-135TH4)](https://github.com/user-attachments/assets/d4abe66d-4f5f-4180-97ae-a1b545c88619)
 
 ## MQ-2
