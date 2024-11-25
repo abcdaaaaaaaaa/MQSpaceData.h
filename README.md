@@ -178,30 +178,34 @@ STATUS 3: MQ131 [MQ131 only]
 ![newplotMQ-135TH](https://github.com/user-attachments/assets/1921246c-c8a2-4a64-a9d8-ab923e564688)
 ![newplotMQ-135TH4)](https://github.com/user-attachments/assets/d4abe66d-4f5f-4180-97ae-a1b545c88619)
 
-## MQ-2
+## MQ-2 NewCurve & OldCurve
 ![MQ-2](https://github.com/user-attachments/assets/7ef90f38-c4a2-4a0a-a2ee-cb2249f18df6)
-## MQ-3
+## MQ-3 NewCurve & OldCurve
 ![MQ-3](https://github.com/user-attachments/assets/15711519-18df-45b8-aa8b-a9d9352cc1b7)
-## MQ-4
+## MQ-4 NewCurve & OldCurve
 ![MQ-4](https://github.com/user-attachments/assets/52c0d426-b0ce-4876-805f-a288e003bb5e)
-## MQ-5
+## MQ-5 NewCurve & OldCurve
 ![MQ-5](https://github.com/user-attachments/assets/9aee2dd0-ddef-41d9-ab48-14f18d27bdb7)
-## MQ-6
+## MQ-6 NewCurve & OldCurve
 ![MQ-6](https://github.com/user-attachments/assets/7bdfdb12-3c6d-4dca-8efc-2703059ae526)
-## MQ-7
+## MQ-7 NewCurve & OldCurve
 ![MQ-7](https://github.com/user-attachments/assets/fd50c7ec-320c-4943-8a5a-e42f85954f85)
-## MQ-8
+## MQ-8 NewCurve & OldCurve
 ![MQ-8](https://github.com/user-attachments/assets/40128658-09b9-4751-8661-0a959e16daa5)
-## MQ-9
+## MQ-9 NewCurve & OldCurve
 ![MQ-9](https://github.com/user-attachments/assets/d7e483b4-eaaa-4431-9e15-78c40079cfee)
-## MQ131
+## MQ131 NewCurve & OldCurve
 ![MQ-131](https://github.com/user-attachments/assets/0d968d23-30fb-4ec0-b107-4f81480914ec)
-## MQ-136
+## MQ-136 NewCurve & OldCurve
 ![MQ-136](https://github.com/user-attachments/assets/43db850d-532c-467f-ab45-a4477dc1dd5e)
-## MQ-137
-## MQ303A
-## MQ307A
-## MQ309A
+## MQ-137 NewCurve & OldCurve
+![MQ-137](https://github.com/user-attachments/assets/1289e710-62b9-4788-add0-b8add85f04b8)
+## MQ303A NewCurve & OldCurve
+![MQ-303A](https://github.com/user-attachments/assets/c9133c10-8a0e-4b98-a59e-f1b3ef25f99b)
+## MQ307A NewCurve & OldCurve
+![MQ-307A](https://github.com/user-attachments/assets/f837736c-434e-47d5-be5a-24bf078402c1)
+## MQ309A NewCurve & OldCurve
+![MQ-309A](https://github.com/user-attachments/assets/60e3a49e-5727-4dfd-94f4-38eb20fb30a5)
 
 NOTE: [For detailed explanation, You can also check out the github wiki page]
 https://github.com/abcdaaaaaaaaa/MQSpaceData.h/wiki
