@@ -179,108 +179,32 @@ STATUS 3: MQ131 [MQ131 only]
 ![newplotMQ-135TH4)](https://github.com/user-attachments/assets/d4abe66d-4f5f-4180-97ae-a1b545c88619)
 
 ## MQ-2
-### NewCurve:
-![MQ2curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/14de872a-3f70-4c8b-b96f-7b368e7a5ec9)
-### OldCurve:
-![MQ2curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/a427bd97-08cf-42d1-9d62-03c4d546369c)
+![MQ-2](https://github.com/user-attachments/assets/7ef90f38-c4a2-4a0a-a2ee-cb2249f18df6)
 ## MQ-3
-### NewCurve:
-![MQ3curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c33b986e-f253-4274-96a1-afeb6ab91d83)
-### OldCurve:
-![MQ3curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/d33aac86-89d1-4f50-bb71-c080acd13011)
+![MQ-3](https://github.com/user-attachments/assets/15711519-18df-45b8-aa8b-a9d9352cc1b7)
 ## MQ-4
-### NewCurve:
-![MQ4curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/590f4b79-e53b-4c9f-947c-b22d49a62d4d)
-### OldCurve:
-![MQ4curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/26d9234d-e11f-4250-b194-2cd024c68258)
+![MQ-4](https://github.com/user-attachments/assets/52c0d426-b0ce-4876-805f-a288e003bb5e)
 ## MQ-5
-### NewCurve:
-![MQ5curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/4c6dfc36-8bfd-438e-bbf8-a03c7be40f2f)
-### OldCurve:
-![MQ5curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5cb6f4f4-2d24-4e10-be19-849f186f0332)
+![MQ-5](https://github.com/user-attachments/assets/9aee2dd0-ddef-41d9-ab48-14f18d27bdb7)
 ## MQ-6
-### NewCurve:
-![MQ6curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/9eea767a-6f66-43f8-affd-6fac06999dd7)
-### OldCurve:
-![MQ6curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/ede333c9-5132-46c9-830b-5e904eb06759)
+![MQ-6](https://github.com/user-attachments/assets/7bdfdb12-3c6d-4dca-8efc-2703059ae526)
 ## MQ-7
-### NewCurve:
-![MQ7curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/0435c61f-4bd4-4168-aadd-84972247c151)
-### OldCurve:
-![MQ7curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/0c6e93d0-5f60-4964-ad06-2308c65be39c)
+![MQ-7](https://github.com/user-attachments/assets/fd50c7ec-320c-4943-8a5a-e42f85954f85)
 ## MQ-8
-### NewCurve:
-![MQ8curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/8c3cb2ac-765a-4d2a-9341-e5b1e2fbff23)
-### OldCurve:
-![MQ8curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/bc9e2299-dd0f-472b-aea3-288d3ce11f46)
+![MQ-8](https://github.com/user-attachments/assets/40128658-09b9-4751-8661-0a959e16daa5)
 ## MQ-9
-### NewCurve:
-![MQ9curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/c7c34507-d8c1-4760-87ac-d5427cf690e5)
-### OldCurve:
-![MQ9curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/f9d41512-c13d-4952-b7bd-8367d613476c)
+![MQ-9](https://github.com/user-attachments/assets/d7e483b4-eaaa-4431-9e15-78c40079cfee)
 ## MQ131
-### NewCurve:
-![MQ131curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/83dd8057-6c4f-4bbc-b696-a0b6a7b2f658)
-### OldCurve:
-![MQ131curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/7e87e4be-b43a-410d-827a-4942f822cb32)
+![MQ-131](https://github.com/user-attachments/assets/0d968d23-30fb-4ec0-b107-4f81480914ec)
 ## MQ-136
-### NewCurve:
-![MQ136curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/b875eaeb-4bc8-4f10-871c-26ddbbbeab5e)
-### OldCurve:
-![MQ136curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/e9e1516f-27e9-43dd-9d68-02deda75deeb)
+![MQ-136](https://github.com/user-attachments/assets/43db850d-532c-467f-ab45-a4477dc1dd5e)
 ## MQ-137
-### NewCurve:
-![MQ137curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/31181760-c6a3-4041-9bba-e5d701e3eea7)
-### OldCurve:
-![MQ137curve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/795298b2-792d-4906-af2e-25bfffacb3f6)
 ## MQ303A
-### NewCurve:
-![MQ303Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/0d6b8d22-e414-4076-81a6-60dd9905d889)
-### OldCurve:
-![MQ303Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/55e4f706-e9b7-478c-a253-2ae7b0e3b107)
 ## MQ307A
-### NewCurve:
-![MQ307AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/ff8d5d71-8e98-4b55-8944-cae35230cc14)
-### OldCurve:
-![MQ307AScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/fcc04650-26a3-4bb2-a218-3ec134795fc8)
 ## MQ309A
-### NewCurve:
-![MQ309Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/f2148e24-0a9d-412f-b523-449b008643fd)
-### OldCurve:
-![MQ309Acurve](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/6758cd50-fb59-4500-9358-98c7f502d9fd)
 
 NOTE: [For detailed explanation, You can also check out the github wiki page]
 https://github.com/abcdaaaaaaaaa/MQSpaceData.h/wiki
-## MQSpaceData Contents
-* [MQ Sensor Datasheet](#MQSensorData)
-* [Start with MQ-X](#MQ-X)
-  * [Start with ALL](#StartAll)
-  * [Supported MQ-X](#Supported)
-  * [UnSupported MQ-X](#UnSupported)
-* [Data-Science](#data)
-  * [for MQ-Sensors](#for-MQ-Sensors)
-  * [for Geiger Conter](#for-Geiger-Counter)
-  * [for SpaceData %0-100](#for-SpaceData)
-* [Sensor Electronics](#Sensor)
-  * [for Arduino](#Arduino)
-  * [for ESP32](#ESP-32)
-  * [for ESP8266](#ESP8266)
-  * [for ESP32-S2](#ESP32-S2)
-  * [for ALL](#for_ALL)
-* [Configure your RL value](#ConfigureRL)
-  * [for Soldered Model](#for-soldered)
-  * [for Normal Model](#for-normal)
-* [Calculate ppm Values](#Arduino)
-  * [Python Regression (a and b)](#Regression)
-  * [Python Regression (m and b)](#Regression)
-  * [Python Calibrate Sensors with dangerousPer()](#R0python)
-* [Calibrate Ro](#calibrateRo)
-  * [Calibrate Ro Arduino](#calibrateRoArduino)
-  * [Python Virtual Calibration](#dangerousPerPython)
-  * [Python Virtual Sensors with dangerousPer()](#dangerousPerPython)
-  * [Calibrate Rs for MQ A models: MQ303A, MQ307A, MQ309A](#calibrateRsforAmodels)
-* [Geiger Counter](#GeigerCounter)
-  * [Radioactivity](#Radioactivity)
 
 # MQSpaceData MQ Sensor List
 MQ Sensor List: [MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ131, MQ-135, MQ-136, MQ-137, MQ303A, MQ307A, MQ309A]
