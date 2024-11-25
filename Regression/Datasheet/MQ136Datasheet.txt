@@ -1,19 +1,39 @@
 Air: 3.54
 Con: 10-200
 
+For New Curve (R² >= 0.9995):
+
 for ppm = a*ratio^b:
 
 Gas    | a       | b
 H2S    | 2.7684  | -0.2832
-NH4    | 6.4463  | -0.4028
+NH4    | 6.5194  | -0.4078
 CO     | 5.277   | -0.2622
 
 for ppm = 10^[(log10(ratio)-b)/m]:
 
 Gas    | m       | b
 H2S    | -0.2832 | 0.4422 
-NH4    | -0.4028 | 0.8093 
+NH4    | -0.4078 | 0.8142 
 CO     | -0.2622 | 0.7224 
+
+
+For Old Curve:
+
+for ppm = a*ratio^b:
+
+Gas    | a       | b
+H2S    | 2.7684  | -0.2832
+NH4    | 6.5194  | -0.4078
+CO     | 5.277   | -0.2622
+
+for ppm = 10^[(log10(ratio)-b)/m]:
+
+Gas    | m       | b
+H2S    | -0.2832 | 0.4422 
+NH4    | -0.4078 | 0.8142 
+CO     | -0.2622 | 0.7224 
+
 
 // exceptional: 10 ppm H2S MQ-136 Rs/Ro: 1.44 | Sensor resistance at 10 ppm of H2S in the clean air. Rs/Ro != 1 Rs/Ro = 1.44
 
