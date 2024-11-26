@@ -148,30 +148,13 @@ STATUS 3: MQ131 [MQ131 only]
 
 ## MQDataScience
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
-![MQ2datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5c77d9d4-40de-4ac5-aaec-33a5ff7a5c2b)
-![MQ3datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/49a65210-5921-4a4c-acce-3c3c476c2d21)
-![MQ4datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/fb746360-cfe6-48ab-a3f7-8bb993811a90)
-![MQ5datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/472ebd97-6033-4e4d-9288-6461160f3c49)
-![MQ6datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/6af8c4c8-f597-46e7-bc97-4a563c773a15)
-![MQ7datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/f5533a47-53ab-4ef8-b2b1-6d2320a9e235)
-![MQ8datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/7a5f2c4b-6fe8-4199-80bd-7c84a227850f)
-![MQ9datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/897c97a0-7f2d-4b73-b9d6-b3b48d8de4a5)
-![MQ131datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/af2be4a2-6477-4d09-8ff1-9c528a922a35)
-![MQ135datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/80bb801d-2421-40bc-a10f-6cc518ded655)
-![MQ136datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/ac5f3747-a6e8-47d5-8518-0163722ec37f)
-![MQ137datascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/d8790147-ab54-4d1c-bbcc-d6946fa4781c)
-![MQ303Adatascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/67ba30ec-971f-48cd-aa92-fef3b35cec59)
-![MQ307Adatascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/e32dfcf8-c557-407a-ae64-3c01cccd2c54)
-![MQ309Adatascience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/72eb1366-4243-4a9c-a743-33fdff440e12)
+
 ## RadioactivityDataScience
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
-![LowGeigerCounterScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/f1ab0644-edd5-4a0e-87a7-926992ddc4ab)
-![MediumGeigerCounterScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/760b4284-3b5c-43a1-9bb5-432162143e18)
-![HighGeigerCounterScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/5bf1c8ad-8a2b-4561-810d-c915e8744ae9)
-![SpecialGeigerCounterScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/a9326b5d-04be-428c-a403-95f953b4bf4a)
+
 ## SpaceDataScience
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
-![SpaceDataScience](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/4baff79d-4477-49fe-ad24-85167c06fb9b)
+
 
 ## MQ-135
 ![newplotMQ-135curves](https://github.com/user-attachments/assets/b2a34329-fcf4-48e7-9bcc-67f244939534)
@@ -180,6 +163,12 @@ STATUS 3: MQ131 [MQ131 only]
 
 ## MQ-135 NewCurve & MQ-135 OldCurve
 ![MQ-135](https://github.com/user-attachments/assets/b2a34329-fcf4-48e7-9bcc-67f244939534)
+| Gas   | Value A | Value B | R²   |
+|-------|---------|---------|-------|
+| Gas 1 | 12.5    | 13.7    | 0.95  |
+| Gas 2 | 8.3     | 9.1     | 0.89  |
+| Gas 3 | 14.2    | 15.3    | 0.92  |
+
 ## MQ-2 NewCurve & MQ-2 OldCurve
 ![MQ-2](https://github.com/user-attachments/assets/7ef90f38-c4a2-4a0a-a2ee-cb2249f18df6)
 ## MQ-3 NewCurve & MQ-3 OldCurve
