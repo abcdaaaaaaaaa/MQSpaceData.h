@@ -163,11 +163,14 @@ STATUS 3: MQ131 [MQ131 only]
 
 ## MQ-135 NewCurve & MQ-135 OldCurve
 ![MQ-135](https://github.com/user-attachments/assets/b2a34329-fcf4-48e7-9bcc-67f244939534)
-| Gas   | Value A | Value B | R²   |
-|-------|---------|---------|-------|
-| Gas 1 | 12.5    | 13.7    | 0.95  |
-| Gas 2 | 8.3     | 9.1     | 0.89  |
-| Gas 3 | 14.2    | 15.3    | 0.92  |
+New Curve    | a       | b
+LPG    | 17.6135 | -0.4539
+propane| 19.5575 | -0.461 
+H2     | 25.7473 | -0.4731
+alcohol| 19.2641 | -0.3604
+CH4    | 20.7074 | -0.36  
+smoke  | 26.4698 | -0.3876
+CO     | 28.024  | -0.3182
 
 ## MQ-2 NewCurve & MQ-2 OldCurve
 ![MQ-2](https://github.com/user-attachments/assets/7ef90f38-c4a2-4a0a-a2ee-cb2249f18df6)
