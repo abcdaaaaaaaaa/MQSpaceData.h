@@ -156,10 +156,14 @@ STATUS 3: MQ131 [MQ131 only]
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
 
 
-## MQ-135
-![newplotMQ-135curves](https://github.com/user-attachments/assets/b2a34329-fcf4-48e7-9bcc-67f244939534)
-![newplotMQ-135TH](https://github.com/user-attachments/assets/1921246c-c8a2-4a64-a9d8-ab923e564688)
-![newplotMQ-135TH4)](https://github.com/user-attachments/assets/d4abe66d-4f5f-4180-97ae-a1b545c88619)
+## 3D Surface Diagram for MQ-135 Gases
+![1mq135acetone](https://github.com/user-attachments/assets/8ea439eb-74c0-4d34-8340-06ac2da46d0f)
+![1mq135alcohol](https://github.com/user-attachments/assets/4035b1ca-d3e0-4684-b658-686220da2c96)
+![1mq135co](https://github.com/user-attachments/assets/26d55964-ce85-4b85-a6e5-6c991a1126a2)
+![1mq135co2](https://github.com/user-attachments/assets/9d43d33f-89e8-43e6-a935-e66f5aff9016)
+![1mq135nh4](https://github.com/user-attachments/assets/aa840714-2f9c-4477-8592-13bff9bb8342)
+![1mq135toluene](https://github.com/user-attachments/assets/aa8cb955-f280-48d9-8c4d-e7e302f57ce4)
+
 
 ## MQ-135 NewCurve & MQ-135 OldCurve
 ![MQ-135](https://github.com/user-attachments/assets/b2a34329-fcf4-48e7-9bcc-67f244939534)
