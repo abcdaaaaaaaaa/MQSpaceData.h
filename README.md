@@ -21,7 +21,7 @@ a*ratio^b = 10^[(log10(ratio)-b)/m]
 logm = valueb, logb = log10(valuea)
 
 # 1]
-![loghello](https://github.com/user-attachments/assets/c3456754-2ad3-47f0-8336-92bb0804c4e9)
+![loghello)](https://github.com/user-attachments/assets/5b251bec-9677-421d-9101-ccb1e3ad4d2e)
 
 
 [(1,10), (2,4), (3,3)]
