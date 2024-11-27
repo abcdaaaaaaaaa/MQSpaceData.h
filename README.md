@@ -21,8 +21,8 @@ a*ratio^b = 10^[(log10(ratio)-b)/m]
 logm = valueb, logb = log10(valuea)
 
 # 1]
+![loghello](https://github.com/user-attachments/assets/c3456754-2ad3-47f0-8336-92bb0804c4e9)
 
-![loghello](https://github.com/abcdaaaaaaaaa/MQSpaceData.h/assets/108553778/76cb0263-3cbf-4c50-a446-616039d5fbba)
 
 [(1,10), (2,4), (3,3)]
 
