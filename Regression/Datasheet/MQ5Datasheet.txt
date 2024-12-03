@@ -1,6 +1,29 @@
 Air: 6.5
 Con: 200-10000
 
+For New Curve (R² >= 0.9995):
+
+for ppm = a*ratio^b:
+
+Gas    | a       | b
+LPG    | 6.1067  | -0.4102
+CH4    | 6.987   | -0.3777
+H2     | 7.4265  | -0.2847
+alcohol| 10.8274 | -0.2104
+CO     | 8.2236  | -0.1492
+
+for ppm = 10^[(log10(ratio)-b)/m]:
+
+Gas    | m       | b
+LPG    | -0.4102 | 0.7858 
+CH4    | -0.3777 | 0.8443 
+H2     | -0.2847 | 0.8708 
+alcohol| -0.2104 | 1.0345 
+CO     | -0.1492 | 0.9151 
+
+
+For Old Curve:
+
 for ppm = a*ratio^b:
 
 Gas    | a       | b
