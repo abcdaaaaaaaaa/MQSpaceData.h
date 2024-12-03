@@ -8,14 +8,14 @@ for ppm = a*ratio^b:
 Gas    | a       | b
 Hydrogen| 1.7955  | -0.3767
 Ethanol| 1.5196  | -0.367 
-Butane | 1.9209  | -0.3443
+Iso-Butane| 1.9209  | -0.3443
 
 for ppm = 10^[(log10(ratio)-b)/m]:
 
 Gas    | m       | b
 Hydrogen| -0.3767 | 0.2542 
 Ethanol| -0.367  | 0.1817 
-Butane | -0.3443 | 0.2835 
+Iso-Butane| -0.3443 | 0.2835 
 
 
 For Old Curve:
@@ -25,14 +25,14 @@ for ppm = a*ratio^b:
 Gas    | a       | b
 Hydrogen| 1.7955  | -0.3767
 Ethanol| 1.5196  | -0.367 
-Butane | 1.9209  | -0.3443
+Iso-Butane| 1.9209  | -0.3443
 
 for ppm = 10^[(log10(ratio)-b)/m]:
 
 Gas    | m       | b
 Hydrogen| -0.3767 | 0.2542 
 Ethanol| -0.367  | 0.1817 
-Butane | -0.3443 | 0.2835 
+Iso-Butane| -0.3443 | 0.2835 
 
 exceptional: 300ppm ethanol Rs/Rs = 0.27
 
