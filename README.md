@@ -1,9 +1,9 @@
 # MQSpaceData
 
 ## What awaits v4.0.0?
-![newplotMQ-135curves](https://github.com/user-attachments/assets/b2a34329-fcf4-48e7-9bcc-67f244939534)
-![newplotMQ-135TH](https://github.com/user-attachments/assets/1921246c-c8a2-4a64-a9d8-ab923e564688)
-![newplotMQ-135TH4)](https://github.com/user-attachments/assets/d4abe66d-4f5f-4180-97ae-a1b545c88619)
+![MQ-135_gas_curves](https://github.com/user-attachments/assets/e8d6e1bf-6f61-40c8-9cc8-fd0cd7189c22)
+![MQ-135_correction_coefficient](https://github.com/user-attachments/assets/8783b3a5-7956-47f1-a61b-ae300041e047)
+![MQ135_CO2_3D](https://github.com/user-attachments/assets/a7ba9d6b-d960-45bc-ab75-842674e8f438)
 
 ## Sample Projects
 | Place | Category | Project Name |
