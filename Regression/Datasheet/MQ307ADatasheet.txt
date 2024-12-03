@@ -1,8 +1,5 @@
 MQ309A Low Sensitivity CO (LOW-CO) SECOND GRAPHIC
 
-Air value is accepted as 100.
-The Air value is assumed to be 100 because it is not in the data graphic and is required in the calculation.
-
 For New Curve (R² >= 0.9995):
 
 for ppm = a*ratio^b:
