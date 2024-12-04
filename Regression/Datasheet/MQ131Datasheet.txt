@@ -1,6 +1,25 @@
 Air: 12
 Con: 5-100
 
+For New Curve (R² >= 0.9995):
+
+for ppm = a*ratio^b:
+
+Gas    | a       | b
+O3     | 16.0871 | -0.8603
+CL2    | 18.9693 | -0.7132
+NOx    | 16.7059 | -0.4684
+
+for ppm = 10^[(log10(ratio)-b)/m]:
+
+Gas    | m       | b
+O3     | -0.8603 | 1.2065 
+CL2    | -0.7132 | 1.2781 
+NOx    | -0.4684 | 1.2229 
+
+
+For Old Curve:
+
 for ppm = a*ratio^b:
 
 Gas    | a       | b
