@@ -166,35 +166,35 @@ STATUS 3: MQ131 [MQ131 only]
 
 
 ## MQ-135 NewCurve & MQ-135 OldCurve
-![MQ-135](https://github.com/user-attachments/assets/b2a34329-fcf4-48e7-9bcc-67f244939534)
+![MQ-135_gas_curves](https://github.com/user-attachments/assets/dbd1d04b-51dc-499c-be32-ff976911b9d8)
 ## MQ-2 NewCurve & MQ-2 OldCurve
-![MQ-2](https://github.com/user-attachments/assets/7ef90f38-c4a2-4a0a-a2ee-cb2249f18df6)
+![MQ-2_gas_curves](https://github.com/user-attachments/assets/b9de3a96-4efa-4aa6-8d0f-9702a5c8a50d)
 ## MQ-3 NewCurve & MQ-3 OldCurve
-![MQ-3](https://github.com/user-attachments/assets/15711519-18df-45b8-aa8b-a9d9352cc1b7)
+![MQ-3_gas_curves](https://github.com/user-attachments/assets/cfaf6c93-3f95-425b-b3c9-57e131c534e0)
 ## MQ-4 NewCurve & MQ-4 OldCurve
-![MQ-4](https://github.com/user-attachments/assets/52c0d426-b0ce-4876-805f-a288e003bb5e)
+![MQ-4_gas_curves](https://github.com/user-attachments/assets/4efb70ae-b686-4efc-ab29-341866704ed7)
 ## MQ-5 NewCurve & MQ-5 OldCurve
-![MQ-5](https://github.com/user-attachments/assets/9aee2dd0-ddef-41d9-ab48-14f18d27bdb7)
+![MQ-5_gas_curves](https://github.com/user-attachments/assets/c6384a51-971d-4fd8-a7ba-2cbd937851c4)
 ## MQ-6 NewCurve & MQ-6 OldCurve
-![MQ-6](https://github.com/user-attachments/assets/7bdfdb12-3c6d-4dca-8efc-2703059ae526)
+![MQ-6_gas_curves](https://github.com/user-attachments/assets/21f6ee26-5595-4649-993a-f67d3755b609)
 ## MQ-7 NewCurve & MQ-7 OldCurve
-![MQ-7](https://github.com/user-attachments/assets/fd50c7ec-320c-4943-8a5a-e42f85954f85)
+![MQ-7_gas_curves](https://github.com/user-attachments/assets/7c6ef35c-ea4d-47e5-9631-ef132026fe86)
 ## MQ-8 NewCurve & MQ-8 OldCurve
-![MQ-8](https://github.com/user-attachments/assets/40128658-09b9-4751-8661-0a959e16daa5)
+![MQ-8_gas_curves](https://github.com/user-attachments/assets/213661d3-20b2-4ead-9e76-42496034446b)
 ## MQ-9 NewCurve & MQ-9 OldCurve
-![MQ-9](https://github.com/user-attachments/assets/d7e483b4-eaaa-4431-9e15-78c40079cfee)
+![MQ-9_gas_curves](https://github.com/user-attachments/assets/4bb1f6e5-803d-4593-8152-96e587e65b0f)
 ## MQ131 NewCurve & MQ131 OldCurve
-![MQ-131](https://github.com/user-attachments/assets/0d968d23-30fb-4ec0-b107-4f81480914ec)
+
 ## MQ-136 NewCurve & MQ-136 OldCurve
-![MQ-136](https://github.com/user-attachments/assets/43db850d-532c-467f-ab45-a4477dc1dd5e)
+![MQ-136_gas_curves](https://github.com/user-attachments/assets/8fe753d1-f88b-4183-8da6-396fb12f4c54)
 ## MQ-137 NewCurve & MQ-137 OldCurve
-![MQ-137](https://github.com/user-attachments/assets/1289e710-62b9-4788-add0-b8add85f04b8)
+![MQ-137_gas_curves](https://github.com/user-attachments/assets/773455b0-cebe-4c3a-bc5e-9ae2b8813378)
 ## MQ303A NewCurve & MQ303A OldCurve
-![MQ-303A](https://github.com/user-attachments/assets/c9133c10-8a0e-4b98-a59e-f1b3ef25f99b)
+![MQ-303A_gas_curves](https://github.com/user-attachments/assets/2c6f128c-0995-4537-af7b-aedcbb1afd04)
 ## MQ307A NewCurve & MQ207A OldCurve
-![MQ-307A](https://github.com/user-attachments/assets/f837736c-434e-47d5-be5a-24bf078402c1)
+![MQ-307A_gas_curves](https://github.com/user-attachments/assets/74e1b4c7-7e32-4fa7-9f62-e93b8f17aa74)
 ## MQ309A NewCurve & MQ309A OldCurve
-![MQ-309A](https://github.com/user-attachments/assets/60e3a49e-5727-4dfd-94f4-38eb20fb30a5)
+![MQ-309A_gas_curves](https://github.com/user-attachments/assets/d73a5e21-85e7-4671-bb7d-92a15aabd671)
 
 NOTE: [For detailed explanation, You can also check out the github wiki page]
 https://github.com/abcdaaaaaaaaa/MQSpaceData.h/wiki
