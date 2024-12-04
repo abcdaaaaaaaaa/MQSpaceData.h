@@ -184,7 +184,7 @@ STATUS 3: MQ131 [MQ131 only]
 ## MQ-9 NewCurve & MQ-9 OldCurve
 ![MQ-9_gas_curves](https://github.com/user-attachments/assets/4bb1f6e5-803d-4593-8152-96e587e65b0f)
 ## MQ131 NewCurve & MQ131 OldCurve
-
+![MQ-131_gas_curves](https://github.com/user-attachments/assets/d63e0af9-f9a0-4a79-a89e-54e7660f1c86)
 ## MQ-136 NewCurve & MQ-136 OldCurve
 ![MQ-136_gas_curves](https://github.com/user-attachments/assets/8fe753d1-f88b-4183-8da6-396fb12f4c54)
 ## MQ-137 NewCurve & MQ-137 OldCurve
