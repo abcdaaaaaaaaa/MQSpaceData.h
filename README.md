@@ -157,13 +157,12 @@ STATUS 3: MQ131 [MQ131 only]
 
 
 ## 3D Surface Diagram for MQ-135 Gases
-![1mq135acetone](https://github.com/user-attachments/assets/8ea439eb-74c0-4d34-8340-06ac2da46d0f)
-![1mq135alcohol](https://github.com/user-attachments/assets/4035b1ca-d3e0-4684-b658-686220da2c96)
-![1mq135co](https://github.com/user-attachments/assets/26d55964-ce85-4b85-a6e5-6c991a1126a2)
-![1mq135co2](https://github.com/user-attachments/assets/9d43d33f-89e8-43e6-a935-e66f5aff9016)
-![1mq135nh4](https://github.com/user-attachments/assets/aa840714-2f9c-4477-8592-13bff9bb8342)
-![1mq135toluene](https://github.com/user-attachments/assets/aa8cb955-f280-48d9-8c4d-e7e302f57ce4)
-
+![MQ135_CO2_3D](https://github.com/user-attachments/assets/77a0441a-45d3-431c-b53d-ed9e114f39d1)
+![MQ135_Acetone_3D](https://github.com/user-attachments/assets/e4fda2d9-3eed-4560-981c-5fc1c629e3cd)
+![MQ135_Alcohol_3D](https://github.com/user-attachments/assets/235dbd90-52f3-4283-b902-9714ccfb6c6f)
+![MQ135_CO_3D](https://github.com/user-attachments/assets/6a2cd316-e714-4d87-8d6b-cd7bbff10f19)
+![MQ135_NH4_3D](https://github.com/user-attachments/assets/ffabdb06-6b66-402d-9fd2-aeff472d41ef)
+![MQ135_Toluene_3D](https://github.com/user-attachments/assets/b0aae025-309d-44b9-b219-46857bd7a03f)
 
 ## MQ-135 NewCurve & MQ-135 OldCurve
 ![MQ-135_gas_curves](https://github.com/user-attachments/assets/dbd1d04b-51dc-499c-be32-ff976911b9d8)
