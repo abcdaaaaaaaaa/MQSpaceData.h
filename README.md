@@ -4,7 +4,8 @@
 ![MQ-135_gas_curves](https://github.com/user-attachments/assets/e8d6e1bf-6f61-40c8-9cc8-fd0cd7189c22)
 ![MQ-135_correction_coefficient](https://github.com/user-attachments/assets/8783b3a5-7956-47f1-a61b-ae300041e047)
 ![MQ135_CO2_3D](https://github.com/user-attachments/assets/a7ba9d6b-d960-45bc-ab75-842674e8f438)
-![4D_Slope_Estimation](https://github.com/user-attachments/assets/5e3abccc-cc2e-4ea3-9a78-97e0d52103b1)
+![4D_Slope_Estimation](https://github.com/user-attachments/assets/c3a8ede3-05a1-41f2-a3f3-aa5d6493ce93)
+
 
 ## Sample Projects
 | Place | Category | Project Name |
@@ -149,13 +150,7 @@ STATUS 3: MQ131 [MQ131 only]
 
 ## MQDataScience
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
-
-## RadioactivityDataScience
-"The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
-
-## SpaceDataScience
-"The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
-
+![4D_Slope_Estimation](https://github.com/user-attachments/assets/c3a8ede3-05a1-41f2-a3f3-aa5d6493ce93)
 
 ## 3D Surface Diagram for MQ-135 Gases
 ![MQ135_CO2_3D](https://github.com/user-attachments/assets/77a0441a-45d3-431c-b53d-ed9e114f39d1)
