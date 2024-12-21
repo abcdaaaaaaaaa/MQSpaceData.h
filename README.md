@@ -4,8 +4,7 @@
 ![MQ-135_gas_curves](https://github.com/user-attachments/assets/e8d6e1bf-6f61-40c8-9cc8-fd0cd7189c22)
 ![MQ-135_correction_coefficient](https://github.com/user-attachments/assets/8783b3a5-7956-47f1-a61b-ae300041e047)
 ![MQ135_CO2_3D](https://github.com/user-attachments/assets/a7ba9d6b-d960-45bc-ab75-842674e8f438)
-![4D_Slope_Estimation](https://github.com/user-attachments/assets/c3a8ede3-05a1-41f2-a3f3-aa5d6493ce93)
-
+![4D_Slope_Estimation](https://github.com/user-attachments/assets/b41931dc-3a71-4df0-a089-d27104ceb4db)
 
 ## Sample Projects
 | Place | Category | Project Name |
