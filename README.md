@@ -3,7 +3,7 @@
 ## What awaits v4.0.0?
 ![MQ-135_gas_curves](https://github.com/user-attachments/assets/e8d6e1bf-6f61-40c8-9cc8-fd0cd7189c22)
 ![MQ-135_correction_coefficient](https://github.com/user-attachments/assets/8783b3a5-7956-47f1-a61b-ae300041e047)
-![MQ135_CO2_3D](https://github.com/user-attachments/assets/6d1ce647-b5ee-4766-a9d2-7a7c54f8e9f6)
+![MQ135_CO2_3D](https://github.com/user-attachments/assets/f743feef-5a3c-4ff5-beea-3368e3a48f41)
 ![4D_Slope_Estimation)](https://github.com/user-attachments/assets/1b1b3841-46c5-4634-a141-e221a0b9033a)
 
 
