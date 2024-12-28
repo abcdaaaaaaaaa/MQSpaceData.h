@@ -11,7 +11,7 @@
 ## 3) Comparison of theoretical "Ratio" measurements and practical "Sensor measurements" in 3D graphics
 ![MQ135_CO2_3D](https://github.com/user-attachments/assets/f743feef-5a3c-4ff5-beea-3368e3a48f41)
 
-## 4) Slope Estimation in Time-Based 4D Space
+## 4) Slope Estimation in Time-Dependent 4D Space
 ![4D_Slope_Estimation)](https://github.com/user-attachments/assets/1b1b3841-46c5-4634-a141-e221a0b9033a)
 
 
