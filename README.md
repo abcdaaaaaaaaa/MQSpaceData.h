@@ -12,13 +12,8 @@
 ![MQ135_CO2_3D](https://github.com/user-attachments/assets/f743feef-5a3c-4ff5-beea-3368e3a48f41)
 
 ## 4) Slope Estimation in Time-Dependent 4D Space
-![4D_Slope_Estimation](https://github.com/user-attachments/assets/e56abbf7-8af3-40f2-8c2a-1472cc67863d)
+![4D_Slope_Estimation](https://github.com/user-attachments/assets/a36ccd40-86a3-4f7d-b94f-a4f1f1609eb6)
 
-
-## Sample Projects
-| Place | Category | Project Name |
-|----------|----------|----------|
-| [1] | Getting Started | [Adjustable Air Quality Monitoring & Analysis Platform](https://projecthub.arduino.cc/abcda123/adjustable-air-quality-monitoring-analysis-platform-with-plug-unplug-system-8a0057) |
 
 ## Formulla 
 
@@ -163,7 +158,7 @@ STATUS 3: MQ131 [MQ131 only]
 ![MQ135_CO2_3D](https://github.com/user-attachments/assets/f743feef-5a3c-4ff5-beea-3368e3a48f41)
 
 ## 4D Slope Estimation
-![4D_Slope_Estimation)](https://github.com/user-attachments/assets/1b1b3841-46c5-4634-a141-e221a0b9033a)
+![4D_Slope_Estimation](https://github.com/user-attachments/assets/a36ccd40-86a3-4f7d-b94f-a4f1f1609eb6)
 
 ## MQ-135 NewCurve & MQ-135 OldCurve
 ![MQ-135_gas_curves](https://github.com/user-attachments/assets/dbd1d04b-51dc-499c-be32-ff976911b9d8)
