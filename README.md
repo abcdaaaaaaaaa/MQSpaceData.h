@@ -127,6 +127,8 @@ Ratio = (MaxSensorValue * [Rload / SensorValue – Rload]) * RsRoMQAir / (MaxSen
 
 Ratio = [Rload / SensorValue – Rload] * RsRoMQAir / [Rload / SensorCalibrationValue – Rload] [Rs / Ro]
 
+Ratio = f(R) * RsRoMQAir
+
 f(R) = [R / S - R] / [R / C - R] -> [(R - R*S) / S] / [(R - R*C) / C] -> [(R - R*S) / S] * [C / (R - R*C)]
 
 f(R) = [(R - R*S) / S] * [C / (R - R*C)] = [C * (R - R*S) / S (R - R*C)]
@@ -136,6 +138,8 @@ g(x) = (R - R*x1) / (R - R*x2) -> g(x) = (1 - x1) / (1 - x2)
 f(R) = [(R - R*S) / S] * [C / (R - R*C)] = [C * (1 - S) / S (1 - C)]
 
 Ratio = [SensorValue * (1 - SensorValue)] * RsRoMQAir / [SensorCalibrationValue * (1 - SensorCalibrationValue)] [Rs / Ro]
+
+if SensorRange[0 - 1]:
 
 ## Calculate Ratio
 (1) if ratio = Rs / Ro: 
