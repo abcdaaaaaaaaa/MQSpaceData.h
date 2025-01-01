@@ -9,7 +9,7 @@
 ![MQ-135_correction_coefficient](https://github.com/user-attachments/assets/8783b3a5-7956-47f1-a61b-ae300041e047)
 
 ## 3) Comparison of theoretical "Ratio" measurements and practical "Sensor" measurements in 3D graphics
-![MQ135_CO2_3D](https://github.com/user-attachments/assets/f743feef-5a3c-4ff5-beea-3368e3a48f41)
+![MQ135_CO2_3D)](https://github.com/user-attachments/assets/241854b0-1124-4703-86c5-df4e0371a257)
 
 ## 4) Slope Estimation in Time-Dependent 4D Space
 ![4D_Slope_Estimation](https://github.com/user-attachments/assets/a36ccd40-86a3-4f7d-b94f-a4f1f1609eb6)
