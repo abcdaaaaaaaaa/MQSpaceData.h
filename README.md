@@ -137,40 +137,20 @@ g(x) = (R - R*x1) / (R - R*x2) -> g(x) = (1 - x1) / (1 - x2)
 
 f(R) = [(R - R*S) / S] * [C / (R - R*C)] = [C * (1 - S) / S (1 - C)]
 
-Ratio = [SensorValue * (1 - SensorValue)] * RsRoMQAir / [SensorCalibrationValue * (1 - SensorCalibrationValue)] [Rs / Ro]
-
-if SensorRange[0 - 1]:
+Ratio = [SensorCalibrationValue * (1 - SensorValue)] * RsRoMQAir / [SensorValue * (1 - SensorCalibrationValue)] [Rs / Ro]
 
 ## Calculate Ratio
 (1) if ratio = Rs / Ro: 
 
-ratio = (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir / (100 * Rload / calibrationPercentile – Rload) 
+ratio = [SensorCalibrationValue * (1 - SensorValue)] * RsRoMQAir / [SensorValue * (1 - SensorCalibrationValue)]
 
 (2) if ratio = Rs / Rs: 
 
-ratio = (bitadc * Rload / analogRead(pin) – Rload) / (100 * Rload / calibrationPercentile – Rload) [No RsRoMQAir]
+ratio = [SensorCalibrationValue * (1 - SensorValue)] / [SensorValue * (1 - SensorCalibrationValue)] [No RsRoMQAir]
 
 (3) if ratio = Ro / Rs: 
 
-ratio = (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir / (100 * Rload / calibrationPercentile – Rload) 
-
-But: slpoe = slope x -1
-
-valueb() = valueb() * -1
-
-logm() = logm() * -1
-
-        float MQSpaceData::readValue()
-        {
-         if (_ratioMode == "Ro/Rs") _vb = _vb * -1;
-         return pow(ratio(),_vb)*_va;
-        }
-        
-        float MQSpaceData::logValue()
-        {
-         if (_ratioMode == "Ro/Rs") _mlog = _mlog * -1;
-         return pow(10,((log10(ratio())-_blog)/_mlog));
-        }
+ratio = [SensorCalibrationValue * (1 - SensorValue)] / [SensorValue * (1 - SensorCalibrationValue)] * RsRoMQAir
 
 ## Ratio for Sensors
 STATUS 1: MQ-2, MQ-3, MQ-4, MQ-5, MQ-6, MQ-7, MQ-8, MQ-9, MQ-135, MQ-136, MQ-137 [Almost All & Standart]
