@@ -155,7 +155,7 @@ STATUS 3: MQ131 [MQ131 only]
 "The first and only Arduino library where Geiger Counter and MQ Sensors combine with Data Science"
 
 ## 3D Surface Diagram for MQ-135 Gases
-![MQ135_CO2_3D](https://github.com/user-attachments/assets/f743feef-5a3c-4ff5-beea-3368e3a48f41)
+![MQ135_CO2_3D)](https://github.com/user-attachments/assets/241854b0-1124-4703-86c5-df4e0371a257)
 
 ## 4D Slope Estimation
 ![4D_Slope_Estimation](https://github.com/user-attachments/assets/a36ccd40-86a3-4f7d-b94f-a4f1f1609eb6)
