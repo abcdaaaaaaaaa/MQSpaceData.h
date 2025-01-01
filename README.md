@@ -105,13 +105,25 @@ RS = [(VC x RL) - (VRL x RL)] / VRL -> RS = [(VC x RL) / VRL] – RL
 
 Rs = (voltage * Rload) / (voltage/2^n-1)) - (Rload)
 
-analogRead(pin) / bitadc -> calibrationPercentile / 100
+SensorValue / 2^(AdcBitResulation1-1) -> SensorCalibrationValue / 2^(AdcBitResulation2-1) 
 
-Rs = bitadc * Rload / analogRead(pin) - Rload -> calibrationRs = 100 * Rload / calibrationPercentile – Rload
+Rs = 2^(AdcBitResulation1-1) * Rload / SensorValue - Rload -> calibrationRs = 2^(AdcBitResulation2-1) * Rload / SensorCalibrationValue – Rload
 
 Ro = calibrationRs / Air ||| ratio = Rs / Ro -> ratio = Rs / (calibrationRs / Air) -> ratio = Rs x Air / calibrationRs
 
-Ratio = (bitadc * Rload / analogRead(pin) – Rload) * RsRoMQAir / (100 * Rload / calibrationPercentile – Rload) [Rs / Ro]
+Ratio = (2^(AdcBitResulation1-1) * Rload1 / SensorValue – Rload1) * RsRoMQAir / (2^(AdcBitResulation2-1) * Rload2 / SensorCalibrationValue – Rload2) [Rs / Ro]
+
+If Sensor Calibration and Sensor Measurement are Under the Same Conditions:
+
+Rload1 = Rload2 && 2^(AdcBitResulation1-1) = 2^(AdcBitResulation2-1)
+
+SensorRange = [0 - 2^(AdcBitResulation-1)]
+
+if MinSensorValue == 0 && MaxSensorValue == 1: SensorRange [0 - 1]
+
+if SensorRange [0 - 1]: 0 <= (SensorValue) <= 1 && 0 <= SensorCalibrationValue <= 1 
+
+Ratio = (MaxSensorValue * Rload / SensorValue – Rload) * RsRoMQAir / (MaxSensorValue * Rload / SensorCalibrationValue – Rload) [Rs / Ro]
 
 ## Calculate Ratio
 (1) if ratio = Rs / Ro: 
