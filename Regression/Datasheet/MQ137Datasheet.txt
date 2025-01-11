@@ -6,16 +6,16 @@ For New Curve (R² >= 0.9995):
 for ppm = a*ratio^b:
 
 Gas    | a       | b
-CO     | 2.7684  | -0.2832
+NH3    | 2.7684  | -0.2832
 Ethanol| 6.5194  | -0.4078
-NH3    | 5.277   | -0.2622
+CO     | 5.277   | -0.2622
 
 for ppm = 10^[(log10(ratio)-b)/m]:
 
 Gas    | m       | b
-CO     | -0.2832 | 0.4422 
+NH3    | -0.2832 | 0.4422 
 Ethanol| -0.4078 | 0.8142 
-NH3    | -0.2622 | 0.7224 
+CO     | -0.2622 | 0.7224 
 
 
 For Old Curve:
@@ -23,20 +23,20 @@ For Old Curve:
 for ppm = a*ratio^b:
 
 Gas    | a       | b
-CO     | 2.7684  | -0.2832
+NH3    | 2.7684  | -0.2832
 Ethanol| 6.5194  | -0.4078
-NH3    | 5.277   | -0.2622
+CO     | 5.277   | -0.2622
 
 for ppm = 10^[(log10(ratio)-b)/m]:
 
 Gas    | m       | b
-CO     | -0.2832 | 0.4422 
+NH3    | -0.2832 | 0.4422 
 Ethanol| -0.4078 | 0.8142 
-NH3    | -0.2622 | 0.7224 
+CO     | -0.2622 | 0.7224 
 
-// exceptional: 10 ppm NH3 MQ-137 Rs/Ro: 1.44 | Sensor resistance at 10 ppm of H2S in the clean air. Rs/Ro != 1 Rs/Ro = 1.44
+// exceptional: 10 ppm NH3 MQ-137 Rs/Ro: 1.44 | Sensor resistance at 10 ppm of NH3 in the clean air. Rs/Ro != 1 Rs/Ro = 1.44
 
-CO
+NH3
 10,1.44
 100,0.77
 200,0.6
@@ -54,7 +54,7 @@ Ethanol
 exceptional: %72
 [(10,2.55), (100,0.985), (200,0.763)]
 
-NH3
+CO
 10,2.89
 100,1.54
 200,1.35
