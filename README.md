@@ -12,8 +12,7 @@
 ![MQ135_CO2_3D)](https://github.com/user-attachments/assets/241854b0-1124-4703-86c5-df4e0371a257)
 
 ## 4) Slope Estimation in Time-Dependent 4D Space
-![4D_Slope_Estimation](https://github.com/user-attachments/assets/a36ccd40-86a3-4f7d-b94f-a4f1f1609eb6)
-
+![4D_Slope_Estimation)](https://github.com/user-attachments/assets/3fd24217-09aa-4c23-bb10-542a7f10a078)
 
 ## Formulla 
 
