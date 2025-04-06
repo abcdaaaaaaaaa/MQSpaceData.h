@@ -6,7 +6,7 @@ import pandas as pd
 
 df = pd.read_excel("Sensor_Datas.xlsx")
 
-SensorName = df["mode"].iloc[0]
+SensorName = df["Mode"].iloc[0]
               
 def roundf(*args):
     return tuple(round(x, 4) for x in args)
@@ -29,7 +29,7 @@ def fit_time_with_r2(x, y):
     r2 = 1 - (ss_res / ss_tot)
     return a, b, r2
 
-time, percentile = np.array(df["time"], dtype=float), np.array(df["per"], dtype=float)
+time, percentile = np.array(df["Time"], dtype=float), np.array(df["Per"], dtype=float)
 percentile = limit(percentile)
 SensorValue = percentile / 100
 
