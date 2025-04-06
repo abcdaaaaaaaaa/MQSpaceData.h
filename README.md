@@ -1,5 +1,6 @@
-# 1 MQSpaceData
-# MQSpaceDat 4.0.0 will be released on July 1, 2025!
+# MQSpaceData
+
+# MQSpaceData 4.0.0 will be released on July 1, 2025!
 
 ## What awaits v4.0.0?
 ## 1) Advanced Data Science System for Regression Calculations
