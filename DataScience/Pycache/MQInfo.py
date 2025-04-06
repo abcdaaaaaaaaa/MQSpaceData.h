@@ -291,7 +291,7 @@ def MQ303A():
     gas_params = [
         {'name': 'Hydrogen', 'ppmvals': (10, 10000), 'ppm': (1.7955, -0.3767)},
         {'name': 'Ethanol', 'ppmvals': (10, 10000), 'ppm': (2.1052, -0.4409)},
-        {'name': 'Butane', 'ppmvals': (100, 10000), 'ppm': (1.9209, -0.3443)}
+        {'name': 'IsoButane', 'ppmvals': (100, 10000), 'ppm': (1.9209, -0.3443)}
     ]
     group2_subgroup3()
 
@@ -304,7 +304,7 @@ def MQ303B():
     gas_params = [
         {'name': 'Hydrogen', 'ppmvals': (10, 10000), 'ppm': (1.7955, -0.3767)},
         {'name': 'Ethanol', 'ppmvals': (10, 10000), 'ppm': (2.1052, -0.4409)},
-        {'name': 'Butane', 'ppmvals': (100, 10000), 'ppm': (1.9209, -0.3443)}
+        {'name': 'IsoButane', 'ppmvals': (100, 10000), 'ppm': (1.9209, -0.3443)}
     ]
     group2_subgroup1()
     
