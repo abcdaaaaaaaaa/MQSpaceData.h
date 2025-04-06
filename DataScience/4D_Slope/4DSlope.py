@@ -7,7 +7,7 @@ import MQInfo
 
 df = pd.read_excel("4D_Datas.xlsx")
 
-f = df["mode"].iloc[0].strip()
+f = df["Mode"].iloc[0].strip()
 if hasattr(MQInfo, f): getattr(MQInfo, f)()
 
 SensorName = MQInfo.SensorName
@@ -64,6 +64,9 @@ def inverseyaxb(valuea, value, valueb):
 
 def interpolate(value, min_value, max_value, target_min, target_max):
     return target_min + (value - min_value) * (target_max - target_min) / (max_value - min_value)
+
+def function(constant, mini_slope):
+    return constant * mini_slope + constant
 
 def ScaleTemp(temp, mode):
     if mode == '+': temp_scaled = (temp + 25) / 15 if CRMode == 1 else (temp + 15) / 5
@@ -123,7 +126,10 @@ def Sensorppm(valuea, valueb, SensorValue, CorrectionCoefficient):
 
 def differentiation(valuea, value, valueb):
     slope = valuea * valueb * np.power(value, valueb-1)
-    return True if slope >= 0 else False
+    slope = limit(slope, -1, 1)
+    mini_slope = slope / 4
+    return mini_slope
+    # return True if slope >= 0 else False
 
 def create_cube(center, xmin, xmax, ymin, ymax, zmin, zmax):
     x0, y0, z0 = center
@@ -141,6 +147,7 @@ def create_cube(center, xmin, xmax, ymin, ymax, zmin, zmax):
 
 def add_cube_edges(fig, vertices, color, trace_name):
     edges = [(0, 1), (1, 2), (2, 3), (3, 0), (0, 4), (1, 5), (7, 4), (4, 5), (3, 7)]
+    
     for start, end in edges:
         fig.add_trace(go.Scatter3d(
             x=[vertices[start, 0], vertices[end, 0]],
@@ -160,7 +167,8 @@ def add_cube_edges(fig, vertices, color, trace_name):
         ))
 
 def add_cube_faces(fig, vertices, color, trace_name):
-    faces = [[0, 1, 2], [0, 2, 3], [0, 1, 5], [0, 5, 4], [0, 3, 7], [0, 7, 4]]    
+    faces = [[0, 1, 2], [0, 2, 3], [0, 1, 5], [0, 5, 4], [0, 3, 7], [0, 7, 4]]
+
     fig.add_trace(go.Mesh3d(
         x=vertices[:, 0],
         y=vertices[:, 1],
@@ -190,7 +198,7 @@ def add_z_faces(fig, outer_vertices, inner_vertices, color, trace_name):
             hoverinfo='none'
         ))
 
-time, percentile, temperature, rh = np.array(df["time"], dtype=float), np.array(df["per"], dtype=float), np.array(df["temp"], dtype=float), np.array(df["rh"], dtype=float)
+time, percentile, temperature, rh = np.array(df["Time"], dtype=float), np.array(df["Per"], dtype=float), np.array(df["Temp"], dtype=float), np.array(df["Rh"], dtype=float)
 percentile, temperature, rh = limit(percentile, 0, 100), limit(temperature, -10, 50), limit(rh, 0, 100)
 
 SensorValue = percentile / 100
@@ -308,74 +316,17 @@ def add_cubes_edges():
     zgrid_lines = vals(z_middle_min, z_middle_max, 10)
 
     for g in xgrid_lines:
-        fig.add_trace(go.Scatter3d(
-            x=[g, g], y=[y_middle_min, y_middle_min], z=[z_middle_max, z_middle_min],
-            mode='lines',
-            line=dict(color='red', width=1),
-            name="x",
-            hoverinfo='none'
-        ))
-        
-        fig.add_trace(go.Scatter3d(
-            x=[g, g], y=[y_middle_max, y_middle_min], z=[z_middle_min, z_middle_min],
-            mode='lines+text',
-            line=dict(color='red', width=1),
-            text=[str(round2(interpolate(g, x_middle_min, x_middle_max, xmin, xmax)))],
-            textposition="middle center",
-            name="x",
-            hoverinfo='text+name',
-            textfont=dict(
-                size=9,
-                color='white'
-            )
-        ))
+        fig.add_trace(go.Scatter3d(x=[g, g], y=[y_middle_min, y_middle_min], z=[z_middle_max, z_middle_min], mode='lines', line=dict(color='red', width=1), name="x", hoverinfo='none'))
+        fig.add_trace(go.Scatter3d(x=[g, g], y=[y_middle_max, y_middle_min], z=[z_middle_min, z_middle_min], mode='lines+text', line=dict(color='red', width=1), text=[str(round2(interpolate(g, x_middle_min, x_middle_max, xmin, xmax)))], textposition="middle center", name="x", hoverinfo='text+name', textfont=dict(size=9, color='white')))
 
     for g in ygrid_lines:
-        fig.add_trace(go.Scatter3d(
-            x=[x_middle_min, x_middle_min], y=[g, g], z=[z_middle_max, z_middle_min],
-            mode='lines',
-            line=dict(color='red', width=1),
-            name="y",
-            hoverinfo='none'
-        ))
-
-        fig.add_trace(go.Scatter3d(
-            x=[x_middle_max, x_middle_min], y=[g, g], z=[z_middle_min, z_middle_min],
-            mode='lines+text',
-            line=dict(color='red', width=1),
-            text=[str(round2(interpolate(g, y_middle_min, y_middle_max, ymin, ymax)))],
-            textposition="middle center",
-            name="y",
-            hoverinfo='text+name',
-            textfont=dict(
-                size=9,
-                color='white'
-            )
-        ))
+        fig.add_trace(go.Scatter3d(x=[x_middle_min, x_middle_min], y=[g, g], z=[z_middle_max, z_middle_min], mode='lines', line=dict(color='red', width=1), name="y", hoverinfo='none'))
+        fig.add_trace(go.Scatter3d(x=[x_middle_max, x_middle_min], y=[g, g], z=[z_middle_min, z_middle_min], mode='lines+text', line=dict(color='red', width=1), text=[str(round2(interpolate(g, y_middle_min, y_middle_max, ymin, ymax)))], textposition="middle center", name="y", hoverinfo='text+name', textfont=dict(size=9, color='white')))
 
     for g in zgrid_lines:
-        fig.add_trace(go.Scatter3d(
-            x=[x_middle_min, x_middle_min], y=[y_middle_max, y_middle_min], z=[g, g],
-            mode='lines',
-            line=dict(color='red', width=1),
-            name="z",
-            hoverinfo='none'
-        ))
-
-        fig.add_trace(go.Scatter3d(
-            x=[x_middle_max, x_middle_min], y=[y_middle_min, y_middle_min], z=[g, g],
-            mode='lines+text',
-            line=dict(color='red', width=1),
-            text=[str(round2(interpolate(g, z_middle_min, z_middle_max, mincr, maxcr)))],
-            textposition="middle center",
-            name="z",
-            hoverinfo='text+name',
-            textfont=dict(
-                size=9,
-                color='white'
-            )
-        ))
-
+        fig.add_trace(go.Scatter3d(x=[x_middle_min, x_middle_min], y=[y_middle_max, y_middle_min], z=[g, g], mode='lines', line=dict(color='red', width=1), name="z", hoverinfo='none'))
+        fig.add_trace(go.Scatter3d(x=[x_middle_max, x_middle_min], y=[y_middle_min, y_middle_min], z=[g, g], mode='lines+text', line=dict(color='red', width=1), text=[str(round2(interpolate(g, z_middle_min, z_middle_max, mincr, maxcr)))], textposition="middle center", name="z", hoverinfo='text+name', textfont=dict(size=9, color='white')))
+        
     xvalues = [xmin, x_middle_min, x_middle_max, xmax]
     yvalues = [ymin, y_middle_min, y_middle_max, ymax]
     zvalues = [zmin, z_middle_min, z_middle_max, zmax]
@@ -542,21 +493,19 @@ for i, gas in enumerate(gas_params):
 ppm_graph = [np.min(ppms_range), np.min(ppm_range), np.max(ppms_range), np.max(ppm_range)]
 graphmin, graphmax = np.min(ppm_graph), np.max(ppm_graph)
 
-
-# x_range_min, x_range_max = (xmin, xmax) if differentiation(a_temp_time, maxtime, b_temp_time) else (xmax, xmin)
-# y_range_min, y_range_max = (ymin, ymax) if differentiation(a_rh_time, maxtime, b_rh_time) else (ymax, ymin)
-# z_range_min, z_range_max = (zmin, zmax) if differentiation(a_percentile_time, maxtime, b_percentile_time) else (zmax, zmin)
-
+cam1 = function(1.75, differentiation(a_temp_time, maxtime, b_temp_time))
+cam2 = function(1.09375, differentiation(a_rh_time, maxtime, b_rh_time))
+cam3 = function(0.088, differentiation(a_percentile_time, maxtime, b_percentile_time))
 
 fig.update_layout(
     scene=dict(
-        camera=dict(eye=dict(x=1.75, y=1.09375, z=0.088)),
+        camera=dict(eye=dict(x=cam1, y=cam2, z=cam3)),
         xaxis_title=f"X: Temp (°C) R² = {r2_temp_time}",
         yaxis_title=f"Y: RH (%) R² = {r2_rh_time}",
         zaxis_title=f"Z: Air (ppm) R² = {r2_percentile_time}",
-        xaxis=dict(range=[xmin, xmax], nticks=10),
-        yaxis=dict(range=[ymin, ymax], nticks=10),
-        zaxis=dict(range=[zmin, zmax], nticks=10),
+        xaxis=dict(range=[xmin, xmax], nticks=10, showbackground=False),
+        yaxis=dict(range=[ymin, ymax], nticks=10, showbackground=False),
+        zaxis=dict(range=[zmin, zmax], nticks=10, showbackground=False),
         aspectmode='cube',
         domain=dict(x=[0.01, 0.51])
     ),
@@ -568,26 +517,7 @@ fig.update_layout(
     yaxis=dict(title='Y: SensorPpm (z)', domain=[0.07, 0.82])
 )
 
-fig.add_annotation(
-    text="4D Slope Estimation",
-    x=0.18,
-    y=0.98,
-    showarrow=False,
-    font=dict(size=19),
-    xref="paper",
-    yref="paper"
-)
-
-fig.add_annotation(
-    text=f"{SensorName} Air Time-based PPM Calculation",
-    x=0.89,
-    y=0.98,
-    showarrow=False,
-    font=dict(size=19),
-    xref="paper",
-    yref="paper"
-)
-
-
+fig.add_annotation(text="4D Slope Estimation", x=0.18, y=0.98, showarrow=False, font=dict(size=19), xref="paper", yref="paper")
+fig.add_annotation(text=f"{SensorName} Air Time-based PPM Calculation", x=0.89, y=0.98, showarrow=False, font=dict(size=19), xref="paper", yref="paper")
 
 fig.write_html(f"{SensorName}_4D_Slope_Estimation.html")
