@@ -8,7 +8,7 @@ import MQInfo
 
 df = pd.read_excel("Model_Datas.xlsx")
 
-f = df["mode"].iloc[0].strip()
+f = df["Mode"].iloc[0].strip()
 if hasattr(MQInfo, f): getattr(MQInfo, f)()
 
 SensorName = MQInfo.SensorName
@@ -84,7 +84,7 @@ def SensorppmModels(valuea, valueb, SensorValue):
     return convertppm(inverseyaxb(valuea, SensorRatio_value, valueb))
 
 
-time, percentile = np.array(df["time"], dtype=float), np.array(df["per"], dtype=float)
+time, percentile = np.array(df["Time"], dtype=float), np.array(df["Per"], dtype=float)
 percentile = limit(percentile, 100)
 SensorValue = percentile / 100
 
