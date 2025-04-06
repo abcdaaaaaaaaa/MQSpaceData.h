@@ -1,7 +1,7 @@
-# MQSpaceData
+# 1 MQSpaceData
+# MQSpaceDat 4.0.0 will be released on July 1, 2025!
 
-## 1 July 2025: What awaits v4.0.0?
-
+## What awaits v4.0.0?
 ## 1) Advanced Data Science System for Regression Calculations
 ![MQ-135_gas_curves](https://github.com/user-attachments/assets/e8d6e1bf-6f61-40c8-9cc8-fd0cd7189c22)
 
