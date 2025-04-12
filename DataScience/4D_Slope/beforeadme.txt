@@ -6,6 +6,6 @@ Sensor modes measuring "Standard Gases": MQ135, MQ2, MQ3, MQ4, MQ5, MQ6, MQ7, MQ
 
 This code aims to predict future data based on past data. 
 Please update the xlsx excel file to the sensor mode you are using and the past results you have obtained.
-The data you need to measure for this code: Sensor Percentage, Temperature, Relative Humidity (DHT22, recommended).
+The data you need to measure for this code: Gas Sensor Percentage, Celsius Temperature, Relative Humidity (DHT22, recommended).
 
 If the sensor you are working with is not listed, please check the list of "Model Gases".
