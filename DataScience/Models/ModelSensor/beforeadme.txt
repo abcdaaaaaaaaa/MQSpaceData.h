@@ -7,7 +7,7 @@ MQ131_LOW, MQ135, MQ136, MQ137, MQ138, MQ303A, MQ303B, MQ307A, MQ309A
 
 This code aims to predict future data based on past data. 
 Please update the xlsx excel file to the sensor mode you are using and the past results you have obtained.
-The data you need to measure for this code: Gas Sensor Percentage.
+The data you need to measure for this code: Sensor Percentage.
 
 -- WARNING --
 If the sensor you are using is listed, browse to the 4D_Slope folder.
