@@ -10,6 +10,6 @@ The data you need to measure for this code: Gas Sensor Percentage, Celsius Tempe
 
 -- WARNING --
 If you are using MQ131, make sure it measures with low sensitivity.
-To understand the sensitivity of MQ131, look at its concentration range (if ppb --> low ModelSlope.py) (if ppm --> high 4D_Slope.py).
+To understand the sensitivity of MQ131, look at its concentration range (if ppb --> low ModelSlope.py) (if ppm --> high 4DSlope.py).
 
 If the sensor you are working with is not listed, please check the list of "Model Gases".
