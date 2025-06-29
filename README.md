@@ -12,7 +12,7 @@
 ## 3) Formulated Correction Coefficients depending on Temperature and Humidity
 ![MQ-135_correction_coefficient](https://github.com/user-attachments/assets/8783b3a5-7956-47f1-a61b-ae300041e047)
 
-## 4) Comparison of theoretical "Ratio" measurements and practical "Sensor" measurements in 3D Graph
+## 4) Comparison of Theoretical Ratio vs. Practical Sensor Measurements 3D Graph
 ![MQ135_CO2_3D)](https://github.com/user-attachments/assets/f95d0886-f08d-44e6-a851-a54e63810e6b)
 
 ## 5) Slope Estimation in Time-Dependent 4D Space
