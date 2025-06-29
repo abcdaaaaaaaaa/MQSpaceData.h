@@ -122,7 +122,7 @@ def convertppm(value):
 
 def Sensorppm(valuea, valueb, SensorValue, CorrectionCoefficient):
     SensorRatio_value = Air * SensorRLCalRL * (CalValue * (SensorValue - 1)) / (SensorValue * (CalValue - 1))
-    return convertppm(inverseyaxb(valuea, SensorRatio_value * CorrectionCoefficient, valueb))
+    return convertppm(inverseyaxb(valuea, SensorRatio_value / CorrectionCoefficient, valueb))
 
 def differentiation(valuea, value, valueb):
     slope = valuea * valueb * np.power(value, valueb-1)
@@ -133,70 +133,20 @@ def differentiation(valuea, value, valueb):
 
 def create_cube(center, xmin, xmax, ymin, ymax, zmin, zmax):
     x0, y0, z0 = center
-    vertices = [
-        [x0 + xmin, y0 + ymin, z0 + zmin],
-        [x0 + xmax, y0 + ymin, z0 + zmin],
-        [x0 + xmax, y0 + ymax, z0 + zmin],
-        [x0 + xmin, y0 + ymax, z0 + zmin],
-        [x0 + xmin, y0 + ymin, z0 + zmax],
-        [x0 + xmax, y0 + ymin, z0 + zmax],
-        [x0 + xmax, y0 + ymax, z0 + zmax],
-        [x0 + xmin, y0 + ymax, z0 + zmax],
-    ]
+    vertices = [[x0 + xmin, y0 + ymin, z0 + zmin], [x0 + xmax, y0 + ymin, z0 + zmin], [x0 + xmax, y0 + ymax, z0 + zmin], [x0 + xmin, y0 + ymax, z0 + zmin], [x0 + xmin, y0 + ymin, z0 + zmax], [x0 + xmax, y0 + ymin, z0 + zmax], [x0 + xmax, y0 + ymax, z0 + zmax], [x0 + xmin, y0 + ymax, z0 + zmax]]
     return np.array(vertices)
 
 def add_cube_edges(fig, vertices, color, trace_name):
     edges = [(0, 1), (1, 2), (2, 3), (3, 0), (0, 4), (1, 5), (7, 4), (4, 5), (3, 7)]
-    
-    for start, end in edges:
-        fig.add_trace(go.Scatter3d(
-            x=[vertices[start, 0], vertices[end, 0]],
-            y=[vertices[start, 1], vertices[end, 1]],
-            z=[vertices[start, 2], vertices[end, 2]],
-            mode='lines+text',
-            line=dict(color=color, width=4),
-            text=[trace_name, trace_name],
-            textposition="middle center",
-            name=trace_name,
-            hoverinfo='text+name',
-            textfont=dict(
-                size=15,
-                color=color,
-                weight='bold'
-            )
-        ))
+    for start, end in edges: fig.add_trace(go.Scatter3d(x=[vertices[start, 0], vertices[end, 0]], y=[vertices[start, 1], vertices[end, 1]], z=[vertices[start, 2], vertices[end, 2]], mode='lines+text', line=dict(color=color, width=4), text=[trace_name, trace_name], textposition="middle center", name=trace_name, hoverinfo='text+name', textfont=dict(size=15, color=color, weight='bold')))
 
 def add_cube_faces(fig, vertices, color, trace_name):
     faces = [[0, 1, 2], [0, 2, 3], [0, 1, 5], [0, 5, 4], [0, 3, 7], [0, 7, 4]]
-
-    fig.add_trace(go.Mesh3d(
-        x=vertices[:, 0],
-        y=vertices[:, 1],
-        z=vertices[:, 2],
-        i=[face[0] for face in faces],
-        j=[face[1] for face in faces],
-        k=[face[2] for face in faces],
-        color=color,
-        opacity=0.3,
-        name=trace_name,
-        flatshading=True,
-        hoverinfo='none'
-    ))
+    fig.add_trace(go.Mesh3d(x=vertices[:, 0], y=vertices[:, 1], z=vertices[:, 2], i=[face[0] for face in faces], j=[face[1] for face in faces], k=[face[2] for face in faces], color=color, opacity=0.3, name=trace_name, flatshading=True, hoverinfo='none'))
 
 def add_z_faces(fig, outer_vertices, inner_vertices, color, trace_name):
     z_faces = [(0, 1, 5, 4), (4, 5, 1, 0), (0, 3, 7, 4), (4, 7, 3, 0)]
-    
-    for face in z_faces:
-        fig.add_trace(go.Mesh3d(
-            x=[outer_vertices[face[i], 0] for i in range(4)] + [inner_vertices[face[i], 0] for i in range(4)],
-            y=[outer_vertices[face[i], 1] for i in range(4)] + [inner_vertices[face[i], 1] for i in range(4)],
-            z=[outer_vertices[face[i], 2] for i in range(4)] + [inner_vertices[face[i], 2] for i in range(4)],
-            color=color,
-            opacity=0.3,
-            name=trace_name,
-            flatshading=True,
-            hoverinfo='none'
-        ))
+    for face in z_faces: fig.add_trace(go.Mesh3d(x=[outer_vertices[face[i], 0] for i in range(4)] + [inner_vertices[face[i], 0] for i in range(4)], y=[outer_vertices[face[i], 1] for i in range(4)] + [inner_vertices[face[i], 1] for i in range(4)], z=[outer_vertices[face[i], 2] for i in range(4)] + [inner_vertices[face[i], 2] for i in range(4)], color=color, opacity=0.3, name=trace_name, flatshading=True, hoverinfo='none'))
 
 time, percentile, temperature, rh = np.array(df["Time"], dtype=float), np.array(df["Per"], dtype=float), np.array(df["Temp"], dtype=float), np.array(df["Rh"], dtype=float)
 percentile, temperature, rh = limit(percentile, 0, 100), limit(temperature, -10, 50), limit(rh, 0, 100)
@@ -204,7 +154,7 @@ percentile, temperature, rh = limit(percentile, 0, 100), limit(temperature, -10,
 SensorValue = percentile / 100
 temperature = ScaleTemp(temperature, '+')
 correction_coefficient = CorrectionCoefficient(temperature, rh)
-air = limit(interpolate(SensorValue, 0, 1, convertppm(MinAirPpm), convertppm(MaxAirPpm)) / correction_coefficient, 0, convertppm(MaxAirPpm))
+air = limit(interpolate(SensorValue, 0, 1, convertppm(MinAirPpm), convertppm(MaxAirPpm)), 0, convertppm(MaxAirPpm)) * correction_coefficient
 
 a_temp_time, b_temp_time, r2_temp_time = fit_time_with_r2(time, temperature)
 a_rh_time, b_rh_time, r2_rh_time = fit_time_with_r2(time, rh)
@@ -220,7 +170,7 @@ rh_surface = limit(yaxb(a_rh_time, time_surface, b_rh_time), 0, 100)
 correction_coefficient_surface = CorrectionCoefficient(temperature_surface, rh_surface)
 percentile_surface = limit(yaxb(a_percentile_time, time_surface, b_percentile_time), 0, 100)
 SensorValue_surface = percentile_surface / 100
-air_surface = limit(interpolate(SensorValue_surface, 0, 1, convertppm(MinAirPpm), convertppm(MaxAirPpm)) / correction_coefficient_surface, 0, convertppm(MaxAirPpm))
+air_surface = limit(interpolate(SensorValue_surface, 0, 1, convertppm(MinAirPpm), convertppm(MaxAirPpm)), 0, convertppm(MaxAirPpm)) * correction_coefficient_surface
 
 temperature = ScaleTemp(temperature, '-')
 temperature_surface = ScaleTemp(temperature_surface, '-')
@@ -294,23 +244,8 @@ def add_cubes_edges():
     
     for i in range(8):
         if i == 6 or i == 2: continue
-        fig.add_trace(go.Scatter3d(
-            x=[outer_cube[i, 0], inner_cube[i, 0]],
-            y=[outer_cube[i, 1], inner_cube[i, 1]],
-            z=[outer_cube[i, 2], inner_cube[i, 2]],
-            mode='lines+text',
-            line=dict(color='green', width=2),
-            text=["z", "z"],
-            textposition="middle center",
-            name="z",
-            hoverinfo='text+name',
-            textfont=dict(
-                size=15,
-                color='green',
-                weight='bold'
-            )
-        ))
-
+        
+        fig.add_trace(go.Scatter3d(x=[outer_cube[i, 0], inner_cube[i, 0]], y=[outer_cube[i, 1], inner_cube[i, 1]], z=[outer_cube[i, 2], inner_cube[i, 2]], mode='lines+text', line=dict(color='green', width=2), text=["z", "z"], textposition="middle center", name="z", hoverinfo='text+name', textfont=dict(size=15, color='green', weight='bold')))
     xgrid_lines = vals(x_middle_min, x_middle_max, 10)
     ygrid_lines = vals(y_middle_min, y_middle_max, 10)
     zgrid_lines = vals(z_middle_min, z_middle_max, 10)
@@ -333,50 +268,9 @@ def add_cubes_edges():
     colors = ['purple', 'orange', 'purple']
 
     for i in range(3):
-        fig.add_trace(go.Scatter3d(
-            x=[xvalues[i], xvalues[i+1]], y=[y_middle, y_middle], z=[z_middle, z_middle],
-            mode='lines+text',
-            line=dict(color=colors[i], width=4),
-            text=["x", "x"],
-            textposition="middle center",
-            name="x",
-            hoverinfo='text+name',
-            textfont=dict(
-                size=15,
-                color=colors[i],
-                weight='bold'
-            )
-        ))
-
-        fig.add_trace(go.Scatter3d(
-            x=[x_middle, x_middle], y=[yvalues[i], yvalues[i+1]], z=[z_middle, z_middle],
-            mode='lines+text',
-            line=dict(color=colors[i], width=4),
-            text=["y", "y"],
-            textposition="middle center",
-            name="y",
-            hoverinfo='text+name',
-            textfont=dict(
-                size=15,
-                color=colors[i],
-                weight='bold'
-            )
-        ))
-
-        fig.add_trace(go.Scatter3d(
-            x=[x_middle, x_middle], y=[y_middle, y_middle], z=[zvalues[i], zvalues[i+1]],
-            mode='lines+text',
-            line=dict(color=colors[i], width=4),
-            text=["z", "z"],
-            textposition="middle center",
-            name="z",
-            hoverinfo='text+name',
-            textfont=dict(
-                size=15,
-                color=colors[i],
-                weight='bold'
-            )
-        ))
+        fig.add_trace(go.Scatter3d(x=[xvalues[i], xvalues[i+1]], y=[y_middle, y_middle], z=[z_middle, z_middle], mode='lines+text', line=dict(color=colors[i], width=4), text=["x", "x"], textposition="middle center", name="x", hoverinfo='text+name', textfont=dict(size=15, color=colors[i], weight='bold')))
+        fig.add_trace(go.Scatter3d(x=[x_middle, x_middle], y=[yvalues[i], yvalues[i+1]], z=[z_middle, z_middle], mode='lines+text', line=dict(color=colors[i], width=4), text=["y", "y"], textposition="middle center", name="y", hoverinfo='text+name', textfont=dict(size=15, color=colors[i], weight='bold')))
+        fig.add_trace(go.Scatter3d(x=[x_middle, x_middle], y=[y_middle, y_middle], z=[zvalues[i], zvalues[i+1]], mode='lines+text', line=dict(color=colors[i], width=4), text=["z", "z"], textposition="middle center", name="z", hoverinfo='text+name', textfont=dict(size=15, color=colors[i], weight='bold')))
 
 add_cubes_faces()
 add_cubes_edges()
