@@ -9,7 +9,7 @@
 #define ADC_BIT_RESU (12) // for ESP32
 #define pin          (35) // D35 (ADC1)
 
-String selectedModel = "MQ135";
+String selectedModel = "MQ135"; // You can change it with the model you use!
 GasSensor sensor(ADC_BIT_RESU, pin);
 const SensorModel* sensorModel = nullptr;
 
