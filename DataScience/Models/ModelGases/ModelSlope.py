@@ -35,6 +35,13 @@ def round4(value):
 def interpolate(value, old_min, old_max, new_min, new_max):
     return (value - old_min) * (new_max - new_min) / (old_max - old_min) + new_min
 
+def exponential_interpolate(value, min_value, max_value, target_min, target_max):
+    log_min = np.log10(target_min)
+    log_max = np.log10(target_max)
+    ratio = (value - min_value) / (max_value - min_value)
+    log_val = log_min + ratio * (log_max - log_min)
+    return np.power(10, log_val)
+
 def yaxb(valuea, value, valueb):
     return valuea * np.power(value, valueb)
 
@@ -96,8 +103,8 @@ percentile_surface = limit(yaxb(a_percentile_time, time_surface, b_percentile_ti
 SensorValue_surface = percentile_surface / 100
 
 if AirVals:
-    air = round4(interpolate(SensorValue, 0, 1, convertppm(MinAirPpm), convertppm(MaxAirPpm)))
-    air_surface = limit(interpolate(SensorValue_surface, 0, 1, convertppm(MinAirPpm), convertppm(MaxAirPpm)), convertppm(MaxAirPpm))
+    air = round4(exponential_interpolate(SensorValue, 0, 1, convertppm(MinAirPpm), convertppm(MaxAirPpm)))
+    air_surface = limit(exponential_interpolate(SensorValue_surface, 0, 1, convertppm(MinAirPpm), convertppm(MaxAirPpm)), convertppm(MaxAirPpm))
     
 GraphTitle = f"SensorAir Graph {convertppm(MinAirPpm)}-{convertppm(MaxAirPpm)} ppm" if AirVals else f"SensorPer% Graph Values"
 fig = make_subplots(rows=1, cols=2, subplot_titles=[GraphTitle, "ModelGases Graph ppms"])
