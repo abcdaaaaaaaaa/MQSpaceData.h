@@ -127,11 +127,11 @@ def ppmLimits():
     return sensitivity, minvalue, maxvalue
 
 def ppm(valuea, valueb, ratio, RH, temp):
-    return convertppm(inverseyaxb(valuea, ratio * CorrectionCoefficient(temp, RH), valueb))
+    return convertppm(inverseyaxb(valuea, ratio / CorrectionCoefficient(temp, RH), valueb))
 
 def Sensorppm(valuea, valueb, SensorValue, RH, temp):
     SensorRatio_value = Air * SensorRLCalRL * (CalValue * (SensorValue - 1)) / (SensorValue * (CalValue - 1))
-    return convertppm(inverseyaxb(valuea, SensorRatio_value * CorrectionCoefficient(temp, RH), valueb))
+    return convertppm(inverseyaxb(valuea, SensorRatio_value / CorrectionCoefficient(temp, RH), valueb))
 
 def LowSensitivityppm(valuea, valueb, ratio, RH, temp):
     return limit(ppm(valuea, valueb, ratio, RH, temp), minair, maxair)
@@ -157,18 +157,18 @@ for gas in gas_params:
         valuea = 1 / np.power(valuea, 1 / valueb)
         valueb = 1 / valueb
 
-    minratio = yaxb(valuea, maxair, valueb) / mincr
-    maxratio = yaxb(valuea, minair, valueb) / maxcr
+    minratio = yaxb(valuea, maxair, valueb) * mincr
+    maxratio = yaxb(valuea, minair, valueb) * maxcr
 
     calAir = inverseyaxb(valuea, CalibrateAir, valueb)
-    CalValue = limit(interpolate(calAir, minair, maxair, 0, 1), 0.01,0.99)
+    CalValue = limit(interpolate(calAir, minair, maxair, 0, 1), 0.01, 0.99)
     
     minair, maxair = convertppm(minair), convertppm(maxair)
 
     sensitivity, minvalue, maxvalue = ppmLimits()
     if (sensitivity == 1):
-        minratio = yaxb(valuea, maxair, valueb) / maxcr
-        maxratio = yaxb(valuea, minair, valueb) / mincr
+        minratio = yaxb(valuea, maxair, valueb) * maxcr
+        maxratio = yaxb(valuea, minair, valueb) * mincr
         sensitivity, minvalue, maxvalue = ppmLimits()
         sensitivity = 50
     ratio_vals = vals(minratio, maxratio, 100)
@@ -227,4 +227,3 @@ for gas in gas_params:
     
 
     fig.write_html(f"{SensorName}_{gasname}_ppm.html")
-
