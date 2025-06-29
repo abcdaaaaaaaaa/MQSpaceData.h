@@ -65,6 +65,13 @@ def inverseyaxb(valuea, value, valueb):
 def interpolate(value, min_value, max_value, target_min, target_max):
     return target_min + (value - min_value) * (target_max - target_min) / (max_value - min_value)
 
+def exponential_interpolate(value, min_value, max_value, target_min, target_max):
+    log_min = np.log10(target_min)
+    log_max = np.log10(target_max)
+    ratio = (value - min_value) / (max_value - min_value)
+    log_val = log_min + ratio * (log_max - log_min)
+    return np.power(10, log_val)
+
 def function(constant, mini_slope):
     return constant * mini_slope + constant
 
@@ -154,7 +161,7 @@ percentile, temperature, rh = limit(percentile, 0, 100), limit(temperature, -10,
 SensorValue = percentile / 100
 temperature = ScaleTemp(temperature, '+')
 correction_coefficient = CorrectionCoefficient(temperature, rh)
-air = limit(interpolate(SensorValue, 0, 1, convertppm(MinAirPpm), convertppm(MaxAirPpm)), 0, convertppm(MaxAirPpm)) * correction_coefficient
+air = limit(exponential_interpolate(SensorValue, 0, 1, convertppm(MinAirPpm), convertppm(MaxAirPpm)), 0, convertppm(MaxAirPpm)) * correction_coefficient
 
 a_temp_time, b_temp_time, r2_temp_time = fit_time_with_r2(time, temperature)
 a_rh_time, b_rh_time, r2_rh_time = fit_time_with_r2(time, rh)
@@ -170,7 +177,7 @@ rh_surface = limit(yaxb(a_rh_time, time_surface, b_rh_time), 0, 100)
 correction_coefficient_surface = CorrectionCoefficient(temperature_surface, rh_surface)
 percentile_surface = limit(yaxb(a_percentile_time, time_surface, b_percentile_time), 0, 100)
 SensorValue_surface = percentile_surface / 100
-air_surface = limit(interpolate(SensorValue_surface, 0, 1, convertppm(MinAirPpm), convertppm(MaxAirPpm)), 0, convertppm(MaxAirPpm)) * correction_coefficient_surface
+air_surface = limit(exponential_interpolate(SensorValue_surface, 0, 1, convertppm(MinAirPpm), convertppm(MaxAirPpm)), 0, convertppm(MaxAirPpm)) * correction_coefficient_surface
 
 temperature = ScaleTemp(temperature, '-')
 temperature_surface = ScaleTemp(temperature_surface, '-')
